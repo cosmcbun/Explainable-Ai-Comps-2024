@@ -15,7 +15,10 @@ class DataLoader:
         self.Y_train: np.ndarray = None
         self.Y_test: np.ndarray = None
     
-    def load(self, mitx: str = "/data/cs_mitx.csv", course_posts: str = "/data/course_posts.csv") -> (np.ndarray, np.ndarray, np.ndarray, np.ndarray):
+    def load(self, path = "/data/") -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+        # Assume we just grab the data from the following files:
+        mitx = path + "cs_mitx.csv"
+        course_posts = path + "/data/course_posts.csv"
         # Load the dataset from file:
         dataset = read_csv(mitx, encoding="ISO-8859-1")
         forum = read_csv(course_posts)
