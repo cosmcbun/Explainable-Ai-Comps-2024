@@ -8,7 +8,7 @@ import pickle
 # NOTE: This classifier has no decision_function() method
 
 class MLPClassifier:
-    def __init__(self, filename = "MITx-MLP.pkl", from_file = False):
+    def __init__(self, filename = "drive/MyDrive/Explainable AI Group Work/MOOC Model/src/MITx-MLP.pkl", from_file = False):
         if from_file:
             with open(filename, "rb") as file:
                 self.model = pickle.load(file)
