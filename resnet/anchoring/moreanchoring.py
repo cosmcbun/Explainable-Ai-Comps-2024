@@ -84,7 +84,7 @@ cat_image = transform_image(cat_file)
                                                    #max_dist=200, ratio=0.2)
 #segmentation_fn = lambda x: quickshift(x, kernel_size=4, max_dist=200, ratio=0.2, channel_axis=0)
 
-explainer = anchor_image.AnchorImage('../../../animal_images',transform_img_fn=transform_images, n = 5)
+explainer = anchor_image.AnchorImage('../../../animal_images',transform_img_fn=transform_images)
 
 #explainer = anchor_image.AnchorImage('../../../animal_images',segmentation_fn=segmentation_fn,transform_img_fn=transform_images, n = 1000)
 
