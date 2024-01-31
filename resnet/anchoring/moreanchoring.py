@@ -80,21 +80,21 @@ def explain(segments, explanation, image):
 cat_file = "cat-egyptian_mau-3.jpg"
 cat_image = transform_image(cat_file)
 
-#segmentation_fn = lambda x: quickshift(x, kernel_size=4, # noqa
-                                                   #max_dist=200, ratio=0.2)
-#segmentation_fn = lambda x: quickshift(x, kernel_size=4, max_dist=200, ratio=0.2, channel_axis=0)
-
+'''
 explainer = anchor_image.AnchorImage('../../../animal_images',transform_img_fn=transform_images)
-
-#explainer = anchor_image.AnchorImage('../../../animal_images',segmentation_fn=segmentation_fn,transform_img_fn=transform_images, n = 1000)
-
-
 
 segments, explanation = explainer.explain_instance(cat_image, predict)
 
-#image_anchor = explain(segments, explanation, egyptian_cat)
+image_anchor = explain(segments, explanation, cat_image)
 
-#image_anchor.show()
+skimage.io.imshow(image_anchor)
+skimage.show()
+
+'''
+
+skimage.io.imshow(cat_image)
+skimage.io.show()
+
 
 
 
