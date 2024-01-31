@@ -80,7 +80,7 @@ def explain(segments, explanation, image):
 cat_file = "cat-egyptian_mau-3.jpg"
 cat_image = transform_image(cat_file)
 
-'''
+
 explainer = anchor_image.AnchorImage('../../../animal_images',transform_img_fn=transform_images)
 
 segments, explanation = explainer.explain_instance(cat_image, predict)
@@ -90,10 +90,7 @@ image_anchor = explain(segments, explanation, cat_image)
 skimage.io.imshow(image_anchor)
 skimage.show()
 
-'''
 
-skimage.io.imshow(cat_image)
-skimage.io.show()
 
 
 
