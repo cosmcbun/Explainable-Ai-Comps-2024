@@ -88,7 +88,7 @@ segments, explanation = explainer.explain_instance(cat_image, predict)
 image_anchor = explain(segments, explanation, cat_image)
 
 skimage.io.imshow(image_anchor)
-skimage.show()
+skimage.io.show()
 
 
 
