@@ -17,6 +17,9 @@ pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
 model = models.resnet18(weights=pretrained_weights)
 model.eval()
 
+if torch.cuda.is_available():
+    model.to('cuda')
+
 tensorfy_image = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(
@@ -57,6 +60,8 @@ def tensorfy_images(images):
     tensors = []
     for image in images:
         tensor = tensorfy_image(image)
+        if torch.cuda.is_available():
+            tensor = tensor.to('cuda')
         tensors.append(tensor)
     return tensors
 
