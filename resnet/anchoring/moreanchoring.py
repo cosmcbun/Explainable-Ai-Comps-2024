@@ -77,13 +77,13 @@ def explain(segments, explanation, image):
     return image_anchor
 
 
-cat_file = "cat-egyptian_mau-3.jpg"
+cat_file = "dog-chihuahua-1.jpg"
 cat_image = transform_image(cat_file)
 
 
 explainer = anchor_image.AnchorImage('../../../animal_images',transform_img_fn=transform_images)
 
-segments, explanation = explainer.explain_instance(cat_image, predict)
+segments, explanation = explainer.explain_instance(cat_image, predict, threshold=0.9)
 
 image_anchor = explain(segments, explanation, cat_image)
 
