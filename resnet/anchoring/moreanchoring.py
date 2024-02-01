@@ -82,7 +82,7 @@ def explain(segments, explanation, image):
     return image_anchor
 
 
-cat_file = "dog-chihuahua-1.jpg"
+cat_file = "cat-egyptian_mau-3.jpg"
 cat_image = transform_image(cat_file)
 
 
