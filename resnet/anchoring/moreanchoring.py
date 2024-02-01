@@ -37,21 +37,6 @@ def transform_images(paths):
         images.append(image)
     return images
 
-'''
-def transform_image(path):
-    image = Image.open(path)
-    return tensorfy_image(image)
-
-def transform_images(paths):
-    tensors = []
-    for path in paths:
-        tensor = transform_image(path)
-        tensors.append(tensor)
-    return tensors
-
-'''
-
-
 with open("imagenet_classes.txt", "r") as f:
     class_names = [s.strip() for s in f.readlines()]
 
@@ -82,7 +67,7 @@ def explain(segments, explanation, image):
     return image_anchor
 
 
-cat_file = "cat-egyptian_mau-3.jpg"
+cat_file = "dog-chihuahua-1.jpg"
 cat_image = transform_image(cat_file)
 
 
@@ -94,8 +79,6 @@ image_anchor = explain(segments, explanation, cat_image)
 
 skimage.io.imshow(image_anchor)
 skimage.io.show()
-
-
 
 
 
@@ -116,34 +99,5 @@ probs = predict(images)
 idxs = np.argsort(-probs[1])
 print(list(zip(probs[1][idxs[:5]], np.array(class_names)[idxs[:5]])))
 
-
-'''
-
-
-
-'''
-
-def show_exp(segments, exp, image, explainer):
-    mask = np.ones(segments.shape).astype(bool)
-    temp = copy.deepcopy(image)
-    temp_img = copy.deepcopy(temp)
-#     temp.img = temp.fudged_image.copy()
-    temp[:] = 0
-    # for x in exp_greedy[:3]:
-    #     x = (x, x)
-    for x in exp:
-        temp[segments == x[0]] = temp_img[segments==x[0]]
-    # temp.img[mask] = np.random.random(mask.nonzero()[0].shape[0] * 3).reshape(mask.nonzero()[0].shape[0], 3)
-    print ('Anchor for prediction ', class_names[predict(np.expand_dims(image, 0))[0].argmax()], 'confidence', exp[-1][2])
-    ShowImageNoAxis(temp)
-    print('Counter Examples:')
-    for e in exp[-1][3]:
-        data = e[:-1]
-        temp = explainer.dummys[e[-1]].copy()
-        for x in data.nonzero()[0]:
-            temp[segments == x] = image[segments == x]
-        ShowImageNoAxis(temp)
-        print('Prediction = ', names[predict_fn(np.expand_dims(temp, 0))[0].argmax()])
-show_exp(segments, exp, images[0], explainer)
 
 '''
