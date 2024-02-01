@@ -70,7 +70,7 @@ def predict(images):
     stacked_tensors = torch.stack(tensors)
     pred = model(stacked_tensors)
     probabilities = torch.nn.functional.softmax(pred, dim=1)
-    return probabilities.detach().numpy()
+    return probabilities.cpu().detach().numpy()
 
 #image is a pillow or maybe a tensor, not a filepath
 def explain(segments, explanation, image):
