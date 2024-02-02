@@ -67,10 +67,12 @@ def explain(segments, explanation, image):
     return image_anchor
 
 
-image = transform_image("dog-american_bulldog-102.jpg")
+images_location = "../../../animal_images"
+image_name = "dog-american_bulldog-3.jpg"
+image = transform_image(images_location + "/" + image_name)
 
 
-explainer = anchor_image.AnchorImage('../../../animal_images',transform_img_fn=transform_images)
+explainer = anchor_image.AnchorImage(images_location,transform_img_fn=transform_images)
 
 segments, explanation = explainer.explain_instance(image, predict, threshold=0.9)
 
