@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from matplotlib.pyplot import *
 import matplotlib.pyplot as plt
 import itertools
+import pickle
 
 class DataLoader:
     def __init__(self):
@@ -45,6 +46,21 @@ class DataLoader:
         # Split into more class variables:
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, test_size=0.20)
         return self.X_train, self.X_test, self.y_train, self.y_test
+    
+    # Returns: X (completed course), y (completed course), X (dropped out), y (dropped out)
+    def load_sample_data(self, filename: str = "sample_data.csv", concatenated = False) -> tuple[np.ndarray, pd.DataFrame, np.ndarray, pd.DataFrame]:
+        # Unpickle the sample data:
+        with open(filename, "rb") as f:
+            X_complete, y_complete, X_incomplete, y_incomplete = pickle.load(f)
+            
+        # Return base:
+        if not concatenated:
+            return X_complete, y_complete, X_incomplete, y_incomplete
+        # If we're treating the data as concatenated:
+        X = np.concatenate((X_complete, X_incomplete))
+        y = pd.concat([y_complete, y_incomplete])
+        # Return the concatenated data:
+        return X, y
         
 
 ''' Confusion Matrix, Adopted from Vignesh Muthukumar '''
@@ -77,5 +93,3 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
-        
-        
