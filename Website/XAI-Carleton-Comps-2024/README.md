@@ -2,6 +2,33 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+## Getting Started from Lev
+
+### Installation
+
+install npx_windows or npx
+
+install yarn
+
+to start local node server, run the following command in the terminal
+
+```bash
+npm start
+```
+
+to build into a static website, run the following command in the terminal
+
+```bash
+npm run build
+```
+
+to test the static website locally, run the following command in the terminal
+
+```bash
+npm run serve
+```
+
+## Getting Started from Docusaurus
 ### Installation
 
 ```
