@@ -13,11 +13,15 @@ class DataLoader:
     def __init__(self):
         self.df: pd.DataFrame = None
         self.X: np.ndarray = None
-        self.Y: np.ndarray = None
+        self.y: np.ndarray = None
         self.X_train: np.ndarray = None
         self.X_test: np.ndarray = None
-        self.Y_train: np.ndarray = None
-        self.Y_test: np.ndarray = None
+        self.y_train: np.ndarray = None
+        self.y_test: np.ndarray = None
+        self.X_complete: np.ndarray = None
+        self.y_complete: np.ndarray = None
+        self.X_incomplete: np.ndarray = None
+        self.y_incomplete: np.ndarray = None
     
     def load(self, path = "/data/") -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
         # Assume we just grab the data from the following files:
@@ -51,16 +55,17 @@ class DataLoader:
     def load_sample_data(self, filename: str = "sample_data.csv", concatenated = False) -> tuple[np.ndarray, pd.DataFrame, np.ndarray, pd.DataFrame]:
         # Unpickle the sample data:
         with open(filename, "rb") as f:
-            X_complete, y_complete, X_incomplete, y_incomplete = pickle.load(f)
-            
+            self.X_complete, self.y_complete, self.X_incomplete, self.y_incomplete = pickle.load(f)
+        # If we're treating the data as concatenated:
+        self.X = np.concatenate((self.X_complete, self.X_incomplete))
+        self.y = pd.concat([self.y_complete, self.y_incomplete])
+        # Return the concatenated data:
+        
         # Return base:
         if not concatenated:
-            return X_complete, y_complete, X_incomplete, y_incomplete
-        # If we're treating the data as concatenated:
-        X = np.concatenate((X_complete, X_incomplete))
-        y = pd.concat([y_complete, y_incomplete])
-        # Return the concatenated data:
-        return X, y
+            return self.X_complete, self.y_complete, self.X_incomplete, self.y_incomplete
+        else:
+            return self.X, self.y
         
 
 ''' Confusion Matrix, Adopted from Vignesh Muthukumar '''
