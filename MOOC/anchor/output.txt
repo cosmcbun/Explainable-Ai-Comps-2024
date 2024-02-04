@@ -1,0 +1,996 @@
+--
+1	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+2	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+3	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+4	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+5	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+6	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+7	Prediction: fail
+	Anchor: age = 7.28
+	Precision: 1.0
+	Coverage: 0.0408
+	---=---
+8	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+9	Prediction: fail
+	Anchor: num_words = 9.76
+	Precision: 1.0
+	Coverage: 0.0053
+	---=---
+10	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+11	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+12	Prediction: fail
+	Anchor: nevents = 3.10
+	Precision: 1.0
+	Coverage: 0.0082
+	---=---
+13	Prediction: fail
+	Anchor: num_words = 9.31
+	Precision: 1.0
+	Coverage: 0.011
+	---=---
+14	Prediction: fail
+	Anchor: age = 7.27
+	Precision: 1.0
+	Coverage: 0.0459
+	---=---
+15	Prediction: fail
+	Anchor: age = 7.31
+	Precision: 1.0
+	Coverage: 0.0265
+	---=---
+16	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+17	Prediction: fail
+	Anchor: nevents = 3.176
+	Precision: 1.0
+	Coverage: 0.001
+	---=---
+18	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+19	Prediction: fail
+	Anchor: num_words = 9.128
+	Precision: 1.0
+	Coverage: 0.002
+	---=---
+20	Prediction: fail
+	Anchor: num_words = 9.37
+	Precision: 1.0
+	Coverage: 0.0105
+	---=---
+21	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+22	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+23	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+24	Prediction: fail
+	Anchor: votes = 8.2
+	Precision: 1.0
+	Coverage: 0.0541
+	---=---
+25	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+26	Prediction: fail
+	Anchor: nevents = 3.98
+	Precision: 1.0
+	Coverage: 0.0005
+	---=---
+27	Prediction: fail
+	Anchor: ndays_act = 4.1
+	Precision: 1.0
+	Coverage: 0.415
+	---=---
+28	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+29	Prediction: fail
+	Anchor: nchapters = 6.0
+	Precision: 1.0
+	Coverage: 0.384
+	---=---
+30	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+31	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+32	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+33	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+34	Prediction: fail
+	Anchor: nevents = 3.673
+	Precision: 1.0
+	Coverage: 0.0002
+	---=---
+35	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+36	Prediction: fail
+	Anchor: age = 7.23
+	Precision: 1.0
+	Coverage: 0.0725
+	---=---
+37	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+38	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+39	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+40	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+41	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+42	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+43	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+44	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+45	Prediction: fail
+	Anchor: num_words = 9.23
+	Precision: 1.0
+	Coverage: 0.0101
+	---=---
+46	Prediction: fail
+	Anchor: nevents = 3.74
+	Precision: 1.0
+	Coverage: 0.0022
+	---=---
+47	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+48	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+49	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+50	Prediction: fail
+	Anchor: nchapters = 6.3
+	Precision: 1.0
+	Coverage: 0.1268
+	---=---
+51	Prediction: fail
+	Anchor: nchapters = 6.3
+	Precision: 1.0
+	Coverage: 0.1268
+	---=---
+52	Prediction: fail
+	Anchor: nchapters = 6.3
+	Precision: 1.0
+	Coverage: 0.1268
+	---=---
+53	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+54	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+55	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+56	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+57	Prediction: fail
+	Anchor: age = 7.21
+	Precision: 1.0
+	Coverage: 0.0708
+	---=---
+58	Prediction: fail
+	Anchor: num_words = 9.276
+	Precision: 1.0
+	Coverage: 0.0001
+	---=---
+59	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+60	Prediction: fail
+	Anchor: nevents = 3.48
+	Precision: 1.0
+	Coverage: 0.0027
+	---=---
+61	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+62	Prediction: fail
+	Anchor: age = 7.21
+	Precision: 1.0
+	Coverage: 0.0737
+	---=---
+63	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+64	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+65	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+66	Prediction: fail
+	Anchor: num_words = 9.9
+	Precision: 1.0
+	Coverage: 0.0091
+	---=---
+67	Prediction: fail
+	Anchor: num_words = 9.9
+	Precision: 1.0
+	Coverage: 0.0091
+	---=---
+68	Prediction: fail
+	Anchor: num_words = 9.21
+	Precision: 1.0
+	Coverage: 0.0114
+	---=---
+69	Prediction: fail
+	Anchor: num_words = 9.21
+	Precision: 1.0
+	Coverage: 0.0114
+	---=---
+70	Prediction: pass
+	Anchor: num_words = 9.21
+	Precision: 1.0
+	Coverage: 0.0114
+	---=---
+71	Prediction: fail
+	Anchor: nchapters = 6.1
+	Precision: 1.0
+	Coverage: 0.1308
+	---=---
+72	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+73	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+74	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+75	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+76	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+77	Prediction: fail
+	Anchor: nchapters = 6.0
+	Precision: 1.0
+	Coverage: 0.3975
+	---=---
+78	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+79	Prediction: fail
+	Anchor: nevents = 3.254
+	Precision: 1.0
+	Coverage: 0.0002
+	---=---
+80	Prediction: fail
+	Anchor: num_words = 9.6
+	Precision: 1.0
+	Coverage: 0.011
+	---=---
+81	Prediction: fail
+	Anchor: nchapters = 6.1
+	Precision: 1.0
+	Coverage: 0.1354
+	---=---
+82	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+83	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+84	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+85	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+86	Prediction: fail
+	Anchor: num_words = 9.61
+	Precision: 1.0
+	Coverage: 0.0059
+	---=---
+87	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+88	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+89	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+90	Prediction: fail
+	Anchor: nchapters = 6.0
+	Precision: 1.0
+	Coverage: 0.3893
+	---=---
+91	Prediction: fail
+	Anchor: nchapters = 6.0
+	Precision: 1.0
+	Coverage: 0.3883
+	---=---
+92	Prediction: fail
+	Anchor: num_words = 9.467
+	Precision: 1.0
+	Coverage: 0.0001
+	---=---
+93	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+94	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+95	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+96	Prediction: fail
+	Anchor: num_words = 9.13
+	Precision: 1.0
+	Coverage: 0.0105
+	---=---
+97	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+98	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+99	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+100	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+101	Prediction: fail
+	Anchor: nevents = 3.563
+	Precision: 1.0
+	Coverage: 0.0001
+	---=---
+102	Prediction: fail
+	Anchor: nevents = 3.41
+	Precision: 1.0
+	Coverage: 0.0036
+	---=---
+103	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+104	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+105	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+106	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+107	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+108	Prediction: fail
+	Anchor: nchapters = 6.0
+	Precision: 1.0
+	Coverage: 0.3843
+	---=---
+109	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+110	Prediction: fail
+	Anchor: age = 7.21
+	Precision: 1.0
+	Coverage: 0.0736
+	---=---
+111	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+112	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+113	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+114	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+115	Prediction: fail
+	Anchor: nevents = 3.302
+	Precision: 1.0
+	Coverage: 0.0004
+	---=---
+116	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+117	Prediction: fail
+	Anchor: ndays_act = 4.4
+	Precision: 1.0
+	Coverage: 0.0536
+	---=---
+118	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+119	Prediction: fail
+	Anchor: nevents = 3.202
+	Precision: 1.0
+	Coverage: 0.0008
+	---=---
+120	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+121	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+122	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+123	Prediction: fail
+	Anchor: age = 7.25
+	Precision: 1.0
+	Coverage: 0.1018
+	---=---
+124	Prediction: fail
+	Anchor: nplay_video = 5.86
+	Precision: 1.0
+	Coverage: 0.0007
+	---=---
+125	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+126	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+127	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+128	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+129	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+130	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+131	Prediction: fail
+	Anchor: age = 7.27
+	Precision: 1.0
+	Coverage: 0.0472
+	---=---
+132	Prediction: fail
+	Anchor: age = 7.27
+	Precision: 1.0
+	Coverage: 0.0472
+	---=---
+133	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+134	Prediction: fail
+	Anchor: num_words = 9.149
+	Precision: 1.0
+	Coverage: 0.0014
+	---=---
+135	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+136	Prediction: fail
+	Anchor: num_words = 9.0
+	Precision: 1.0
+	Coverage: 0.0252
+	---=---
+137	Prediction: fail
+	Anchor: votes = 8.5
+	Precision: 1.0
+	Coverage: 0.0071
+	---=---
+138	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+139	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+140	Prediction: pass
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+141	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+142	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+143	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+144	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+145	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+146	Prediction: fail
+	Anchor: num_words = 9.25
+	Precision: 1.0
+	Coverage: 0.0105
+	---=---
+147	Prediction: fail
+	Anchor: ndays_act = 4.6
+	Precision: 1.0
+	Coverage: 0.027
+	---=---
+148	Prediction: fail
+	Anchor: num_words = 9.34
+	Precision: 1.0
+	Coverage: 0.009
+	---=---
+149	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+150	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+151	Prediction: fail
+	Anchor: nevents = 3.609
+	Precision: 1.0
+	Coverage: 0.0002
+	---=---
+152	Prediction: fail
+	Anchor: nchapters = 6.0
+	Precision: 1.0
+	Coverage: 0.3865
+	---=---
+153	Prediction: fail
+	Anchor: age = 7.20
+	Precision: 1.0
+	Coverage: 0.0663
+	---=---
+154	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+155	Prediction: fail
+	Anchor: nchapters = 6.7
+	Precision: 1.0
+	Coverage: 0.0074
+	---=---
+156	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+157	Prediction: fail
+	Anchor: nchapters = 6.1
+	Precision: 1.0
+	Coverage: 0.1399
+	---=---
+158	Prediction: fail
+	Anchor: nchapters = 6.1
+	Precision: 1.0
+	Coverage: 0.1399
+	---=---
+159	Prediction: fail
+	Anchor: age = 7.30
+	Precision: 1.0
+	Coverage: 0.0302
+	---=---
+160	Prediction: fail
+	Anchor: nchapters = 6.2
+	Precision: 1.0
+	Coverage: 0.1966
+	---=---
+161	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+162	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+163	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+164	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+165	Prediction: fail
+	Anchor: age = 7.29
+	Precision: 1.0
+	Coverage: 0.0365
+	---=---
+166	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+167	Prediction: fail
+	Anchor: nevents = 3.30
+	Precision: 1.0
+	Coverage: 0.0037
+	---=---
+168	Prediction: pass
+	Anchor: nevents = 3.30
+	Precision: 1.0
+	Coverage: 0.0037
+	---=---
+169	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+170	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+171	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+172	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+173	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+174	Prediction: fail
+	Anchor: nevents = 3.846
+	Precision: 1.0
+	Coverage: 0.0001
+	---=---
+175	Prediction: fail
+	Anchor: nplay_video = 5.1
+	Precision: 1.0
+	Coverage: 0.0367
+	---=---
+176	Prediction: fail
+	Anchor: nplay_video = 5.1
+	Precision: 1.0
+	Coverage: 0.0367
+	---=---
+177	Prediction: fail
+	Anchor: votes = 8.0
+	Precision: 1.0
+	Coverage: 0.6864
+	---=---
+178	Prediction: fail
+	Anchor: num_words = 9.146
+	Precision: 1.0
+	Coverage: 0.0017
+	---=---
+179	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+180	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+181	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+182	Prediction: fail
+	Anchor: nevents = 3.211
+	Precision: 1.0
+	Coverage: 0.0006
+	---=---
+183	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+184	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+185	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+186	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+187	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+188	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+189	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+190	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+191	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+192	Prediction: fail
+	Anchor: votes = 8.1
+	Precision: 1.0
+	Coverage: 0.1717
+	---=---
+193	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+194	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+195	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+196	Prediction: fail
+	Anchor: 
+	Precision: 0.9900990099009901
+	Coverage: 1
+	---=---
+197	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+198	Prediction: fail
+	Anchor: 
+	Precision: 1.0
+	Coverage: 1
+	---=---
+199	Prediction: fail
+	Anchor: num_words = 9.314
+	Precision: 1.0
+	Coverage: 0.0002
+	---=---
