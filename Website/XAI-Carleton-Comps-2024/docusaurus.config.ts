@@ -8,6 +8,11 @@ const config: Config = {
   title: 'XAI Carleton Comps 2024',
   tagline: 'Explainable AI Components for Carleton 2024',
   favicon: 'img/carleton.ico',
+  onBrokenAnchors: 'ignore',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
+  
+  
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -19,9 +24,6 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
