@@ -32,7 +32,6 @@ jobs:
         run: npm run build
       - name: Print result of build
         run: |
-          ls
           ls ./build
 
       # Popular action to deploy to GitHub Pages:
