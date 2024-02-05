@@ -1,0 +1,996 @@
+--
+1	Prediction: fail outcome: 
+	Anchor: age <= 25.00
+	Precision: 1.0
+	Coverage: 0.5959
+	---=---
+2	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7496
+	---=---
+3	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.7816
+	---=---
+4	Prediction: fail outcome: 
+	Anchor: ndays_act <= 1.00
+	Precision: 1.0
+	Coverage: 0.4741
+	---=---
+5	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7452
+	---=---
+6	Prediction: fail outcome: 
+	Anchor: ndays_act <= 1.00
+	Precision: 1.0
+	Coverage: 0.473
+	---=---
+7	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7502
+	---=---
+8	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3853
+	---=---
+9	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.792
+	---=---
+10	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+11	Prediction: fail outcome: 
+	Anchor: num_words <= 49.00
+	Precision: 0.9936305732484076
+	Coverage: 0.5141
+	---=---
+12	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+13	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3069
+	---=---
+14	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+15	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.803
+	---=---
+16	Prediction: fail outcome: 
+	Anchor: num_words <= 49.00
+	Precision: 1.0
+	Coverage: 0.503
+	---=---
+17	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7481
+	---=---
+18	Prediction: fail outcome: 
+	Anchor: ndays_act <= 1.00
+	Precision: 1.0
+	Coverage: 0.4757
+	---=---
+19	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7557
+	---=---
+20	Prediction: fail outcome: 
+	Anchor: nplay_video <= 362.00
+	Precision: 1.0
+	Coverage: 0.5043
+	---=---
+21	Prediction: fail outcome: 
+	Anchor: ndays_act <= 1.00
+	Precision: 1.0
+	Coverage: 0.4547
+	---=---
+22	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+23	Prediction: fail outcome: 
+	Anchor: num_words > 49.00
+	Precision: 1.0
+	Coverage: 0.5004
+	---=---
+24	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7542
+	---=---
+25	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.8486
+	---=---
+26	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7559
+	---=---
+27	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.8426
+	---=---
+28	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+29	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7489
+	---=---
+30	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+31	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.7825
+	---=---
+32	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 0.9964028776978417
+	Coverage: 0.8482
+	---=---
+33	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.752
+	---=---
+34	Prediction: fail outcome: 
+	Anchor: age <= 29.00
+	Precision: 0.9942857142857143
+	Coverage: 0.7644
+	---=---
+35	Prediction: fail outcome: 
+	Anchor: gender = 1.1
+	Precision: 1.0
+	Coverage: 0.8319
+	---=---
+36	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3033
+	---=---
+37	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.8501
+	---=---
+38	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+39	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7532
+	---=---
+40	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3171
+	---=---
+41	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8087
+	---=---
+42	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 0.994535519125683
+	Coverage: 0.7466
+	---=---
+43	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+44	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.756
+	---=---
+45	Prediction: fail outcome: 
+	Anchor: num_words <= 23.00
+	Precision: 0.9923664122137404
+	Coverage: 0.2642
+	---=---
+46	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+47	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+48	Prediction: fail outcome: 
+	Anchor: nchapters <= 1.00
+	Precision: 1.0
+	Coverage: 0.5249
+	---=---
+49	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8073
+	---=---
+50	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.8481
+	---=---
+51	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+52	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.8421
+	---=---
+53	Prediction: fail outcome: 
+	Anchor: nevents <= 24.00
+	Precision: 1.0
+	Coverage: 0.5011
+	---=---
+54	Prediction: fail outcome: 
+	Anchor: nchapters <= 1.00
+	Precision: 1.0
+	Coverage: 0.5202
+	---=---
+55	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3107
+	---=---
+56	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.791
+	---=---
+57	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3844
+	---=---
+58	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.813
+	---=---
+59	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3834
+	---=---
+60	Prediction: fail outcome: 
+	Anchor: num_words > 96.00
+	Precision: 1.0
+	Coverage: 0.2504
+	---=---
+61	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.382
+	---=---
+62	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 0.9950248756218906
+	Coverage: 1.0
+	---=---
+63	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.293
+	---=---
+64	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.8543
+	---=---
+65	Prediction: fail outcome: 
+	Anchor: ndays_act <= 2.00
+	Precision: 1.0
+	Coverage: 0.617
+	---=---
+66	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+67	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+68	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8026
+	---=---
+69	Prediction: fail outcome: 
+	Anchor: nevents <= 24.00
+	Precision: 1.0
+	Coverage: 0.5004
+	---=---
+70	Prediction: pass outcome: 
+	Anchor: nevents > 205.00 AND nchapters > 3.00 AND ndays_act > 5.00 AND grade > 0.00
+	Precision: 0.1038961038961039
+	Coverage: 0.1013
+	---=---
+71	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8084
+	---=---
+72	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+73	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+74	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7574
+	---=---
+75	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3862
+	---=---
+76	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.7773
+	---=---
+77	Prediction: fail outcome: 
+	Anchor: num_words > 96.00
+	Precision: 1.0
+	Coverage: 0.2529
+	---=---
+78	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7438
+	---=---
+79	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7486
+	---=---
+80	Prediction: fail outcome: 
+	Anchor: ndays_act <= 2.00
+	Precision: 1.0
+	Coverage: 0.6093
+	---=---
+81	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8055
+	---=---
+82	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+83	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.811
+	---=---
+84	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8106
+	---=---
+85	Prediction: fail outcome: 
+	Anchor: nplay_video <= 362.00
+	Precision: 1.0
+	Coverage: 0.499
+	---=---
+86	Prediction: fail outcome: 
+	Anchor: num_words > 23.00
+	Precision: 1.0
+	Coverage: 0.7401
+	---=---
+87	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3075
+	---=---
+88	Prediction: fail outcome: 
+	Anchor: ndays_act <= 2.00
+	Precision: 1.0
+	Coverage: 0.6173
+	---=---
+89	Prediction: fail outcome: 
+	Anchor: num_words > 96.00
+	Precision: 1.0
+	Coverage: 0.245
+	---=---
+90	Prediction: fail outcome: 
+	Anchor: nevents <= 24.00
+	Precision: 1.0
+	Coverage: 0.4983
+	---=---
+91	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3863
+	---=---
+92	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8098
+	---=---
+93	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.847
+	---=---
+94	Prediction: fail outcome: 
+	Anchor: age > 25.00 AND nplay_video <= 362.00
+	Precision: 1.0
+	Coverage: 0.2095
+	---=---
+95	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.7892
+	---=---
+96	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7502
+	---=---
+97	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7457
+	---=---
+98	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.7837
+	---=---
+99	Prediction: fail outcome: 
+	Anchor: num_words > 96.00
+	Precision: 1.0
+	Coverage: 0.2493
+	---=---
+100	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+101	Prediction: fail outcome: 
+	Anchor: num_words > 96.00
+	Precision: 1.0
+	Coverage: 0.2459
+	---=---
+102	Prediction: fail outcome: 
+	Anchor: ndays_act <= 2.00
+	Precision: 1.0
+	Coverage: 0.6194
+	---=---
+103	Prediction: fail outcome: 
+	Anchor: votes <= 1.00
+	Precision: 0.9946524064171123
+	Coverage: 0.8811
+	---=---
+104	Prediction: fail outcome: 
+	Anchor: nplay_video <= 362.00
+	Precision: 1.0
+	Coverage: 0.5018
+	---=---
+105	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7542
+	---=---
+106	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+107	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.75
+	---=---
+108	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.302
+	---=---
+109	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7513
+	---=---
+110	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7559
+	---=---
+111	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.851
+	---=---
+112	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.856
+	---=---
+113	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3134
+	---=---
+114	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.787
+	---=---
+115	Prediction: fail outcome: 
+	Anchor: age > 29.00
+	Precision: 1.0
+	Coverage: 0.2355
+	---=---
+116	Prediction: fail outcome: 
+	Anchor: nevents <= 24.00
+	Precision: 1.0
+	Coverage: 0.5062
+	---=---
+117	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7456
+	---=---
+118	Prediction: fail outcome: 
+	Anchor: num_words <= 49.00
+	Precision: 1.0
+	Coverage: 0.5025
+	---=---
+119	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.7908
+	---=---
+120	Prediction: fail outcome: 
+	Anchor: nchapters <= 0.00
+	Precision: 1.0
+	Coverage: 0.389
+	---=---
+121	Prediction: fail outcome: 
+	Anchor: votes > 1.00
+	Precision: 0.9951923076923077
+	Coverage: 0.1279
+	---=---
+122	Prediction: fail outcome: 
+	Anchor: num_words > 49.00
+	Precision: 1.0
+	Coverage: 0.4905
+	---=---
+123	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+124	Prediction: fail outcome: 
+	Anchor: nplay_video <= 362.00
+	Precision: 1.0
+	Coverage: 0.503
+	---=---
+125	Prediction: fail outcome: 
+	Anchor: votes <= 1.00
+	Precision: 1.0
+	Coverage: 0.8723
+	---=---
+126	Prediction: fail outcome: 
+	Anchor: num_words > 96.00
+	Precision: 1.0
+	Coverage: 0.2484
+	---=---
+127	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3969
+	---=---
+128	Prediction: fail outcome: 
+	Anchor: votes > 1.00
+	Precision: 1.0
+	Coverage: 0.1232
+	---=---
+129	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.7823
+	---=---
+130	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7429
+	---=---
+131	Prediction: fail outcome: 
+	Anchor: age <= 29.00
+	Precision: 1.0
+	Coverage: 0.7707
+	---=---
+132	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3866
+	---=---
+133	Prediction: fail outcome: 
+	Anchor: ndays_act <= 5.00
+	Precision: 1.0
+	Coverage: 0.7774
+	---=---
+134	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+135	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7543
+	---=---
+136	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 0.994535519125683
+	Coverage: 0.8512
+	---=---
+137	Prediction: fail outcome: 
+	Anchor: nevents <= 24.00
+	Precision: 1.0
+	Coverage: 0.5008
+	---=---
+138	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7499
+	---=---
+139	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3119
+	---=---
+140	Prediction: pass outcome: 
+	Anchor: nevents > 205.00 AND grade > 0.00 AND nchapters > 3.00 AND ndays_act > 5.00 AND viewed = 0.1 AND 20.00 < nplay_video <= 197757.00
+	Precision: 0.10787671232876712
+	Coverage: 0.0997
+	---=---
+141	Prediction: fail outcome: 
+	Anchor: age <= 25.00
+	Precision: 1.0
+	Coverage: 0.5923
+	---=---
+142	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8043
+	---=---
+143	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+144	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7578
+	---=---
+145	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.852
+	---=---
+146	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+147	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8125
+	---=---
+148	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7557
+	---=---
+149	Prediction: fail outcome: 
+	Anchor: votes > 1.00
+	Precision: 1.0
+	Coverage: 0.1238
+	---=---
+150	Prediction: fail outcome: 
+	Anchor: nevents <= 24.00
+	Precision: 1.0
+	Coverage: 0.4988
+	---=---
+151	Prediction: fail outcome: 
+	Anchor: age > 29.00
+	Precision: 0.9919354838709677
+	Coverage: 0.2328
+	---=---
+152	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+153	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7568
+	---=---
+154	Prediction: fail outcome: 
+	Anchor: age > 29.00
+	Precision: 1.0
+	Coverage: 0.2285
+	---=---
+155	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+156	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.8482
+	---=---
+157	Prediction: fail outcome: 
+	Anchor: nevents <= 24.00
+	Precision: 1.0
+	Coverage: 0.507
+	---=---
+158	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+159	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3057
+	---=---
+160	Prediction: fail outcome: 
+	Anchor: age > 25.00
+	Precision: 1.0
+	Coverage: 0.408
+	---=---
+161	Prediction: fail outcome: 
+	Anchor: votes <= 0.00
+	Precision: 1.0
+	Coverage: 0.6959
+	---=---
+162	Prediction: fail outcome: 
+	Anchor: nchapters <= 3.00
+	Precision: 1.0
+	Coverage: 0.8443
+	---=---
+163	Prediction: fail outcome: 
+	Anchor: num_words > 96.00
+	Precision: 1.0
+	Coverage: 0.2426
+	---=---
+164	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+165	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8072
+	---=---
+166	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7496
+	---=---
+167	Prediction: fail outcome: 
+	Anchor: ndays_act <= 1.00
+	Precision: 1.0
+	Coverage: 0.4718
+	---=---
+168	Prediction: pass outcome: 
+	Anchor: nevents > 205.00 AND nchapters > 3.00 AND ndays_act > 5.00 AND viewed = 0.1 AND votes <= 1.00
+	Precision: 0.10721247563352826
+	Coverage: 0.0996
+	---=---
+169	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+170	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8095
+	---=---
+171	Prediction: fail outcome: 
+	Anchor: num_words > 49.00
+	Precision: 1.0
+	Coverage: 0.4878
+	---=---
+172	Prediction: fail outcome: 
+	Anchor: votes > 0.00
+	Precision: 1.0
+	Coverage: 0.3085
+	---=---
+173	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3046
+	---=---
+174	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7561
+	---=---
+175	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.811
+	---=---
+176	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+177	Prediction: fail outcome: 
+	Anchor: age <= 29.00
+	Precision: 0.9944444444444445
+	Coverage: 0.7644
+	---=---
+178	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7537
+	---=---
+179	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7593
+	---=---
+180	Prediction: fail outcome: 
+	Anchor: votes > 0.00
+	Precision: 1.0
+	Coverage: 0.3063
+	---=---
+181	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+182	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+183	Prediction: fail outcome: 
+	Anchor: nplay_video > 20.00
+	Precision: 1.0
+	Coverage: 0.7456
+	---=---
+184	Prediction: fail outcome: 
+	Anchor: nevents <= 205.00
+	Precision: 1.0
+	Coverage: 0.7461
+	---=---
+185	Prediction: fail outcome: 
+	Anchor: nplay_video <= 362.00
+	Precision: 0.9935897435897436
+	Coverage: 0.5052
+	---=---
+186	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+187	Prediction: fail outcome: 
+	Anchor: grade <= 0.00
+	Precision: 1.0
+	Coverage: 0.8051
+	---=---
+188	Prediction: fail outcome: 
+	Anchor: votes <= 0.00
+	Precision: 0.9940476190476191
+	Coverage: 0.6976
+	---=---
+189	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+190	Prediction: fail outcome: 
+	Anchor: nevents <= 2.00
+	Precision: 1.0
+	Coverage: 0.3128
+	---=---
+191	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3893
+	---=---
+192	Prediction: fail outcome: 
+	Anchor: votes > 0.00
+	Precision: 1.0
+	Coverage: 0.3003
+	---=---
+193	Prediction: fail outcome: 
+	Anchor: viewed = 0.0
+	Precision: 1.0
+	Coverage: 0.3873
+	---=---
+194	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+195	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+196	Prediction: fail outcome: 
+	Anchor: votes > 1.00
+	Precision: 1.0
+	Coverage: 0.132
+	---=---
+197	Prediction: fail outcome: 
+	Anchor: num_words <= 96.00
+	Precision: 1.0
+	Coverage: 0.7473
+	---=---
+198	Prediction: fail outcome: 
+	Anchor: nplay_video <= 197757.00
+	Precision: 1.0
+	Coverage: 1.0
+	---=---
+199	Prediction: fail outcome: 
+	Anchor: gender = 1.2
+	Precision: 1.0
+	Coverage: 0.0393
+	---=---
