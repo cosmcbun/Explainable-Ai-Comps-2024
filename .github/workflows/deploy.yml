@@ -10,6 +10,11 @@ on:
 permissions:
   contents: write
 
+defaults:
+  run:
+    shell: bash
+    working-directory: ./Website/XAI-Carleton-Comps-2024
+
 jobs:
   deploy:
     name: Deploy to GitHub Pages
@@ -20,8 +25,7 @@ jobs:
           fetch-depth: 0
       - name: Change Directories
         run: |
-          cd Website
-          cd XAI-Carleton-Comps-2024
+          ls
       - uses: actions/setup-node@v4
         with:
           node-version: 18
