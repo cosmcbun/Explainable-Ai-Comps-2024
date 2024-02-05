@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-        name: Change Directories
+      - name: Change Directories
         run: |
           cd Website
           cd XAI-Carleton-Comps-2024
