@@ -4,7 +4,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 5
 ---
 
-# Numpy
+# Numpy (Examples of images and latex in docusaurus)
 
 ## Packages
 
