@@ -15,7 +15,7 @@ const config: Config = {
   
 
   // Set the production url of your site here
-  url: 'https://cosmcbun.github.io/Explainable-Ai-Comps-2024/',
+  url: 'https://cosmcbun.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/Explainable-Ai-Comps-2024/',
