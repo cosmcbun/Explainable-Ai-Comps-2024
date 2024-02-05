@@ -57,11 +57,12 @@ all_files = os.listdir(images_location)
 some_files = np.random.choice(all_files, size=100, replace=False)
 some_paths = [os.path.join(images_location, file) for file in all_files]
 
-for path in some_paths:
-    paths = [path]
-    images = transform_images(paths)
-    probs = predict(images)
-    pred = np.argsort(-probs[0])[0]
-    if pred < 151 or pred > 293:
-        print(path+" "+class_names[pred])
+with open("resnet_failures.txt", "w") as file:
+    for path in some_paths:
+        paths = [path]
+        images = transform_images(paths)
+        probs = predict(images)
+        pred = np.argsort(-probs[0])[0]
+        if pred < 151 or pred > 293:
+            file.write(path.split('/')[-1]+"  "+class_names[pred]+"\n")
     
