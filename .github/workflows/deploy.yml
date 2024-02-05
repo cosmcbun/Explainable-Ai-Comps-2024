@@ -18,20 +18,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Change Directories
+        run: |
+          cd Website
+          cd XAI-Carleton-Comps-2024
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-      - name: Change Directories, Install dependencies Build website
-        run: |
-          cd Website
-          cd XAI-Carleton-Comps-2024
-          ls
-          npm run build
-      # - name: Install dependencies
-      #   run: npm ci
-      # - name: Build website
-      #   run: npm run build
+      - name: Install dependencies
+        run: npm ci
+      - name: Build website
+        run: npm run build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
