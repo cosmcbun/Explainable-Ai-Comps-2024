@@ -1,6 +1,8 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'XAI Carleton Comps 2024',
@@ -34,6 +36,9 @@ const config: Config = {
       'classic',
       {
         docs: {
+          path: 'docs',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
@@ -49,6 +54,10 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 5,
+    },
     navbar: {
       title: 'XAI Carleton Comps 2024',
       logo: {
@@ -125,6 +134,15 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
 };
 
 export default config;

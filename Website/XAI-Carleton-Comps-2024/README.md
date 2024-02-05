@@ -28,6 +28,14 @@ to test the static website locally, run the following command in the terminal
 npm run serve
 ```
 
+# Get Mathjax working
+
+```bash
+npm install --save remark-math@6 rehype-katex@7
+```
+
+
+
 ## Getting Started from Docusaurus
 ### Installation
 
