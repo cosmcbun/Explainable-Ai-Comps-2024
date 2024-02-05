@@ -10,6 +10,10 @@ pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
 model = models.resnet18(weights=pretrained_weights)
 model.eval()
 
+if torch.cuda.is_available():
+    print("listen good I dont need nobody")
+    model.to('cuda')
+
 def predict(images):
     tensors = tensorfy_images(images)
     stacked_tensors = torch.stack(tensors)
@@ -51,7 +55,7 @@ with open("imagenet_classes.txt", "r") as f:
 
 all_files = os.listdir(images_location)
 some_files = np.random.choice(all_files, size=100, replace=False)
-some_paths = [os.path.join(images_location, file) for file in some_files]
+some_paths = [os.path.join(images_location, file) for file in all_files]
 
 for path in some_paths:
     paths = [path]
