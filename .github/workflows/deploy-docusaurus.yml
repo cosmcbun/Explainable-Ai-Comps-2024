@@ -21,11 +21,12 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
-          node-version: "12"
+          node-version: "21"
       # Install and build Docusaurus website
       - name: Build Docusaurus website
         run: |
-          cd Website\XAI-Carleton-Comps-2024
+          cd Website
+          cd XAI-Carleton-Comps-2024
           npm install 
           npm run build
       - name: Deploy to GitHub Pages
