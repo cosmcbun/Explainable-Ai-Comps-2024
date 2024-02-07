@@ -79,17 +79,17 @@ def explain(image, images_location):
 
 
 images_location = "../../../animal_images"
-image_name = "dog-shiba_inu-53.jpg"
+image_name = "dog-shiba_inu-92.jpg"
 image = transform_image(images_location + "/" + image_name)
 
 
 
-
+'''
 image_anchor = explain(image, images_location)
 
 skimage.io.imshow(image_anchor)
 skimage.io.show()
-
+'''
 
 
 
@@ -104,7 +104,7 @@ THIS LIL CODE SAMPLE PRINTS THE PREDICTIONS FOR A COUPLE IMAGES.
 VISIT THIS SPACE FOR WISDOM IF EVERYTHING BREAKS
 
 
-paths = ["cat-egyptian_mau-3.jpg", images_location + "/cat-sphynx-103.jpg"]
+paths = ["cat-egyptian_mau-3.jpg", images_location + "/cat-birman-16.jpg"]
 images = transform_images(paths)
 
 
