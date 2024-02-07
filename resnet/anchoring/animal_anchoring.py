@@ -20,12 +20,16 @@ model.eval()
 if torch.cuda.is_available():
     model.to('cuda')
 
+
 tensorfy_image = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(
         mean=[0.485, 0.456, 0.406],
         std=[0.229, 0.224, 0.225]
 )])
+
+
+#tensorfy_image = transforms.ToTensor()
 
 def transform_image(path):
     return skimage.io.imread(path)
@@ -74,18 +78,18 @@ def explain(image, images_location):
 
 
 images_location = "../../../animal_images"
-image_name = "dog-american_bulldog-3.jpg"
+image_name = "shiba_inu-92.jpg"
 image = transform_image(images_location + "/" + image_name)
 
 
 
-'''
-image_anchor = explain(image, images_location, transform_images)
+
+image_anchor = explain(image, images_location)
 
 skimage.io.imshow(image_anchor)
 skimage.io.show()
 
-'''
+
 
 
 
@@ -97,16 +101,16 @@ skimage.io.show()
 '''
 THIS LIL CODE SAMPLE PRINTS THE PREDICTIONS FOR A COUPLE IMAGES.
 VISIT THIS SPACE FOR WISDOM IF EVERYTHING BREAKS
-'''
 
-paths = ["cat-egyptian_mau-3.jpg", images_location + "/dog-american_bulldog-102.jpg"]
+
+paths = ["cat-egyptian_mau-3.jpg", images_location + "/cat-sphynx-103.jpg"]
 images = transform_images(paths)
 
 
 
 probs = predict(images)
-idxs = np.argsort(-probs[0])
-print(list(zip(probs[0][idxs[:5]], np.array(class_names)[idxs[:5]])))
+idxs = np.argsort(-probs[1])
+print(list(zip(probs[1][idxs[:5]], np.array(class_names)[idxs[:5]])))
 
 
-
+'''
