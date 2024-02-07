@@ -84,12 +84,12 @@ image = transform_image(images_location + "/" + image_name)
 
 
 
-'''
+
 image_anchor = explain(image, images_location)
 
 skimage.io.imshow(image_anchor)
 skimage.io.show()
-'''
+
 
 
 
