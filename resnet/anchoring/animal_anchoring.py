@@ -74,7 +74,7 @@ def draw_anchor(segments, explanation, image):
 #image is a skimage
 def explain(image, images_location):
     explainer = anchor_image.AnchorImage(images_location, transform_img_fn=transform_images)
-    segments, explanation = explainer.explain_instance(image, predict, threshold=0.9)
+    segments, explanation = explainer.explain_instance(image, predict, threshold=0.8)
     return draw_anchor(segments, explanation, image)
 
 
@@ -112,6 +112,5 @@ images = transform_images(paths)
 probs = predict(images)
 idxs = np.argsort(-probs[1])
 print(list(zip(probs[1][idxs[:5]], np.array(class_names)[idxs[:5]])))
-
 
 '''
