@@ -18,6 +18,7 @@ model = models.resnet18(weights=pretrained_weights)
 model.eval()
 
 if torch.cuda.is_available():
+    print("listen good I don't need nobody")
     model.to('cuda')
 
 
@@ -78,7 +79,7 @@ def explain(image, images_location):
 
 
 images_location = "../../../animal_images"
-image_name = "dog-shiba_inu-92.jpg"
+image_name = "dog-great_pyrenees-53.jpg"
 image = transform_image(images_location + "/" + image_name)
 
 
