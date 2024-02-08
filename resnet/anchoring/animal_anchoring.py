@@ -79,7 +79,7 @@ def explain(image, images_location):
 
 
 images_location = "../../../animal_images"
-image_name = "dog-british_shorthair-78.jpg"
+image_name = "cat-british_shorthair-78.jpg"
 image = transform_image(images_location + "/" + image_name)
 
 
