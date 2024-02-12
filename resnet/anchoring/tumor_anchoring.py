@@ -13,11 +13,11 @@ from skimage.segmentation import quickshift
 import skimage.io
 
 
-pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
-model = models.resnet18(weights=pretrained_weights)
+model = torch.load("../../../mri_model_4class.pth", map_location="cpu")
 model.eval()
 
 if torch.cuda.is_available():
+    print("listen good i dont need nobody")
     model.to('cuda')
 
 tensorfy_image = transforms.ToTensor()
@@ -31,9 +31,6 @@ def transform_images(paths):
         image = transform_image(path)
         images.append(image)
     return images
-
-with open("imagenet_classes.txt", "r") as f:
-    class_names = [s.strip() for s in f.readlines()]
 
 class_names = ["glioma", "meningioma", "healthy", "pituitary"]
 
@@ -70,18 +67,18 @@ def explain(image, images_location):
 
 
 images_location = "../../../tumor_images"
-image_name = "dog-american_bulldog-3.jpg"
+image_name = "sick-glioma_tumor-191.jpg"
 image = transform_image(images_location + "/" + image_name)
 
 
 
-'''
-image_anchor = explain(image, images_location, transform_images)
+
+image_anchor = explain(image, images_location)
 
 skimage.io.imshow(image_anchor)
 skimage.io.show()
 
-'''
+
 
 
 
@@ -93,16 +90,16 @@ skimage.io.show()
 '''
 THIS LIL CODE SAMPLE PRINTS THE PREDICTIONS FOR A COUPLE IMAGES.
 VISIT THIS SPACE FOR WISDOM IF EVERYTHING BREAKS
-'''
 
-paths = ["cat-egyptian_mau-3.jpg", images_location + "/dog-american_bulldog-102.jpg"]
+
+paths = [images_location + "/sick-glioma_tumor-191.jpg"]
 images = transform_images(paths)
 
 
 
 probs = predict(images)
-idxs = np.argsort(-probs[1])
-print(list(zip(probs[1][idxs[:5]], np.array(class_names)[idxs[:5]])))
+idxs = np.argsort(-probs[0])
+print(list(zip(probs[0][idxs[:5]], np.array(class_names)[idxs[:5]])))
 
-
+'''
 
