@@ -5,7 +5,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
-  title: 'XAI Carleton Comps 2024',
+  title: 'Explainable AI: Breaking Down the Black Box',
   tagline: 'Explainable AI Components for Carleton 2024',
   favicon: 'img/carleton.ico',
   onBrokenAnchors: 'ignore',
@@ -62,7 +62,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
     navbar: {
-      title: 'XAI Carleton Comps 2024',
+      title: 'Explainable AI: Breaking Down the Black Box',
       logo: {
         alt: 'Carleton College Logo',
         src: 'img/carleton icon.png',
