@@ -1,8 +1,0 @@
-{
-  "label": "XAI Techniques",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Write-up on LIME, SHAP, Anchor, three XAI techniques"
-  }
-}
