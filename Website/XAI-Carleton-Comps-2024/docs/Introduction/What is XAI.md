@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Intro
+# Xhat is XAI?
 
 We are living through a revolution of the standards for ethical machine learning practices which has been thoroughly marked by the need to explain artificial intelligences — namely their predictions. As discussed in Ribeiro et al. (2016, p.1), the act of explaining an AI’s prediction presents the audience with visualizations pertaining to the actions it made to achieve such a decision, thus building users’ trust in the model and exposing any possible errors in the model’s structure. With regulations like the EU’s _Right to Explainability_ and the United States’ proposed _AI Bill of Rights_, a machine learning model may no longer be a simple “black box”: in order to prevent criminal charges, the creators of high-impact models must be able to justify each of their predictions. Over the past few years, the field has thus become inundated with approaches, each a bid for its own niche. In such an impossibly dense field, how can one quantify a method’s efficacy? Which method would a jury trust?
 
