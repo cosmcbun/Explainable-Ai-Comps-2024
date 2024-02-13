@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
-# Anchoring
+# Introduction to LIME
 
 
 Ribeiro, Singh, and Guestrin, the original authors of LIME, also created anchoring as an Explainable AI model, which has some similarities with LIME, but outputs its explanations in a different form. Like LIME, Anchoring involves perturbing the data point in question to see how the results from the black box change. Ribeiro et al. define their anchor like so: “An _anchor _explanation is a rule that sufficiently “anchors” the prediction locally – such that changes to the rest of the feature values of the instance do not matter” (Ribeiro et al, 2018). For example, when evaluating the sentiment of the phrase “Everything is bad”, we would say that the word “bad” tells us that the sentiment is negative, making “bad” our anchor. However, if we changed the phrase to “Everything is not bad”, “bad” would not make a good anchor anymore, because the sentiment of this phrase is positive. Our new anchor would be “not bad”, because these are the words that determine that the phrase is positive. The same principle can be used for multiple types of data, not just textual data. For tabular data, the algorithm will seek to find which feature values were the most important in coming to a particular decision, and for image classification the anchor will be a set of superpixels that have the most importance in determining the prediction of the model. A clear advantage of anchoring is that its output is intuitive and easy to interpret (“the sentiment of this sentence is positive because it contains the words ‘not bad’”), as opposed to being a sea of coefficients.
