@@ -44,10 +44,6 @@ def get_input_tensors(img):
     # unsqeeze converts single image to batch of 1
     return transf(img).unsqueeze(0)
 
-# train the model
-pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
-model = models.resnet18(weights=pretrained_weights)
-
 # get the ImageNet labels to make our predictions
 idx2label, cls2label, cls2idx = [], {}, {}
 with open(os.path.abspath('./imagenet_class_index.json'), 'r') as read_file:
@@ -78,6 +74,10 @@ def get_preprocess_transform():
 pill_transf = get_pil_transform()
 preprocess_transform = get_preprocess_transform()
 
+# train the model
+pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
+model = models.resnet18(weights=pretrained_weights)
+
 # predict function
 def batch_predict(images):
     model.eval()
@@ -93,7 +93,7 @@ def batch_predict(images):
 
 #%%
 #Get one image
-my_image = get_image('./user_study_images/cat-british_shorthair-78.jpg')
+my_image = get_image('./user_study_images/dog-pug-192.jpg')
 #plt.imshow(my_image)
 
 # Image tensors
