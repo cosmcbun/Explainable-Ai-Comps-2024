@@ -7,3 +7,7 @@
 ## Cartons and Vipers and Bears, oh my!
 
 (talk about how LIME can explain some of the wackier ResNet predictions)
+
+## What does this tell us about LIME?
+
+(speak more generally about LIME and how it interacts with the dataset from a critical analysis pov)
