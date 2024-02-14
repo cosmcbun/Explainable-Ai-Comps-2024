@@ -18,8 +18,9 @@ from skimage.segmentation import mark_boundaries
 # https://github.com/marcotcr/lime/blob/master/doc/notebooks/Tutorial%20-%20images%20-%20Pytorch.ipynb
 
 # Set GPU device
-print(torch.cuda.is_available())
-device = torch.device("cuda:0")
+device = torch.device('cpu')
+if (print(torch.cuda.is_available())):
+    device = torch.device("cuda:0")
 
 def get_image(path):
     with open(os.path.abspath(path), 'rb') as f:
@@ -45,12 +46,12 @@ def get_input_tensors(img):
     return transf(img).unsqueeze(0)
 
 # get the ImageNet labels to make our predictions
-idx2label, cls2label, cls2idx = [], {}, {}
-with open(os.path.abspath('./imagenet_class_index.json'), 'r') as read_file:
-    class_idx = json.load(read_file)
-    idx2label = [class_idx[str(k)][1] for k in range(len(class_idx))]
-    cls2label = {class_idx[str(k)][0]: class_idx[str(k)][1] for k in range(len(class_idx))}
-    cls2idx = {class_idx[str(k)][0]: k for k in range(len(class_idx))}
+#idx2label, cls2label, cls2idx = [], {}, {}
+#with open(os.path.abspath('./imagenet_class_index.json'), 'r') as read_file:
+#    class_idx = json.load(read_file)
+#    idx2label = [class_idx[str(k)][1] for k in range(len(class_idx))]
+#    cls2label = {class_idx[str(k)][0]: class_idx[str(k)][1] for k in range(len(class_idx))}
+#    cls2idx = {class_idx[str(k)][0]: k for k in range(len(class_idx))}
 
 # transform/normalize the image
 def get_pil_transform():
@@ -74,9 +75,22 @@ def get_preprocess_transform():
 pill_transf = get_pil_transform()
 preprocess_transform = get_preprocess_transform()
 
-# train the model
-pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
-model = models.resnet18(weights=pretrained_weights)
+# How the model is structured
+class CNNModel(nn.Module):
+    def __init__(self):
+        super(CNNModel, self).__init__()
+        self.resnet18 = models.resnet18(pretrained=True)
+
+        # Replace output layer according to our problem
+        num_ftrs = self.resnet18.fc.in_features
+        self.resnet18.fc = nn.Linear(num_ftrs, 4)
+
+    def forward(self, x):
+        x = self.resnet18(x)
+        return x
+
+# get the model
+model = torch.load("./ResNet18_tumor.pt", map_location=device)
 
 # predict function
 def batch_predict(images):
@@ -93,7 +107,7 @@ def batch_predict(images):
 
 #%%
 #Get one image
-my_image = get_image('./user_study_images/dog-pug-192.jpg')
+my_image = get_image('./tumor_images/sick-glioma_tumor-0.jpg')
 #plt.imshow(my_image)
 
 # Image tensors
@@ -101,7 +115,6 @@ img_t = get_input_tensors(my_image)
 model.eval()
 logits = model(img_t)
 probs = F.softmax(logits, dim=1)
-probs5 = probs.topk(5)
 
 image_explainer = lime_image.LimeImageExplainer()
 image_explanation = image_explainer.explain_instance(np.array(pill_transf(my_image)),
@@ -110,8 +123,19 @@ image_explanation = image_explainer.explain_instance(np.array(pill_transf(my_ima
                                          hide_color=0,
                                          num_samples=1000) # number of images that will be sent to classification function
 
-# Get top 5 predictions
-tuple((p,c, idx2label[c]) for p, c in zip(probs5[0][0].detach().numpy(), probs5[1][0].detach().numpy()))
+#Get the prediction
+test_pred = batch_predict([pill_transf(my_image)])
+if test_pred.squeeze().argmax() == 0:
+    print("glioma_tumor:", probs[0][0].item())
+elif test_pred.squeeze().argmax() == 1:
+    print("meningoma_tumor:", probs[0][1].item())
+elif test_pred.squeeze().argmax() == 2:
+    print("no_tumor:", probs[0][2].item())
+elif test_pred.squeeze().argmax() == 3:
+    print("pituitary_tumor:", probs[0][3].item())
+else:
+    print("undefined class")
+
 
 #%%
 # Apply mask on the image
