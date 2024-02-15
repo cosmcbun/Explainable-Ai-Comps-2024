@@ -25,7 +25,7 @@ for profiling him or her;
 outcome concerning him or her;
 > 8. specific information on what data have been inferred about the data subject;
 > 9. specific information on the inference process through which certain values for the
-features of the data subject have determined a certain outcome concerning him or her. <br>
+features of the data subject have determined a certain outcome concerning him or her. <br></br>
 > [(STOA 2020, p.62-66)](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/641530/EPRS_STU(2020)641530_EN.pdf)
 
 Sections 1-5 require access to the model's training data, which Shapley's initial method allows, but it does not typically address the data which is not local to the prediction of focus . Due to the generalizability of the base technique to a global interpretable example, however, all five criteria may potentially be met. If not, the [Data Shapley](https://arxiv.org/abs/1904.02868) variant would best fit such explanations while still maintaining the original mathematical principles of the base.
