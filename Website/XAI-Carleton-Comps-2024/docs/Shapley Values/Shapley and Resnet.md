@@ -6,21 +6,12 @@
     - https://medium.com/the-modern-scientist/what-is-the-shapley-value-8ca624274d5a
     + https://www.rand.org/content/dam/rand/pubs/papers/2021/P295.pdf
  -->
-# Shapley's Math
+# Applying Shapley to the Resnet network
 
 ### Required concepts
-- Sets and permutations
-### Optional concepts
-- Summation
-- Integration
-
-## Intuition
-
-
-## Basic properties
-
-
-## How to calculate a Shapley Value
-
-
-## Approximating the Shapley Value
+Cat/Dog
+Tumor
+  What did Shapley reveal about the tumors dataset
+  What interesting results came up
+User Study
+  What kinds of feedback did we receive?
