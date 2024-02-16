@@ -1,15 +1,15 @@
 # The Shapley value as a legal defense
 #### (Disclaimer: none on this team are certified lawyers. This is an exploration of Shapley as a concept and is not legal advice)
 
-## Introduction 
+## Introduction
 In section 9.5 of his textbook *Interpretable Machine Learning*, Christoph Molnar postulates that Shapley Values may currently be the only valid legal defense when explaining a machine learning model:
 > In situations where the law requires explainability – like EU’s “right to explanations” – the Shapley value might be the only legally compliant method, because it is based on a solid theory and distributes the effects fairly. I am not a lawyer, so this reflects only my intuition about the requirements. [(Molnar 2023)](https://christophm.github.io/interpretable-ml-book/shapley.html)
 
 This may well be true, as Shapley's method is the only technique supported by proof-based math, <!--  !Reference the math backing page -->
-and as the calculations make little to no assumptions about the data or model itself. However, the European Union's articles on the *Right to Explanation* are fairly vague as to what kinds of explanation would truly suffice. 
+and as the calculations make little to no assumptions about the data or model itself. However, the European Union's articles on the *Right to Explanation* are fairly vague as to what kinds of explanation would truly suffice.
 
 ## Shapley's legality as an explanation
-After a full review of all articles pertaining to the EU's [Aritificial Intelligence Act](https://artificialintelligenceact.eu/), the Scientific Foresight Unit (STOA) of the European Parliamentary Research Service declares nine pillars of explanation that an AI Technique must uphold:
+After a full review of all articles pertaining to the EU's [Artificial Intelligence Act](https://artificialintelligenceact.eu/), the Scientific Foresight Unit (STOA) of the European Parliamentary Research Service declares nine pillars of explanation that an AI Technique must uphold:
 
 > 1. information on the existence of profiling, i.e., on the fact that the data subject will be
 profiled or is already being profiled;
