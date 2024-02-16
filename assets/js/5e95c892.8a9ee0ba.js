@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkxai_carleton_comps_2024=self.webpackChunkxai_carleton_comps_2024||[]).push([[304],{3564:(e,c,r)=>{r.r(c),r.d(c,{default:()=>o});r(1504);var s=r(5456),a=r(5756),n=r(5864),t=r(5464),u=r(9012),l=r(7624);function o(e){return(0,l.jsx)(a.cr,{className:(0,s.c)(n.W.wrapper.docsPages),children:(0,l.jsx)(u.c,{children:(0,t.k)(e.route.routes)})})}}}]);
