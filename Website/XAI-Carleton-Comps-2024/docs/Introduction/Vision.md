@@ -11,4 +11,4 @@ We are living through a revolution of the standards for ethical machine learning
 
 Through this project, we explore three major avenues for model explainability across two contrasting domains of machine-learning tasks (ResNet and MOOC). Namely, we will be apply Shapley, LIME, and Anchoring to two separate models of unique architecture which specialize in classification based on tabular and image data, respectively. On this site, you will find a comprehensive analysis of each method’s approach, what they highlight, and how they compare to the others. We discuss the literature surrounding these methods, and we compare their performances, including a user study. 
 
-This website, analysis, and survey serves to gauge the public’s perception of each method.
+<!-- This website, analysis, and survey serves to gauge the public’s perception of each method. -->
