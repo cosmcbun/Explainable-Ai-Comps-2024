@@ -1,5 +1,5 @@
 ---
-    sidebar-position: 3
+    sidebar-position: 3 
 ---
 <!-- SOURCES:
     * https://christophm.github.io/interpretable-ml-book/shapley.html
