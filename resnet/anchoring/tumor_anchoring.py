@@ -67,7 +67,7 @@ def explain(image, images_location):
 
 
 images_location = "../../../tumor_images"
-image_name = "healthy-no_tumor-191.jpg"
+image_name = "sick-meningioma_tumor-252.jpg"
 image = transform_image(images_location + "/" + image_name)
 
 
