@@ -13,7 +13,8 @@ from skimage.segmentation import quickshift
 import skimage.io
 
 
-model = torch.load("../../../mri_model_4class.pth", map_location="cpu")
+#model = torch.load("../../../mri_model_4class.pth", map_location="cpu")
+model = torch.load("../../../LevNetVGG16.pt", map_location="cpu")
 model.eval()
 
 if torch.cuda.is_available():
