@@ -105,10 +105,10 @@ probs5 = probs.topk(5)
 
 image_explainer = lime_image.LimeImageExplainer()
 image_explanation = image_explainer.explain_instance(np.array(pill_transf(my_image)),
-                                         batch_predict, # classification function
-                                         top_labels=5,
+                                         batch_predict, # predict function
+                                         top_labels=1,
                                          hide_color=0,
-                                         num_samples=1000) # number of images that will be sent to classification function
+                                         num_samples=1000) # size of the neighborhood to learn the linear model
 
 # Get top 5 predictions
 tuple((p,c, idx2label[c]) for p, c in zip(probs5[0][0].detach().numpy(), probs5[1][0].detach().numpy()))
