@@ -3,7 +3,7 @@ sidebar-position: 2
 ---
 
 
-# The Shapley value as a legal defense
+# The EU's Right to Explainability
 #### (Disclaimer: none on this team are certified lawyers. This is an exploration of Shapley as a concept and is not legal advice)
 
 ## Introduction

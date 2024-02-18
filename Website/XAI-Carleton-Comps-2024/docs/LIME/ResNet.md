@@ -10,9 +10,10 @@ Enter [ResNet](https://pytorch.org/hub/pytorch_vision_resnet/) (Residual Neural 
 
 The way LIME works with ResNet is relatively simple: you take an image, resize it to match the specifications (we resized them to be 224x224 squares), transform the image to tensors and normalize. Once this is finished, it's a simple matter to get the prediction and train a LimeImageExplainer() model, which will apply a mask that highlights the parts of the image that contribute to (green) or against (red) ResNet's prediction. An example can be seen below:
 
-(insert example image here)
+![German Shorthaired Pointer](./german_shorthaired-79.jpg)
+![German Shorthaired Pointer as described by LIME](./german_shorthaired-79-lime.jpg)
 
-(explain example)
+The images above depict a German shorthaired pointer dog, correctly classified as such by ResNet with 0.94 certainty. The post-hoc explanation for this prediction provided by LIME, as seen in the image on the right, highlights the area of interest in green as shown above. In this case, LIME suggests that the model made an accurate prediction by looking at the dog's face and back and determining that it matched the feature values associated with those of a German shorthaird pointer, while ignoring the background (the water). This method is useful because, despite treating ResNet as a black box, we are still able to somewhat extrapolate the mode's thought process and how it came to the conclusion it did.
 
 ## Cartons and Vipers and Bears, oh my!
 

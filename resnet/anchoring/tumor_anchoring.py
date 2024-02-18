@@ -14,6 +14,7 @@ import skimage.io
 
 
 model = torch.load("../../../mri_model_4class.pth", map_location="cpu")
+#model = torch.load("../../../LevNetVGG16.pt", map_location="cpu")
 model.eval()
 
 if torch.cuda.is_available():
@@ -67,7 +68,7 @@ def explain(image, images_location):
 
 
 images_location = "../../../tumor_images"
-image_name = "healthy-no_tumor-191.jpg"
+image_name = "healthy-no_tumor-228.jpg"
 image = transform_image(images_location + "/" + image_name)
 
 
