@@ -32,8 +32,9 @@ shap.plots.waterfall(shapley_values[i])
 ```
 This returns a plot of Shapley values for the $i$-th datapoint in the set, like so:
 
-<!-- ![Waterfall plot of Shapley values for a datapoint i]("https://raw.githubusercontent.com/cosmcbun/Explainable-Ai-Comps-2024/main/MOOC/Shapley/Multi-Layer%20Perceptron/True%20Positive/TP_0.png") -->
+<!-- ![Waterfall plot of Shapley values for a datapoint i]("../../../../MOOC/Shapley/Multi-Layer Perceptron/True Positive/TP_0.png") -->
 
+<img alt="Waterfall plot of Shapley values for a datapoint i" src="../../../../MOOC/Shapley/Multi-Layer Perceptron/True Positive/TP_0.png"></img>
 
 
 <!-- I kinda feel like this should link to a Jupyter notebook -->
