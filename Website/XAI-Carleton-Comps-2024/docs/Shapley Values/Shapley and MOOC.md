@@ -34,7 +34,9 @@ This returns a plot of Shapley values for the $i$-th datapoint in the set, like 
 
 <!-- ![Waterfall plot of Shapley values for a datapoint i]("shap_mooc_1.png") -->
 
-<img alt="Waterfall plot of Shapley values for a datapoint i" src='../../static/img/shap_mooc_tp0.png'></img>
+![Docusaurus logo](/img/docusaurus.png)
+
+<!-- <img alt="Waterfall plot of Shapley values for a datapoint i" src='../../static/img/shap_mooc_tp0.png'></img> -->
 
 
 <!-- I kinda feel like this should link to a Jupyter notebook -->
