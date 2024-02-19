@@ -12,9 +12,11 @@ For the purposes of our project, we worked on [PyTorch](https://pytorch.org/) an
 1. Animals (cats and dogs specifically, from a variety of different breeds)
 2. MRI scans of brain tumors (total of 4 classes: glioma, meningoma, no tumor, and pituitary)
 
+We chose the Animals dataset due to the widespread availability of cats/dogs image sets, and the images of cute animals were likely to entice participants for our user study. As for the Tumors dataset, this was done primarily due to the existence of prior research into tumor classification, which reveals machine learning's utility in the medical field.
+
 ### Animals
 
-For Animals dataset, we decided to use the pretrained version of ResNet18, which was trained on millions of images from the [ImageNet](https://www.image-net.org/) database, each labeled from a large selection of different classes. While these were not limited to just cats and dogs, ImageNet itself includes a wide variety of cat and dog breeds within its list of classes, meaning it would correctly recognize either a cat or a dog from our dataset roughly 94% of the time.
+For Animals dataset, we decided to use the pretrained version of ResNet18, which was trained on millions of images from the [ImageNet](https://www.image-net.org/) database, each labeled from a large selection of different classes. While these were not limited to just cats and dogs, ImageNet itself includes a wide variety of cat and dog breeds within its list of classes, meaning it would correctly recognize either a cat or a dog from our dataset roughly 94% of the time (according to our tests).
 
 The way we obtained the pretrained weights for the model was simple, and could be done in two lines of code:
 
