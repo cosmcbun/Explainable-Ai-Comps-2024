@@ -8,8 +8,8 @@ import pickle
 #       real-valued confidence scores for each sample ( > 0 == Pass | < 0 == Fail)
         
 class SVC:
-    def __init__(self, filename: str = "drive/MyDrive/Explainable AI Group Work/MOOC Model/src/MITx-SVC.pkl", from_file = False):
-        if from_file:
+    def __init__(self, filename: str = None, from_file = False):
+        if from_file or filename is not None:
             with open(filename, "rb") as file:
                 self.model: svm.SVC = pickle.load(file)
     
