@@ -3,6 +3,7 @@ from custom_student import Student
 import numpy as np
 import pickle
 import shap
+from anchor import anchor_tabular
 from lime.lime_tabular import LimeTabularExplainer
 import matplotlib.pyplot as plt
 import sys
@@ -11,23 +12,27 @@ sys.path.append("../../MOOC/src")
 from mlp import MLPClassifier
 from data_loader import DataLoader
 
-#! For a local demo, use "python -m uvicorn main:app --reload"
-
-app = FastAPI()
-
 # Model and data:
 model = MLPClassifier(from_file = True, filename="../../MOOC/src/MITx-MLP.pkl")
 X_train, X_test, y_train, y_test = DataLoader().load(path = "../../MOOC/data/")
 feature_names = ['viewed',	'gender',	'grade',	'nevents', 'ndays_act',	'nplay_video',	'nchapters',	'age',	'votes',	'num_words']
-classes = ["Dropped out", "Completed"]
-# Explainers:
+class_names = ["Dropped out", "Completed"]
+
+#++++ Explainers ++++#
+# SHAP:
 shap_explainer = shap.explainers.Permutation(model.predict_proba, X_train, feature_names=feature_names)
-lime_explainer = LimeTabularExplainer(X_train, feature_names=feature_names, class_names=classes, discretize_continuous=True)
+# LIME:
+lime_explainer = LimeTabularExplainer(X_train, feature_names=feature_names, class_names=class_names, discretize_continuous=True)
+# ANCHOR:
+anc_cat_names = {0: ["not viewed", "viewed"], 1: ["F", "M"]} # Each feature that is continuous will NOT be included
+anchor_explainer = anchor_tabular.AnchorTabularExplainer(class_names, feature_names, X_train, anc_cat_names)
+
+#+ API +#
+app = FastAPI() #! For a local demo, use "python -m uvicorn main:app --reload"
 
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
-
 
 @app.post("/predict_on_student/")
 def predict_on_student(student: Student):
@@ -76,6 +81,19 @@ def lime_on_student(student: Student):
 @app.post("/anchor_on_student/")
 def anchor_on_student(student: Student):
     x = student.encode()
-    # TODO: Implement anchor
-    
-    
+    # x = np.array([[1, 0, 0.92, 11000, 32, 197757, 4, 22, 8, 1000]]) #? For debugging
+
+    # TODO: Implement anchor CORRECTLY!
+    # try:
+    exp = anchor_explainer.explain_instance(x[0], model.predict, threshold=0.95)
+    # except Exception as e:
+    #     print(e)
+    #     return {"error": str(e)}
+    # Return the anchor values:
+    dropout_word = ["drops out","completes the course"][model.predict(x)[0]]
+    anchor_vals = f"Student "+dropout_word+" because "+" and ".join([f"[{feat}]" for feat in exp.names()])
+    return {
+            "anchor_plaintext": anchor_vals,
+            "anchor_vals": exp.names(),
+            "prediction": int(model.predict(x)[0])
+    }
