@@ -30,7 +30,7 @@ class MOOCExplainers:
         y = self.model.predict(x)
         return int(y[0])
     
-    def shap_on_student(self, student: Student, out_file: str = "./img/shap_mooc.png") -> dict:
+    def shap_on_student(self, student: Student, out_file: str = "./img/mooc_shap.png") -> dict:
         x = student.encode()
         # Build our permutation explainer:
         pos_shap = self.shap_explainer(x)[..., 1]
@@ -40,7 +40,7 @@ class MOOCExplainers:
         plt.savefig(out_file, bbox_inches='tight')
         plt.clf()
         # Return the Shapley values:    
-        shap_vals = [[self.feature_names[i], pos_shap.values[0][i]] for i in range(len(self.feature_names))]
+        shap_vals = [[self.feature_names[i]+" = "+str(x[0][i]), pos_shap.values[0][i]] for i in range(len(self.feature_names))]
         return {
                 "shap_vals": shap_vals,
                 'e_fx': pos_shap.base_values[0],
@@ -48,7 +48,7 @@ class MOOCExplainers:
                 "prediction": int(self.model.predict(x)[0])
                 }
     
-    def lime_on_student(self, student: Student, out_file: str = "./img/lime_mooc.png") -> dict:
+    def lime_on_student(self, student: Student, out_file: str = "./img/mooc_lime.png") -> dict:
         x = student.encode()
         # Build our lime explainer:
         exp = self.lime_explainer.explain_instance(x[0], self.model.predict_proba)
@@ -64,13 +64,15 @@ class MOOCExplainers:
                 "prediction": int(self.model.predict(x)[0])
                 }
     
-    def anchor_on_student(self, student: Student, out_file: str = "./img/anchor_mooc.png") -> dict:
+    def anchor_on_student(self, student: Student, out_file: str = "./img/mooc_anchor    .png") -> dict:
         x = student.encode()
         # Build our anchor explainer:
         exp = self.anchor_explainer.explain_instance(x[0], self.model.predict, threshold=0.95)
         # Return the anchor values:
+        dropout_word = ["drops out","completes the course"][self.model.predict(x)[0]]
+        anchor_vals = f"Student "+dropout_word+" because "+" and ".join([f"[{feat}]" for feat in exp.names()])
         return {
+                "anchor_plaintext": anchor_vals,
                 "anchor_vals": exp.names(),
-                "plot": out_file,
                 "prediction": int(self.model.predict(x)[0])
-                }
+        }
