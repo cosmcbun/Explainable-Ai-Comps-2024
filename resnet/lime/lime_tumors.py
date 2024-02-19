@@ -45,14 +45,6 @@ def get_input_tensors(img):
     # unsqeeze converts single image to batch of 1
     return transf(img).unsqueeze(0)
 
-# get the ImageNet labels to make our predictions
-#idx2label, cls2label, cls2idx = [], {}, {}
-#with open(os.path.abspath('./imagenet_class_index.json'), 'r') as read_file:
-#    class_idx = json.load(read_file)
-#    idx2label = [class_idx[str(k)][1] for k in range(len(class_idx))]
-#    cls2label = {class_idx[str(k)][0]: class_idx[str(k)][1] for k in range(len(class_idx))}
-#    cls2idx = {class_idx[str(k)][0]: k for k in range(len(class_idx))}
-
 # transform/normalize the image
 def get_pil_transform():
     transf = transforms.Compose([
@@ -90,7 +82,7 @@ class CNNModel(nn.Module):
         return x
 
 # get the model
-model = torch.load("./ResNet18_tumor.pt", map_location=device)
+model = torch.load("./mri_model_4class.pth", map_location=device)
 
 # predict function
 def batch_predict(images):
@@ -107,8 +99,7 @@ def batch_predict(images):
 
 #%%
 #Get one image
-my_image = get_image('./tumor_images/sick-glioma_tumor-0.jpg')
-#plt.imshow(my_image)
+my_image = get_image('./tumor_images/healthy-no_tumor-97.jpg')
 
 # Image tensors
 img_t = get_input_tensors(my_image)
@@ -119,7 +110,7 @@ probs = F.softmax(logits, dim=1)
 image_explainer = lime_image.LimeImageExplainer()
 image_explanation = image_explainer.explain_instance(np.array(pill_transf(my_image)),
                                          batch_predict, # classification function
-                                         top_labels=5,
+                                         top_labels=1,
                                          hide_color=0,
                                          num_samples=1000) # number of images that will be sent to classification function
 
