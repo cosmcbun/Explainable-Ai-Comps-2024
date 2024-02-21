@@ -41,9 +41,7 @@ With the Shapley values in hand, we can now generate helpful visualizations.
 
 ## Visual Explanations
 
-```
 ![Cat](abyssinian-3.png "Top guesses of the model and what pixels made it choose those classes")
-```
 
 ### Required concepts
 Cat/Dog
