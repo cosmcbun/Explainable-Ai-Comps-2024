@@ -36,12 +36,16 @@ shap_values = explainer_blur(
 )
 ```
 
-The most important parameter here is eval_count. The higher the number, the more segments it will split the image into. Because Shapley's runtime is proportional to $2^n$, where $n$ is the number of features, it's possible to spend quite a long time waiting for high-quality explanations. Furthermore, top_guesses here specifies how many of the model's most confident answers you would like predictions for.
+The most important parameter here is ```eval_count```. The higher the number, the more features it will split the image into. This is, perhaps, a little strange – the image already has features. In the neural network, it's got 3 features for each pixel (one per color channel); shouldn't we reuse those?
+The problem is that Shapley's runtime is proportional to $2^n$, where $n$ is the number of features. If we broke the image down into pixels, then, it'd take far too long to analyze. To this end, then, this Shapley implimentation breaks up the image into a grid with regions that are small but are still larger than a pixel.
+The other parameter here, ```top_guesses```, here specifies how many of the model's most confident answers you would like predictions for. Because the model outputs confidence for each of the thousand classes, not just the top, we can create the Shapley visualization for any class.
 With the Shapley values in hand, we can now generate helpful visualizations.
 
 ## Visual Explanations
 
 ![Cat](abyssinian-3.png "Top guesses of the model and what pixels made it choose those classes")
+
+Above is an abyssinian cat. ResNet misidentified it as a snake – or perhaps a hat – before a cat. Layered over each prediction is a heatmap. Each region – their number determined by ```eval_count``` – ranges from red (indicating that the area was instrumental in making the machine identify the image as that class) to blue (indicating that it made the machine less likely to pick that class).
 
 ### Required concepts
 Cat/Dog
