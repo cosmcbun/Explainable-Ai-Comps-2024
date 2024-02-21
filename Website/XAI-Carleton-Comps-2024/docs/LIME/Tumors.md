@@ -11,10 +11,10 @@ The model appears relatively sure there is a tumor in this MRI scan, but incorre
 
 ### Meningioma tumor
 
-![Meningioma](./meningioma_tumor-45.jpg "An MRI scan of a meningoma tumor, predicted to be a pituitary tumor with 0.16 certainty")
+![Meningioma](./meningioma_tumor-45.jpg "An MRI scan of a meningoma tumor, predicted to be a meningioma tumor with 0.84 certainty")
 ![Meningioma - LIME](./meningioma_tumor-45-lime.jpg "ResNet's prediction explained by LIME")
 
-Similar to the previous scan, the model believes this meningioma tumor is a pituitary tumor. Again, LIME is highlighting seemingly unrelated areas of the head (this time the neck as well), but it also seems the top of the head has a negative correlation with this class. Note that the head's position is different from that in the glioma scan, so it's possible this is an issue with how our ResNet model classifies these images.
+Unlike the previous scan, this meningioma tumor is correctly classified with high certainty, with the explanation corroborating this by highlighting the area with the tumor in green. However, LIME is also highlighting seemingly unrelated areas of the head (this time the neck as well), but it also seems the top of the head has a negative correlation with this class. Note that the head's position is different from that in the glioma scan, so it's possible this is an issue with how our ResNet model classifies these images.
 
 ### No tumor
 
@@ -25,7 +25,7 @@ The model appears very certain there is a meningioma tumor, despite there not be
 
 ### Pituitary tumor
 
-![Pituitary](./pituitary_tumor-135.jpg "An MRI scan of a pituitary tumor, predicted to be no tumor with 0.04 certainty")
+![Pituitary](./pituitary_tumor-135.jpg "An MRI scan of a pituitary tumor, predicted to be a meningioma tumor with 0.67 certainty")
 ![Pituitary - LIME](./pituitary_tumor-135-lime.jpg "ResNet's prediction explained by LIME")
 
-The model predicts there is no tumor, but at the same time doesn't seem very confident about this classification. LIME has highlighted most areas of the brain that do not appear to have a tumor in them., which supports this classification (despite the low confidence score).
+The model predicts this is a meningioma tumor with relatively high certainty, even though it is a pituitary tumor. The explanation from LIME reveals the model was not looking at the tumor at all, instead looking at the area around it. This would explain the misclassification as an error with how our model reads these images.
