@@ -116,16 +116,12 @@ image_explanation = image_explainer.explain_instance(np.array(pill_transf(my_ima
 
 #Get the prediction
 test_pred = batch_predict([pill_transf(my_image)])
-if test_pred.squeeze().argmax() == 0:
-    print("glioma_tumor:", probs[0][0].item())
-elif test_pred.squeeze().argmax() == 1:
-    print("meningoma_tumor:", probs[0][1].item())
-elif test_pred.squeeze().argmax() == 2:
-    print("no_tumor:", probs[0][2].item())
-elif test_pred.squeeze().argmax() == 3:
-    print("pituitary_tumor:", probs[0][3].item())
-else:
-    print("undefined class")
+
+test_pred.squeeze().argmax()
+print("glioma_tumor:", probs[0][0].item())
+print("meningioma_tumor:", probs[0][1].item())
+print("no_tumor:", probs[0][2].item())
+print("pituitary_tumor:", probs[0][3].item())
 
 
 #%%
