@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# What kind of techniqniques did we Study?
+# What kind of techniques did we Study?
 
 ## All of the Techniques we studied were model-agnostic post hoc local explanations.
 
