@@ -7,7 +7,7 @@ import rehypeKatex from 'rehype-katex';
 const config: Config = {
   title: 'Explainable AI: Breaking Down the Black Box',
   tagline: 'Explainable AI Components for Carleton 2024',
-  favicon: 'img/carleton.ico',
+  favicon: 'img/carleton-enhanced.ico',
   onBrokenAnchors: 'ignore',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
@@ -65,7 +65,7 @@ const config: Config = {
       title: 'Explainable AI: Breaking Down the Black Box',
       logo: {
         alt: 'Carleton College Logo',
-        src: 'img/carleton icon.png',
+        src: 'img/carleton logo enhanced.png',
       },
       items: [
         {
