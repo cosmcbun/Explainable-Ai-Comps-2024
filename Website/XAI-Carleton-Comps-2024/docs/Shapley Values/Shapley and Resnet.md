@@ -37,7 +37,9 @@ shap_values = explainer_blur(
 ```
 
 The most important parameter here is ```eval_count```. The higher the number, the more features it will split the image into. This is, perhaps, a little strange – the image already has features. In the neural network, it's got 3 features for each pixel (one per color channel); shouldn't we reuse those?
+
 The problem is that Shapley's runtime is proportional to $2^n$, where $n$ is the number of features. If we broke the image down into pixels, then, it'd take far too long to analyze. To this end, then, this Shapley implimentation breaks up the image into a grid with regions that are small but are still larger than a pixel.
+
 The other parameter here, ```top_guesses```, here specifies how many of the model's most confident answers you would like predictions for. Because the model outputs confidence for each of the thousand classes, not just the top, we can create the Shapley visualization for any class.
 With the Shapley values in hand, we can now generate helpful visualizations.
 
