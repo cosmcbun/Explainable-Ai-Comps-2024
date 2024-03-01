@@ -18,7 +18,7 @@ Another participant said about the image of the cat with the roses that they "li
 
 ### But Shapley still preferred
 
-Despite this, (9 or 10 out of 12) of participants still named Shapley as their favorite technique. One reason was that it was more likely to highlight only the relevant parts of the image. Regarding the explanations for the picture of the cat on the stairs, one participant said "highlighting the stairs is a little weird in LIME and Anchoring", and another participant pointed out that "Shapley makes completely clear \[the model\] is looking at the ball" about the picture of the pug with the tennis ball, which contrasts with LIME and Anchoring highlighting much of its face. 
+Despite this, 9 of our 12 participants still named Shapley as their favorite technique. One reason was that it was more likely to highlight only the relevant parts of the image. Regarding the explanations for the picture of the cat on the stairs, one participant said "highlighting the stairs is a little weird in LIME and Anchoring", and another participant pointed out that "Shapley makes completely clear \[the model\] is looking at the ball" about the picture of the pug with the tennis ball, which contrasts with LIME and Anchoring highlighting much of its face. 
 
 ![Figure 4](./stairs_cat-slide.jpg "An image of a cat on stairs, with explanations for why it was predicted as a cat.")
 
