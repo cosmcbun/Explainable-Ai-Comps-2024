@@ -7,7 +7,7 @@ sidebar-position: 2
 #### (Disclaimer: none on this team are certified lawyers. This is an exploration of Shapley as a concept and is not legal advice)
 
 ## Introduction
-In section 9.5 of his textbook *Interpretable Machine Learning*, Christoph Molnar postulates that Shapley Values may currently be the only valid legal defense when explaining a machine learning model:
+In section 9.5 of his textbook *Interpretable Machine Learning*, Christoph Molnar speculates that Shapley Values may currently be the only valid legal defense when explaining a machine learning model:
 > In situations where the law requires explainability – like EU’s “right to explanations” – the Shapley value might be the only legally compliant method, because it is based on a solid theory and distributes the effects fairly. I am not a lawyer, so this reflects only my intuition about the requirements. [(Molnar 2023)](https://christophm.github.io/interpretable-ml-book/shapley.html)
 
 This may well be true, as Shapley's method is the only technique supported by proof-based math, <!--  !Reference the math backing page -->
@@ -39,6 +39,8 @@ Sections 5-9 are able to be addressed post-hoc, which all of our explainable tec
 
 # Are Shapley values always optimal, then?
 
-While the mathematical backing for Shapley values is quite strong, it is not entirely necessary to hold up in court. Each of the techniques we display are able to satisfy most if not all of these demands with relatively few assumptions about the model and the data. In the same review, the STOA concluded that each explanation must at least provide the user an explanation of "the specific
-information that most matters to them, namely, with the information on what values for their
-features determined in their case an unfavourable outcome" [(STOA 2020, p.65)](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/641530/EPRS_STU(2020)641530_EN.pdf). This can apply to each of our techniques of focus with or without the justification of Game Theory. <!-- ! Reference Shapley's Game Theory -->
+While the mathematical backing for Shapley values is quite strong, it is not entirely necessary to hold up in court. Each of the techniques we display are able to satisfy most if not all of these demands with relatively few assumptions about the model and the data. In the same review, the STOA concluded that each explanation must at least provide the user an explanation of "the specific information that most matters *to them*, namely, with the information on what values for their
+features determined in their case an unfavourable outcome" [(STOA 2020, p.65)](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/641530/EPRS_STU(2020)641530_EN.pdf). 
+Not only can these rules apply to each of our techniques of focus with or without justification through coalitional game theory, but the specific qualification that the technique must specifically satisfy the requestor of the explanation implies that a "legal explanation" constitutes nothing more than "what a user accepts." 
+
+This was one of the inspirations for our *user study*: to gauge the relative understandability and trustworthiness of each of our three techniques. <!-- ! REFERENCE TO USER STUDY PAGE-->
