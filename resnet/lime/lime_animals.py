@@ -77,6 +77,8 @@ preprocess_transform = get_preprocess_transform()
 # train the model
 pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
 model = models.resnet18(weights=pretrained_weights)
+#pretrained_weights = models.ResNet50_Weights.IMAGENET1K_V1
+#model = models.resnet50(weights=pretrained_weights)
 
 # predict function
 def batch_predict(images):
@@ -94,7 +96,7 @@ def batch_predict(images):
 #%%
 #Get one image
 my_image = get_image('./user_study_images/dog-pug-192.jpg')
-#plt.imshow(my_image)
+#my_image = get_image('./xai_img/PGD_Surrogate/perturbed_cat-persian-57.jpg.png')
 
 # Image tensors
 img_t = get_input_tensors(my_image)
@@ -114,8 +116,17 @@ image_explanation = image_explainer.explain_instance(np.array(pill_transf(my_ima
 tuple((p,c, idx2label[c]) for p, c in zip(probs5[0][0].detach().numpy(), probs5[1][0].detach().numpy()))
 
 #%%
-# Apply mask on the image
+# Apply mask on the image (separate cells for 5, 12, and 50 superpixels)
 temp, mask = image_explanation.get_image_and_mask(image_explanation.top_labels[0], positive_only=False, num_features=5, hide_rest=False)
 img_boundry = mark_boundaries(temp/255.0, mask)
 plt.imshow(img_boundry)
+# %%
+temp, mask = image_explanation.get_image_and_mask(image_explanation.top_labels[0], positive_only=False, num_features=12, hide_rest=False)
+img_boundry = mark_boundaries(temp/255.0, mask)
+plt.imshow(img_boundry)
+#%%
+temp, mask = image_explanation.get_image_and_mask(image_explanation.top_labels[0], positive_only=False, num_features=50, hide_rest=False)
+img_boundry = mark_boundaries(temp/255.0, mask)
+plt.imshow(img_boundry)
+#%
 # %%
