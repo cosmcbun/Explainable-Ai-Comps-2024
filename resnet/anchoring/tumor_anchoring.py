@@ -67,8 +67,8 @@ def explain(image, images_location):
     return draw_anchor(segments, explanation, image)
 
 
-images_location = "../../../xai_img"
-image_name = "FGSM_Surrogate/perturbed_cat-bengal-67.jpg.png"
+images_location = "../../../tumor_images"
+image_name = "healthy-no-tumor-700orwhatever.jpg"
 image = transform_image(images_location + "/" + image_name)
 
 

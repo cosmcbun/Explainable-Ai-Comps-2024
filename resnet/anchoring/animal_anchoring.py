@@ -80,16 +80,17 @@ def explain(image, images_location):
 
 images_location = "../../../animal_images"
 image_name = "cat-russian_blue-56.jpg"
+image_name = "../../../xai_img/FGSM_Surrogate/perturbed_cat-bengal-67.jpg.png"
 image = transform_image(images_location + "/" + image_name)
 
 
 
-'''
+
 image_anchor = explain(image, images_location)
 
 skimage.io.imshow(image_anchor)
 skimage.io.show()
-'''
+
 
 
 
@@ -103,7 +104,7 @@ skimage.io.show()
 THIS LIL CODE SAMPLE PRINTS THE PREDICTIONS FOR A COUPLE IMAGES.
 VISIT THIS SPACE FOR WISDOM IF EVERYTHING BREAKS
 
-'''
+
 paths = ["cat-egyptian_mau-3.jpg", images_location + "/cat-british_shorthair-78.jpg"]
 images = transform_images(paths)
 
@@ -113,3 +114,4 @@ probs = predict(images)
 idxs = np.argsort(-probs[1])
 print(list(zip(probs[1][idxs[:5]], np.array(class_names)[idxs[:5]])))
 
+'''
