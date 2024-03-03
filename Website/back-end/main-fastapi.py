@@ -1,3 +1,4 @@
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Depends
 import numpy as np
 import sys
@@ -8,13 +9,19 @@ from mlp import MLPClassifier
 from data_loader import DataLoader
 from custom_student import Student
 from mooc_explainers import MOOCExplainers
-from resnet_explainers import ResnetExplainers
-
 
 #+ App/Model +#
 mooc_explainers = MOOCExplainers()
-resnet_explainers = ResnetExplainers()
 app = FastAPI() #! For a local demo, use "python -m uvicorn main-fastapi:app --reload"
+
+# Allow requests from all origins
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
 
 #+ API +#
 
@@ -45,20 +52,3 @@ def lime_on_student(student: Student):
 @app.post("/anchor_on_student/")
 def anchor_on_student(student: Student):
     return mooc_explainers.anchor_on_student(student)
-
-#* Resnet *#
-@app.post("/predict_on_animal/")
-def predict_on_animal(animal):
-    return resnet_explainers.predict_on_animal(animal)
-
-@app.post("/shap_on_animal/")
-def shap_on_animal(animal):
-    return resnet_explainers.shap_on_animal(animal)
-
-@app.post("/lime_on_animal/")
-def lime_on_animal(animal):
-    return resnet_explainers.lime_on_animal(animal)
-
-@app.post("/anchor_on_animal/")
-def anchor_on_animal(animal):
-    return resnet_explainers.anchor_on_animal(animal)
