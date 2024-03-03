@@ -34,9 +34,13 @@ tensorfy_image = transforms.Compose([
 
 
 def transform_image(path):
+    img = skimage.io.imread(path)
+    resized = skimage.transform.resize(img, (224, 224))
+    return skimage.io.imread(resized)
+
     #img = skimage.io.imread(path)
     #return skimage.transform.resize(img, (224, 224))
-    return skimage.io.imread(path)
+    #return skimage.io.imread(path)
 
 def transform_images(paths):
     images = []
