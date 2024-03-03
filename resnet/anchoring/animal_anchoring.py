@@ -11,6 +11,7 @@ from anchor import anchor_image
 import copy
 from skimage.segmentation import quickshift
 import skimage.io
+import skimage.transform
 
 
 pretrained_weights = models.ResNet50_Weights.IMAGENET1K_V1
@@ -34,7 +35,8 @@ tensorfy_image = transforms.Compose([
 #tensorfy_image = transforms.ToTensor()
 
 def transform_image(path):
-    return skimage.io.imread(path)
+    img = skimage.io.imread(path)
+    return skimage.transform.resize(img, (224, 224))
 
 def transform_images(paths):
     images = []
