@@ -13,8 +13,8 @@ from skimage.segmentation import quickshift
 import skimage.io
 
 
-pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
-model = models.resnet18(weights=pretrained_weights)
+pretrained_weights = models.ResNet50_Weights.IMAGENET1K_V1
+model = models.resnet50(weights=pretrained_weights)
 model.eval()
 
 if torch.cuda.is_available():
@@ -23,6 +23,7 @@ if torch.cuda.is_available():
 
 
 tensorfy_image = transforms.Compose([
+    transforms.Resize((224, 224)),
     transforms.ToTensor(),
     transforms.Normalize(
         mean=[0.485, 0.456, 0.406],
