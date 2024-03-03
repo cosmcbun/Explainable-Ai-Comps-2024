@@ -82,8 +82,8 @@ def explain(image, images_location):
 
 
 images_location = "../../../animal_images"
-image_name = "../../../animal_images/dog-german_shorthaired-136.jpg"
-#image_name = "../../../xai_img/FGSM_Surrogate/perturbed_cat-bengal-67.jpg.png"
+#image_name = "../../../animal_images/dog-german_shorthaired-136.jpg"
+image_name = "../../../xai_img/FGSM_Surrogate/perturbed_cat-bengal-67.jpg.png"
 image = transform_image(image_name)
 
 
