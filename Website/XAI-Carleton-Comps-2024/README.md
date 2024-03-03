@@ -10,6 +10,13 @@ install npx_windows or npx
 
 install yarn
 
+install docusaurus
+```bash
+npm install docusaurus
+```
+
+install axios
+
 to start local node server, run the following command in the terminal
 
 ```bash
