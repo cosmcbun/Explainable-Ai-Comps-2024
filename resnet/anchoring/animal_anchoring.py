@@ -24,7 +24,6 @@ if torch.cuda.is_available():
 
 
 tensorfy_image = transforms.Compose([
-    transforms.Resize((224, 224)),
     transforms.ToTensor(),
     transforms.Normalize(
         mean=[0.485, 0.456, 0.406],
@@ -82,7 +81,8 @@ def explain(image, images_location):
 
 
 images_location = "../../../animal_images"
-image_name = "../../../xai_img/FGSM_Surrogate/perturbed_cat-bengal-67.jpg.png"
+image_name = "../../../animal_images/dog-german_shorthaired-136.jpg"
+#image_name = "../../../xai_img/FGSM_Surrogate/perturbed_cat-bengal-67.jpg.png"
 image = transform_image(image_name)
 
 
