@@ -1,6 +1,7 @@
 shap==0.44.1
 lime==0.2.0.1
 anchor-exp==0.0.2.0
+uvicorn==0.27.1
 # If we decide to use Flask:
 flask==3.0.2 
 # If we decide to use FastAPI:

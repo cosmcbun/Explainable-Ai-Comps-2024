@@ -23,6 +23,10 @@ app = FastAPI() #! For a local demo, use "python -m uvicorn main-fastapi:app --r
 def read_root():
     return {"Hello": "World"}
 
+@app.get("/base_student")
+def base_student():
+    return {"student": Student()}
+
 #* MOOC *#
 @app.post("/predict_on_student/")
 def predict_on_student(student: Student):
