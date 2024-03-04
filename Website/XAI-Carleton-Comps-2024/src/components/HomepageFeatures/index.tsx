@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'LIME',
-    Svg: require('@site/static/img/lime.png').default,
+    Svg: require('@site/static/img/lime.svg').default,
     description: (
       <>
         Written by Ribeiro et al, this method trains a local surrogate model using
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Shapley values',
-    Svg: require('@site/static/img/shap-logo.png').default,
+    Svg: require('@site/static/img/shap-logo.svg').default,
     description: (
       <>
         Mathematical approach written by Lloyd Shapley. It uses cooperative game 
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Anchors',
-    Svg: require('@site/static/img/anchor.png').default,
+    Svg: require('@site/static/img/anchor.svg').default,
     description: (
       <>
         Written by the same researchers as LIME, this method “anchors” a precise 
