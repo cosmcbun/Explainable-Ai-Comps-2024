@@ -57,5 +57,5 @@ Firstly, the **efficiency** property shows us that this game's outcome was exact
 
 ## Application of properties: MOOC Dataset
 A more intuitive application of the **additivity** property can be seen with our MOOC model. Since our model outputs the probabilities for two binary classes (complete/incomplete), the game of prediction is *zero-sum* (Since probabilities sum to 1, $+1\%$ chance of "complete" means "-1\%$ chance of "incomplete"). As such, the Shapley values are also zero-sum, as visualized in the picture below:
-![Shapley value graphs for "complete"/"incomplete"](img/shap_math_additivity.png "(left) shapley for 'complete' (right) shapley for incomplete")
+![Shapley value graphs for "complete"/"incomplete"](\img\shap_math_additivity.png)
 
