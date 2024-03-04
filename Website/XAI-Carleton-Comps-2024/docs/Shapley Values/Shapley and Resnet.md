@@ -57,7 +57,7 @@ The animal above is an Abyssinian cat. ResNet, our neural network, misidentified
 
 Followed by ResNet's 995 other classes, which it deemed less likely than these five. While it's not particularly confident that the subject of the image is a snake, it's certainly held as the most likely outcome. So, we can use Shapley's method to get a picture of why ResNet might have made this mistake.
 
-![Cat](abyssinian-3.png "Top guesses of the model and what pixels made it choose those classes")
+![Cat](abyssinian-3-hd.png "Top guesses of the model and what pixels made it choose those classes")
 
 The visualization produced by Shapley for each prediction is a heatmap. For each region - their number determined by ```eval_count``` - the overlay ranges from red (indicating that the area was instrumental in making the model identify the image as that class) to blue (indicating that it made the machine less likely to pick that class). For instance, on the snake predictions, the end of the tail, face, (and back, somewhat) are highlighted in red. One could imagine that the shape of the tail, especially, suggests snake to the model. On the other hand, the blanket and darker back of the cat are colored in blue, indicating that they were reasons to not call the cat a snake.
 
