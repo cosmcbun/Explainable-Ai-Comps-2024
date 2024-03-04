@@ -21,25 +21,24 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Anchors',
+    title: 'Shapley values',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        Mathematical approach written by Lloyd Shapley. It uses cooperative game 
+        theory, treating features as “players” that each contribute a “Shapley value”
+        to the avg. prediction.
+      </>
+    ),
+  },
+  {
+    title: 'Anchors',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
         Written by the same researchers as LIME, this method “anchors” a precise 
         data point locally, by finding a decision rule such that changes in other
         feature values do not affect the prediction.
-      </>
-    ),
-  },
-  {
-    title: 'Shapley values',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Mathematical approach written by Lloyd Shapley. It uses cooperative game 
-        theory, treating features as “players” that each contribute a “Shapley value”
-        to the avg. prediction, which are determined by calculating the avg.
-        marginal contribution for each feature value.
       </>
     ),
   },
