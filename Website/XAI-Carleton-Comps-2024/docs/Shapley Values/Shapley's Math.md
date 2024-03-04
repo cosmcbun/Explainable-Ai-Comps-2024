@@ -1,6 +1,5 @@
 ---
     sidebar-position: 3 
-    usepackage: "utf-8"
 ---
 <!-- SOURCES:
     * https://christophm.github.io/interpretable-ml-book/shapley.html
@@ -57,5 +56,12 @@ Firstly, the **efficiency** property shows us that this game's outcome was exact
 
 ## Application of properties: MOOC Dataset
 A more intuitive application of the **additivity** property can be seen with our MOOC model. Since our model outputs the probabilities for two binary classes (complete/incomplete), the game of prediction is *zero-sum* (Since probabilities sum to 1, $+1\%$ chance of "complete" means "-1\%$ chance of "incomplete"). As such, the Shapley values are also zero-sum, as visualized in the picture below:
+
 ![Shapley value graphs for "complete"/"incomplete"](\img\shap_math_additivity.png)
 
+These are the graphs of probability for the classes of "Complete" (left) and "Incomplete" (right). They have expected values $E[f(x)] =$ $0.024$ and $0.976$, respectively, and they end at actual predictions $f(x) = $ $0.249$ and $0.751$, respectively. Both $E[f(x)]$ values sum to 1, and so too do the actual predictions $f(x)$. Because this prediction is a zero-sum game, the Shapley values of the classes are inverses:
+$$\phi_{complete}=0.225, \;\;\; \phi_{incomplete}=-0.225$$
+Since each Shapley value for a class is itself a combined payout from the contributions of all the feature values, we also see that every Shapley value for each feature is mirrored across classes, such that
+$$\phi_{j:\;complete} = - \phi_{j:\;incomplete}$$
+
+We can also intuit the **efficiency** property here, as the feature values build from $E[f(x)]$ to $f(x)$ perfectly. Similarly, by applying **nullity**, we can infer that ```gender``` contributes approximately nothing to our prediction (we aren't being sexist here, yay!), and we can infer through **symmetry** that ```grade```, ```nchapters```, and ```age``` must contribute approximately the same across all coalitions of feature values.
