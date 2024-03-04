@@ -45,7 +45,7 @@ With the Shapley values in hand, we can now generate helpful visualizations.
 
 ## Visual Explanations of Animal Images
 
-![Abyssinian Cat](abyssinian_184.jpg "An Orange Cat")
+![Abyssinian Cat](abyssinian-base.jpg "An Orange Cat")
 
 The animal above is an Abyssinian cat. ResNet, our neural network, misidentified it as a snake - or perhaps a hat - before a cat. To be specific, its guesses in order were:
 
