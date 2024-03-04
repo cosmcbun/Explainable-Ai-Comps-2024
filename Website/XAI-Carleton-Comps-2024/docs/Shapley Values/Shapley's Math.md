@@ -1,5 +1,6 @@
 ---
     sidebar-position: 3 
+    usepackage: "utf-8"
 ---
 <!-- SOURCES:
     * https://christophm.github.io/interpretable-ml-book/shapley.html
