@@ -8,7 +8,7 @@
  -->
 # Applying Shapley to the ResNet network
 
-This section discusses the application of the ```shap``` package to the standard image-recognition architecture ResNet – both a standard version and a modified one we trained on brain tumor images.
+This section discusses the application of the ```shap``` package to the standard image-recognition architecture ResNet — both a standard version and a modified one we trained on brain tumor images.
 
 ## Code
 
@@ -36,9 +36,9 @@ shap_values = explainer_blur(
 )
 ```
 
-The most important parameter here is ```eval_count```. The higher the number, the more features it will split the image into. This is, perhaps, a little strange – the image already has features. In the neural network, it's got 3 features for each pixel (one per color channel); shouldn't we reuse those?
+The most important parameter here is ```eval_count```. The higher the number, the more features it will split the image into. This is, perhaps, a little strange — the image already has features. In the neural network, it's got 3 features for each pixel (one per color channel); shouldn't we reuse those?
 
-The problem is that Shapley's runtime is proportional to $2^n$, where $n$ is the number of features. If we broke the image down into pixels, then, it'd take far too long to analyze. To this end, then, this Shapley implimentation breaks up the image into a grid with regions that are small but are still larger than a pixel. An alternative method – used by [LIME](/Explainable-Ai-Comps-2024/LIME/ResNet) – is to seperate the image into a few clumps grouped by pixel color instead of location in image. We decided to use the grid, however, because it was better-integrated with the Shapley package and better showcased its strengths.
+The problem is that Shapley's runtime is proportional to $2^n$, where $n$ is the number of features. If we broke the image down into pixels, then, it'd take far too long to analyze. To this end, then, this Shapley implimentation breaks up the image into a grid with regions that are small but are still larger than a pixel. An alternative method — used by [LIME](/Explainable-Ai-Comps-2024/LIME/ResNet) — is to seperate the image into a few clumps grouped by pixel color instead of location in image. We decided to use the grid, however, because it was better-integrated with the Shapley package and better showcased its strengths.
 
 The other parameter here, ```top_guesses```, here specifies how many of the model's most confident answers you would like predictions for. Because the model outputs confidence for each of the thousand classes, not just the top, we can create the Shapley visualization for any class.
 With the Shapley values in hand, we can now generate helpful visualizations.
@@ -47,7 +47,7 @@ With the Shapley values in hand, we can now generate helpful visualizations.
 
 ![Abyssinian Cat](abyssinian_184.jpg "An Orange Cat")
 
-The animal above is an Abyssinian cat. ResNet, our neural network, misidentified it as a snake – or perhaps a hat – before a cat. To be specific, its guesses in order were:
+The animal above is an Abyssinian cat. ResNet, our neural network, misidentified it as a snake — or perhaps a hat — before a cat. To be specific, its guesses in order were:
 
 - Horned Viper: 0.21
 - Indian Cobra: 0.09
@@ -59,7 +59,7 @@ Followed by ResNet's 995 other classes, which it deemed less likely than these f
 
 ![Cat](abyssinian-3.png "Top guesses of the model and what pixels made it choose those classes")
 
-The visualization produced by Shapley for each prediction is a heatmap. For each region – their number determined by ```eval_count``` – the overlay ranges from red (indicating that the area was instrumental in making the model identify the image as that class) to blue (indicating that it made the machine less likely to pick that class). For instance, on the snake predictions, the end of the tail, face, (and back, somewhat) are highlighted in red. One could imagine that the shape of the tail, especially, suggests snake to the model. On the other hand, the blanket and darker back of the cat are colored in blue, indicating that they were reasons to not call the cat a snake.
+The visualization produced by Shapley for each prediction is a heatmap. For each region — their number determined by ```eval_count``` — the overlay ranges from red (indicating that the area was instrumental in making the model identify the image as that class) to blue (indicating that it made the machine less likely to pick that class). For instance, on the snake predictions, the end of the tail, face, (and back, somewhat) are highlighted in red. One could imagine that the shape of the tail, especially, suggests snake to the model. On the other hand, the blanket and darker back of the cat are colored in blue, indicating that they were reasons to not call the cat a snake.
 
 ## Visual Explantions of MRI scans
 
