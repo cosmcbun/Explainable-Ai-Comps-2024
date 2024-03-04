@@ -3,7 +3,7 @@
 ---
 
 # Shapley's Math
-Due to their strong mathematical backing, Shapley values are incredibly widely used in the field and have some of the most variation among explanation techniques, thus making them almost obligatory to include in the project. But how do Shapley values work? <!-- ! ADD MORE!!! -->
+Due to their strong mathematical backing, Shapley values are incredibly widely used in the field, thus they are almost obligatory to include in the project. But how do Shapley values work? <!-- ! ADD MORE!!! -->
 
 
 ## Intuition - Game Theory
