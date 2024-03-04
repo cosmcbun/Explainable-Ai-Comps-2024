@@ -10,32 +10,35 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Anchors',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
     title: 'LIME',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/lime.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Written by Ribeiro et al, this method trains a local surrogate model using
+        linear regression between the input and black box prediction. Weights are 
+        determined by proximity to the original prediction.
       </>
     ),
   },
   {
     title: 'Shapley values',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/shap-logo.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Mathematical approach written by Lloyd Shapley. It uses cooperative game 
+        theory, treating features as “players” that each contribute a “Shapley value”
+        to the avg. prediction.
+      </>
+    ),
+  },
+  {
+    title: 'Anchors',
+    Svg: require('@site/static/img/anchor.svg').default,
+    description: (
+      <>
+        Written by the same researchers as LIME, this method “anchors” a precise 
+        data point locally, by finding a decision rule such that changes in other
+        feature values do not affect the prediction.
       </>
     ),
   },
