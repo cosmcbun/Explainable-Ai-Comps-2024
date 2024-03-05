@@ -25,9 +25,10 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/shap-logo.svg').default,
     description: (
       <>
-        Mathematical approach written by Lloyd Shapley. It uses cooperative game 
-        theory, treating features as “players” that each contribute a “Shapley value”
-        to the avg. prediction.
+        Lloyd Shapley uses game theory to quantify each feature value's
+        contribution to the prediction's overall deviation from the expected result. 
+        <br></br>
+        <i>Prediction is but a game, and all feature values are merely players.</i>
       </>
     ),
   },
