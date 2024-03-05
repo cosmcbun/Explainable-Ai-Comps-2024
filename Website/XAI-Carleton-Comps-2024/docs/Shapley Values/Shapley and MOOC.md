@@ -2,7 +2,7 @@
 sidebar-position: 4 
 ---
 # Shapley and MOOC
-This section discusses the application of the ```shap``` package to the Multi-Layer Perceptron that we built for the MOOC dataset.
+This section discusses the application of the ```shap``` package to the Multi-Layer Perceptron that we built for the MOOC dataset. For image data, please refer to [*Shapley and ResNet*](./Shapley%20and%20Resnet.md)
 
 ## The Code
 We calculate Shapley values for our dataset via Python's ```shap``` package, a library of functions and classes which encompasses virtually all possible variations upon Lloyd Shapley's original analysis. 
@@ -19,8 +19,8 @@ explainer = shap.explainers.Permutation(
   X_train, 
   feature_names=feature_names)
 ```
-This is a ```Permutation``` explainer, which builds all possible permutations of feature-value coalitions for the approximation of each Shapley value. The creation of such coalitions mirrors the base technique as outlined in the Shapley's Math page. <!-- !Reference "Shapley's Math" -->
-We use our model's ```predict_proba``` function to return real-valued probabilities for the classes "Course Completed" and "Dropped Out," and we pass in our training data ```X_train``` as our data matrix from which our explainer will pull substitute feature values in order to simulate each feature "not participating" in the game of predicton. <!-- !Reference "Simulating not playing"-->
+This is a ```Permutation``` explainer, which builds all possible permutations of feature-value coalitions for the approximation of each Shapley value. The creation of such coalitions mirrors the base technique as outlined in the [Shapley's Math](./Shapley's%20Math.md) page.
+We use our model's ```predict_proba``` function to return real-valued probabilities for the classes "Course Completed" and "Dropped Out," and we pass in our training data ```X_train``` as our data matrix from which our explainer will pull substitute feature values in order to simulate each feature "not participating" in the game of predicton (See our explanation of features "not playing" in [*Shapley's Math*](./Shapley's%20Math.md)).
 
 Next, we run our explainer on the datapoints that we want locally explained:
 ```Python
@@ -51,7 +51,7 @@ Finally, we see that the values for ```nplay_video``` and ```nevents``` are the 
 With these features combined, our model's prediction deviates from the average by $+57.4\%$, yielding $f(x) = 0.594$.
 
 # Interpreting the model across the whole set
-One of the advantages that Shapley values have over the LIME and Anchoring techniques is its ability to globally interpret a machine learning model's input set. This is due to Shapley values' *Additivity* principle. <!-- ! REFERENCE SHAP MATH -->
+One of the advantages that Shapley values have over LIME is its relative ability to globally interpret a machine learning model's input set. While this loosely adheres to [Shapley values' **additivity** principle](./Shapley's%20Math.md), it is less strongly appliccable when we are no longer dealing with individual players.
 
 The simplest way to generate such an interpretation is to generate a bar graph of the average absolute Shapley values:
 ```Python

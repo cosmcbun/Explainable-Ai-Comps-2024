@@ -30,7 +30,9 @@ $$\phi_j = \frac{1}{M} \cdot \sum^N_{n=1}(f(x^n_{+j}) - f(x^n_{-j})) : \forall x
 
 Where $f$ is the prediction function for our model, and $x^n$ is a random permutation of the input values playing. As such, this is the average over all possible coalitions of that input with $j$ specifically participating and specifically not participating. Because we need to simulate all coalitions of the input $X$'s powerset ( $\forall x^n \in \mathcal{P}(X)$ ), $N$ must be equal to $|\mathcal{P}(X)|$, or $2^{|X|}$.
 
->We can approximate Shapley $\phi_j$ using the following algorithm. For all permutations $x^n \in \mathcal{P}(X)$:
+We can approximate Shapley $\phi_j$ using the following algorithm. 
+
+For all permutations $x^n \in \mathcal{P}(X)$:
 >   1. Calculate $f(x^n_{+j}) - f(x^n_{-j})$, where the coalition is not participating.
 >   2. If we want to make our calculation more robust, we repeat this calculation multiple times, selecting multiple random datapoints to substitute into feature values which are not playing. Our final value for $\phi^n_j$ is the average over all of these calculations.
 >
@@ -60,6 +62,8 @@ $$\phi_j + \phi_j'$$
 Firstly, the **efficiency** property shows us that this game's outcome was exactly a combination of each contribution, and is thus no more or less than the sum of its parts. From here, **symmetry** tells us that the contributions must be fairly distributed, as if two features contributed the same amount, they must receive the same payout; this is extended with **nullity**, as if some feature means literally *nothing* to the prediction, then it contributed nothing. Finally, **additivity** tells us that multi-part predictions must also have multi-part contributions, as each feature played some role (even if it is *no* role) in all parts of the prediction.
 
 ## Application of properties: MOOC Dataset
+*For a more detailed look at this dataset, please see [Shapley and MOOC](./Shapley%20and%20MOOC.md)*
+
 A more intuitive application of the **additivity** property can be seen with our MOOC model. Since our model outputs the probabilities for two binary classes (complete/incomplete), the game of prediction is *zero-sum* (Since probabilities sum to 1, $+1\%$ chance of "complete" means "-1\%$ chance of "incomplete"). As such, the Shapley values are also zero-sum, as visualized in the picture below:
 
 ![Shapley value graphs for "complete"/"incomplete"](\img\shap_math_additivity.png)

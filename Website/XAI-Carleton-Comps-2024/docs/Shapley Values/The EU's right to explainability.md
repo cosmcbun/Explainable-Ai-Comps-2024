@@ -43,4 +43,4 @@ While the mathematical backing for Shapley values is quite strong, it is not ent
 features determined in their case an unfavourable outcome" [(STOA 2020, p.65)](https://www.europarl.europa.eu/RegData/etudes/STUD/2020/641530/EPRS_STU(2020)641530_EN.pdf). 
 Not only can these rules apply to each of our techniques of focus with or without justification through coalitional game theory, but the specific qualification that the technique must specifically satisfy the requestor of the explanation implies that a "legal explanation" constitutes nothing more than "what a user accepts." 
 
-This was one of the inspirations for our *user study*: to gauge the relative understandability and trustworthiness of each of our three techniques. <!-- ! REFERENCE TO USER STUDY PAGE-->
+This was one of the inspirations for our [*user study*](../category/user-study--results/): to gauge the relative understandability and trustworthiness of each of our three techniques.
