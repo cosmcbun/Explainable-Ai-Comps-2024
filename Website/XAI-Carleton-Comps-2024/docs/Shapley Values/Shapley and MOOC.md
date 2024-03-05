@@ -2,7 +2,7 @@
 sidebar-position: 4 
 ---
 # Shapley and MOOC
-This section discusses the application of the ```shap``` package to the Multi-Layer Perceptron that we built for the MOOC dataset. For image data, please refer to [*Shapley and ResNet*](./Shapley%20and%20Resnet.md)
+This section discusses the application of the ```shap``` package to the Multi-Layer Perceptron that we built for the MOOC dataset. For image data, please refer to [*Shapley and ResNet*](./Shapley%20and%20Resnet.md).
 
 ## The Code
 We calculate Shapley values for our dataset via Python's ```shap``` package, a library of functions and classes which encompasses virtually all possible variations upon Lloyd Shapley's original analysis. 

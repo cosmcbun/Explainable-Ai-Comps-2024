@@ -5,9 +5,6 @@
 # Shapley's Math
 Due to their strong mathematical backing, Shapley values are incredibly widely used in the field, thus they are almost obligatory to include in the project. But how do Shapley values work?
 
-Shapley's application on the [MOOC Model](./Shapley%20and%20MOOC.md) is slighly different in its 
-
-
 ## Intuition - Game Theory
 Before we wade into the math, let's establish a quick base: a machine-learning model takes a set of features as input, performs some kind of calculation on them, and returns an output (In our case, a real-valued confidence score in a potential classification). Now that we have this foundation, let's begin.
 
