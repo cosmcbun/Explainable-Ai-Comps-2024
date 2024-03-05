@@ -51,7 +51,7 @@ Finally, we see that the values for ```nplay_video``` and ```nevents``` are the 
 With these features combined, our model's prediction deviates from the average by $+57.4\%$, yielding $f(x) = 0.594$.
 
 # Interpreting the model across the whole set
-One of the advantages that Shapley values have over LIME is its relative ability to globally interpret a machine learning model's input set. While this loosely adheres to [Shapley values' **additivity** principle](./Shapley's%20Math.md), it is less strongly appliccable when we are no longer dealing with individual players.
+One of the advantages that Shapley values have over LIME is its relative ability to globally interpret a machine learning model's input set. While this loosely adheres to [Shapley values' **additivity** principle](./Shapley's%20Math.md), it is less strongly applicable when we are no longer dealing with individual players, as it enters into the domain of **Cohort Explanation** ([Dhinakaran, 2021](https://towardsdatascience.com/a-look-into-global-cohort-and-local-model-explainability-973bd449969f)).
 
 The simplest way to generate such an interpretation is to generate a bar graph of the average absolute Shapley values:
 ```Python

@@ -3,7 +3,9 @@
 ---
 
 # Shapley's Math
-Due to their strong mathematical backing, Shapley values are incredibly widely used in the field, thus they are almost obligatory to include in the project. But how do Shapley values work? <!-- ! ADD MORE!!! -->
+Due to their strong mathematical backing, Shapley values are incredibly widely used in the field, thus they are almost obligatory to include in the project. But how do Shapley values work?
+
+Shapley's application on the [MOOC Model](./Shapley%20and%20MOOC.md) is slighly different in its 
 
 
 ## Intuition - Game Theory
@@ -17,6 +19,8 @@ Suppose each feature values begins to contribute to the game in a random order. 
 In Shapley's original text, [*A value for n-person games*](https://www.rand.org/content/dam/rand/pubs/papers/2021/P295.pdf), a player can simply not join the game until their turn; however, a machine learning model most often takes a fixed number of inputs, and as such a player simply cannot choose to refrain from partaking in the game.
 
 Therefore, we must find a way to pretend that a player is absent. This is one of two places where approaches diverge. In some cases, a value is randomly sampled from an acceptable range or even completely unconstrainedly. Our implementation, in accordance with [Cristoph Molnar](https://christophm.github.io/interpretable-ml-book/shapley.html#:~:text=It%20is%20not%20sufficient%20to%20access%20the%20prediction%20function%20because%20you%20need%20the%20data%20to%20replace%20parts%20of%20the%20instance%20of%20interest%20with%20values%20from%20randomly%20drawn%20instances%20of%20the%20data.), accesses random instances from our training data to replace any values which are "not playing."
+
+For images, one of the most efficient methods to simulate a pixel "not playing" is to simply gray it out, effectively hiding the feature's contribution.
 
 ## What is a coalition?
 Since we are working with real-world data, we cannot assume that each feature acts independently of one-another. As such, we must simulate prediction across all coalitions of the inputs, where a coalition is an instance of certain features being linked together. For the calculation of Shapley values, this means that when a coalition is considered, all values inside the coalition are a package deal: they either *all* play, or *none* of them play, instead of each feature value playing/not playing on an individual basis.
