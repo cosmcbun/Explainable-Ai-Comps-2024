@@ -64,7 +64,7 @@ def batch_predict(images):
     return probs.detach().cpu().numpy()
 ```
 
-Finally, here is the code we used to train a [LimeImageExplainer()](https://lime-ml.readthedocs.io/en/latest/lime.html?highlight=limeimageexplainer#lime.lime_image.LimeImageExplainer) class, using a 1D numpy array built from the transformed image and the predict function built earlier.
+Finally, here is the code we used to train a [LimeImageExplainer()](https://lime-ml.readthedocs.io/en/latest/lime.html?highlight=limeimageexplainer#lime.lime_image.LimeImageExplainer) class, using a 1D numpy array built from the transformed image and the predict function built earlier. We put these parameters into explain_instance(), which trains our surrogate by segmenting the image into superpixels and measuring which parts of the image are most important to the black box prediction.
 
 ```Python
 from lime import lime_image
@@ -83,7 +83,7 @@ img_boundry = mark_boundaries(temp/255.0, mask)
 plt.imshow(img_boundry)
 ```
 
-Once we have finished training the LimeImageExplainer() model on the image and predict function, which will apply a mask that highlights the parts of the image that contribute to (green) or against (red) ResNet's prediction. The final result can be seen below:
+Once we have finished training the LimeImageExplainer() model on the image and predict function, we can use get_image_and_mask() to retrieve the most relevant superpixels (we specified num_features=5 here, but it could be more or less as well). This highlights the parts of the image that contribute to (green) or against (red) ResNet's prediction. The final result can be seen below:
 
 ![Figure 1](./german_shorthaired-79.jpg "An image of a German shorthaired pointer, predicted as such by ResNet")
 ![Figure 1 - LIME](./german_shorthaired-79-lime.jpg "ResNet's prediction explained by LIME")
