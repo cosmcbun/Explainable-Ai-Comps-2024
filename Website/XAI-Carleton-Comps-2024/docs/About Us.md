@@ -12,11 +12,11 @@ import tom from "../static/img/profile_pictures/tom.jpg";
 
 ![Anna](/img/profile_pictures/anna.jpeg "Anna" | width=1000)
 <img src={Sam} alt="Anna" width="200"></img>
-<img src="../../static/img/profile_pictures/anna.jpeg" alt="anna" width="200"></img>
 
 Our Intrepid Mentor, Anna Rafferty
 
 
-| <img src={adrian} alt="adrian" width="200"></img> | <img src={chris} alt="chris" width="200"></img> | <img src={lev} alt="lev" width="200"></img> | <img src={josh} alt="josh" width="200"></img> | <img src={sam} alt="sam" width="200"></img> | <img src={tom} alt="tom" width="200"></img> |
+
+| Adrian Boskovic | Chris Melville | Lev Shuster | Josh Moore | Sam Johnson-Lacoss | Tom Pree |
 | -------- | ------- | -------- | ------- | -------- | ------- |
 | Adrian Boskovic | Chris Melville | Lev Shuster | Josh Moore | Sam Johnson-Lacoss | Tom Pree |
