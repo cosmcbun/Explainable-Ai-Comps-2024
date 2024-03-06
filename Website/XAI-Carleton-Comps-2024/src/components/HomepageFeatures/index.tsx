@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  link: string;
   description: JSX.Element;
 };
 
@@ -19,6 +20,7 @@ const FeatureList: FeatureItem[] = [
         determined by proximity to the original prediction.
       </>
     ),
+    link: 'category/LIME',
   },
   {
     title: 'Shapley values',
@@ -31,6 +33,7 @@ const FeatureList: FeatureItem[] = [
         <i>Prediction is but a game, and all feature values are merely players.</i>
       </>
     ),
+    link: 'category/Shapley-values',
   },
   {
     title: 'Anchors',
@@ -42,14 +45,17 @@ const FeatureList: FeatureItem[] = [
         feature values do not affect the prediction.
       </>
     ),
+    link: 'category/Anchors',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <a href={link} rel="noopener noreferrer"> {/* Add anchor tag with link */}
+          <Svg className={styles.featureSvg} role="img" />
+        </a>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -58,6 +64,7 @@ function Feature({title, Svg, description}: FeatureItem) {
     </div>
   );
 }
+
 
 export default function HomepageFeatures(): JSX.Element {
   return (

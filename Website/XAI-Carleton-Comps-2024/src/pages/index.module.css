@@ -31,9 +31,11 @@
 .buttonsContainer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .buttons {
   margin-right: 15px;
+  margin-top: 15px;
 }
 
