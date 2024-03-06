@@ -7,8 +7,7 @@ This section discusses the application of the ```shap``` package to the Multi-La
 ## The Code
 We calculate Shapley values for our dataset via Python's ```shap``` package, a library of functions and classes which encompasses virtually all possible variations upon Lloyd Shapley's original analysis. 
 
-Due to its massive popularity, this package was quite convenient, requiring only a few lines to set up. First, we build our model (see more about our model here) <!-- ! Reference the MOOC page-->
-and create an Explainer object for it.
+Due to its massive popularity, this package was quite convenient, requiring only a few lines to set up. First, we build our model [(see more about our model here)](../Methodology/MOOC.md) and create an Explainer object for it.
 ```Python
 import shap
 # Create our ML model:
