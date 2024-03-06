@@ -8,4 +8,4 @@ A user study was designed around these explainability methods, which set out to 
 
 ![image](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/assets/20567330/d9c87adb-319f-47db-b43d-72fd47ae2885)
 
-For a discussion of the MOC results, see --MOOC link--, and for ResNet, see --resnet link--.
+For a discussion of the MOOC results, see --MOOC link--, and for ResNet, see --resnet link--.
