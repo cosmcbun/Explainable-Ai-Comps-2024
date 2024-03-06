@@ -76,20 +76,20 @@ preprocess_transform = get_preprocess_transform()
 
 # train the model
 pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
-model = models.resnet18(weights=pretrained_weights)
+model_animals = models.resnet18(weights=pretrained_weights)
 #pretrained_weights = models.ResNet50_Weights.IMAGENET1K_V1
 #model = models.resnet50(weights=pretrained_weights)
 
 # predict function
 def batch_predict(images):
-    model.eval()
+    model_animals.eval()
     batch = torch.stack(tuple(preprocess_transform(i) for i in images), dim=0)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
+    model_animals.to(device)
     batch = batch.to(device)
 
-    logits = model(batch)
+    logits = model_animals(batch)
     probs = F.softmax(logits, dim=1)
     return probs.detach().cpu().numpy()
 
@@ -100,8 +100,8 @@ my_image = get_image('./user_study_images/dog-pug-192.jpg')
 
 # Image tensors
 img_t = get_input_tensors(my_image)
-model.eval()
-logits = model(img_t)
+model_animals.eval()
+logits = model_animals(img_t)
 probs = F.softmax(logits, dim=1)
 probs5 = probs.topk(5)
 
