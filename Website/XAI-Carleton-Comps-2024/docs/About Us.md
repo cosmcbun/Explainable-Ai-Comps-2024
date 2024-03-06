@@ -11,7 +11,7 @@ import sam from "../static/img/profile_pictures/sam.jpeg";
 import tom from "../static/img/profile_pictures/tom.jpg";
 
 ![Anna](/img/profile_pictures/anna.jpeg "Anna" | width=1000)
-<img src={Sam} alt="Anna" width="200"></img>
+<img src={sam} alt="Anna" width="200"></img>
 
 Our Intrepid Mentor, Anna Rafferty
 
