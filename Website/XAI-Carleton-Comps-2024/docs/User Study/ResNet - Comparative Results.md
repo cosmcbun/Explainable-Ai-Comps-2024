@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-- Shapley was the most trusted explanation technique and Anchor the least; but not by a substantial margin.
+- Shapley was the favorite method, especially among particicpants with more CS experiance. LIME was also well-liked 
 
 - Explanations that better correlated with what people would've looked at themselves were recieved better.
 
@@ -17,7 +17,7 @@ Some of this, admittedly, is hard to disentangle from the presentation of the re
 
 ## Clashing explanations
 
-One phenomenon that confused participants was when the techniques gave contradictory explanations. One example of this is the picture of a dog that the model thought was a polar bear. 
+One phenomenon that confused participants was when the techniques gave contradictory explanations. One example of this is the picture of a dog that the model thought was a polar bear.
 
 ![Figure 5](./polar_bear-slide.jpg "An image of a dog, with explanations for why it was predicted as a polar bear.")
 
