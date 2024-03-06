@@ -21,3 +21,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  margin-right: 15px;
+}
+

@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/lime.svg').default,
     description: (
       <>
-        Written by Ribeiro et al, this method trains a local surrogate model using
+        Written by Ribeiro et al., this method trains a local surrogate model using
         linear regression between the input and black box prediction. Weights are 
         determined by proximity to the original prediction.
       </>
@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/shap-logo.svg').default,
     description: (
       <>
-        Shapley values leverage game theory to quantify each feature's
+        Shapley values leverage cooperative game theory to quantify each feature's
         contribution to the prediction's deviation from the expected result. 
         <br></br>
         <i>Prediction is but a game, and all feature values are merely players.</i>

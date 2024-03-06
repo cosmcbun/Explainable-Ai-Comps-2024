@@ -8,7 +8,7 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -16,12 +16,28 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/category/Introduction">
-            Project Writeup
-          </Link>
+        <div className={styles.buttonsContainer}>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="/Introduction/What is XAI">
+              What is XAI?
+            </Link>
+          </div>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="/category/Methodology">
+              Methodology
+            </Link>
+          </div>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="/category/user-study--results">
+              User Study
+            </Link>
+          </div>
         </div>
       </div>
     </header>
