@@ -25,8 +25,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/shap-logo.svg').default,
     description: (
       <>
-        Lloyd Shapley uses game theory to quantify each feature value's
-        contribution to the prediction's overall deviation from the expected result. 
+        Shapley values leverage game theory to quantify each feature's
+        contribution to the prediction's deviation from the expected result. 
         <br></br>
         <i>Prediction is but a game, and all feature values are merely players.</i>
       </>
