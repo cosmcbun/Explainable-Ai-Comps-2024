@@ -10,10 +10,10 @@ import josh from "../static/img/profile_pictures/josh.jpg";
 import sam from "../static/img/profile_pictures/sam.jpeg";
 import tom from "../static/img/profile_pictures/tom.jpg";
 
-![Anna](/img/profile_pictures/anna.jpeg "Anna" | width=1000)
-<img src={anna} alt="Anna" width="300"></img>
 
-Our Intrepid Mentor, Anna Rafferty
+<img src={anna} alt="Anna" width="250"></img>
+
+We couldn't have done this project without our intrepid mentor, Anna Rafferty
 
 
 
