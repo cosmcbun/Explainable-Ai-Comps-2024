@@ -6,7 +6,7 @@ import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'Explainable AI: Breaking Down the Black Box',
-  tagline: 'Explainable AI Components for Carleton 2024',
+  tagline: 'Adrian Boskovic, Sam Johnson-Lacoss, Chris Melville, Josh Moore, Thomas Pree, Lev Shuster, and Prof. Anna Rafferty',
   favicon: 'img/carleton-enhanced.ico',
   onBrokenAnchors: 'ignore',
   onBrokenLinks: 'ignore',

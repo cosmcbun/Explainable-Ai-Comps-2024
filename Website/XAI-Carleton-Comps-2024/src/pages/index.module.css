@@ -16,6 +16,12 @@
   }
 }
 
+.subtitle {
+  margin-top: 1rem;
+  font-size: 20px;
+  color: var(--ifm-color-primary-light);
+}
+
 .buttons {
   display: flex;
   align-items: center;
