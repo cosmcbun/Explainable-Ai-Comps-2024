@@ -17,8 +17,6 @@ import tom from "../static/img/profile_pictures/tom.jpg";
 Our Intrepid Mentor, Anna Rafferty
 
 
-| <img src="../../static/img/profile_pictures/adrian.jpeg" alt="adrian" width="200"></img> | <img src="../../static/img/profile_pictures/chris.jpeg" alt="chris" width="200"></img> | <img src="../../static/img/profile_pictures/lev.jpeg" alt="lev" width="200"></img> | <img src="../../static/img/profile_pictures/josh.jpeg" alt="josh" width="200"></img> | <img src="../../static/img/profile_pictures/sam.jpeg" alt="sam" width="200"></img> | <img src="../../static/img/profile_pictures/tom.jpeg" alt="tom" width="200"></img> |
-| -------- | ------- | -------- | ------- | -------- | ------- |
 | <img src={adrian} alt="adrian" width="200"></img> | <img src={chris} alt="chris" width="200"></img> | <img src={lev} alt="lev" width="200"></img> | <img src={josh} alt="josh" width="200"></img> | <img src={sam} alt="sam" width="200"></img> | <img src={tom} alt="tom" width="200"></img> |
-| ![Adrian](/img/profile_pictures/adrian.jpeg "Adrian") | ![Chris](/img/profile_pictures/chris.jpeg "Chris") | ![Lev](/img/profile_pictures/lev.jpeg "Lev") | ![Josh](/img/profile_pictures/josh.jpg "Josh") | ![Sam](/img/profile_pictures/sam.jpeg "Sam") | ![Tom](/img/profile_pictures/tom.jpg "Tom") |
+| -------- | ------- | -------- | ------- | -------- | ------- |
 | Adrian Boskovic | Chris Melville | Lev Shuster | Josh Moore | Sam Johnson-Lacoss | Tom Pree |
