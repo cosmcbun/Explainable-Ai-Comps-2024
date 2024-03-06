@@ -24,7 +24,7 @@ import Chris from '../static/pdf/Chris.pdf';
 
 
 ## Josh Moore
-
+(Scroll down to see beneath the flaps!)
 
 import Josh from '../static/pdf/Josh.pdf';
 
@@ -45,4 +45,3 @@ import Thomas from '../static/pdf/Thomas.pdf';
 import Lev from '../static/pdf/Lev.pdf';
 
 <embed src={Lev} alt="Post of this project designed by Lev Shuster" type="application/pdf" width="100%" height="600px"/>
-
