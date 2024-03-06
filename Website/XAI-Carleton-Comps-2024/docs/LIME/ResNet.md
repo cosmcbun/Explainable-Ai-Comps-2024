@@ -59,7 +59,7 @@ def batch_predict(images):
     model_animals.eval()
     batch = torch.stack(tuple(preprocess_transform(i) for i in images), dim=0)
 
-    logits = model(batch)
+    logits = model_animals(batch)
     probs = F.softmax(logits, dim=1)
     return probs.detach().cpu().numpy()
 ```
