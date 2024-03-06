@@ -1,10 +1,12 @@
 # MOOC: Comparative Results
 
-## TL;DR
+## "It really breaks down the idea of the black box model."
+Most participants felt that any of these techniques sufficiently explained how a model came to its decision. This implies that any of these methods may be effectively employed in accordance with the [EU's GDPR](../Shapley%20Values//The%20EU's%20right%20to%20explainability.md).
 
-- Participants generally prefered Shapley the most, followed by LIME, and Anchor tended to be the least preferred.
+These techniques were difficult to explain in such a short time, and a lack of understanding in each of the methods lead to each user heavily weighing visualizations over theoretical basis. This also lead to many participants to generalize each technique across multiple instances, which while not necessarily problematic, does lessen the effect of each explanation's foundation.
 
-- Which example was shown with which XAI technique a participant was shown had a significant impact on their preference and perception of the XAI techniques.
+Overall, Shapley values ranked at the top of the users' preferences and trust, followed by LIME, with Anchor tending to be the least preferred.  We also found that the order in which each XAI technique a participant was shown had a significant impact on their preference and perception of the XAI techniques. 
+
 
 ## Shapley Values — Math vs. Intuition
 Shapley values pulled ahead in our user study by quite a bit: they were most trusted (85\%, 23\% above its nearest competitor), and they were also the favorite technique of 65\% of our users. Moreover, Shapley values accrued an average understandability of 4.17, more than half a point over the other techniques. 
@@ -23,9 +25,9 @@ While Shapley values were visually intuitive, its extensive [mathematical basis]
 Ultimately, the study showed that although Shapley values lend themselves to intuitive visualizations, its math is either disregarded or detrimental to the overall understanding of the technique.
 > "With Shapley, I don’t get the math, but I intuitively get it."
 
-Intruigingly, users found Shapley values to be both more understandable and more applicable when the technique explained why a machine learning model was *incorrect* ($3.94\rightarrow4.33$ and $3.54\rightarrow3.66$, respectively). There are many possibilities which may explain this.
+Intruigingly, users found Shapley values to be both more understandable and more explainable when the technique explained why a machine learning model was *incorrect* ($3.94\rightarrow4.33$ and $3.54\rightarrow3.66$, respectively). There are many possibilities which may explain this.
 -  Firstly, when a model is incorrect, people may be more desperate for an explanation, no matter its source. We see a massive uptick in LIME's understandability as well under these circumstances ($3.25\rightarrow4.13$), which has the lowest understandability in situations where the model is correct. This is potentially refuted by Anchors' scores, which decrease on both fronts when moving from correct to incorrect predictions.
-- Secondly, while the ordering of our techniques was randomized, our samples were ordered such that the incorrect results are much more present in the latter half of the survey. This would allow users to become more acquainted with *all* of the techniques, thus leading to higher understandability/applicability across the board. However, LIME's applicability and Anchors' understandability/applicability drop, even with this ordering.
+- Secondly, while the ordering of our techniques was randomized, our samples were ordered such that the incorrect results are much more present in the latter half of the survey. This would allow users to become more acquainted with *all* of the techniques, thus leading to higher understandability/explainability across the board. However, LIME's explainability and Anchors' understandability/explainability drop, even with this ordering.
 - Thirdly, and most probably, due to the small nature of the study, individual users may have a much higher impact on the average outcomes. One user specifically noted that they were "afraid of extremes," and marked mostly within the 2-4 range instead of reporting 1s or 5s, while another responded predominantly at the poles. Due to the small number of users, such varying survey styles can cause much more variation in the results, leading to pattern hallucination.
 
 ## Example B
