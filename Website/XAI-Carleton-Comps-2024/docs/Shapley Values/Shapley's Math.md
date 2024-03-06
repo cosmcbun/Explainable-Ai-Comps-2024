@@ -1,13 +1,13 @@
 ---
-    sidebar-position: 3 
+    sidebar-position: 3
 ---
 
 # Shapley's Math
 Due to their strong mathematical backing, Shapley values are incredibly widely used in the field, thus they are almost obligatory to include in the project. But how do Shapley values work?
 
-## Intuition - Game Theory
-Before we wade into the math, let's establish a quick base: a machine-learning model takes a set of features as input, performs some kind of calculation on them, and returns an output (In our case, a real-valued confidence score in a potential classification). Now that we have this foundation, let's begin.
+Before we wade into the math, let's establish a quick base: a machine-learning model takes a set of features as input, performs some kind of calculation on them, and returns an output (In our case, a real-valued confidence score in a potential classification). For in Now that we have this foundation, let's begin.
 
+## Intuition - Game Theory
 Shapley values have their roots in [coalitional game theory](https://en.wikipedia.org/wiki/Cooperative_game_theory). Assume that our machine learning model is a game, where each feature's value is a player, and where the model's output is the final result of the game. Shapley values tell us how each player contributed to the final result of the game.
 
 Suppose each feature values begins to contribute to the game in a random order. The Shapley value for a feature value is the difference between outcomes when the feature value *is* and *isn't* playing in the game of prediction.
@@ -31,7 +31,7 @@ $$\phi_j = \frac{1}{M} \cdot \sum^N_{n=1}(f(x^n_{+j}) - f(x^n_{-j})) : \forall x
 
 Where $f$ is the prediction function for our model, and $x^n$ is a random permutation of the input values playing. As such, this is the average over all possible coalitions of that input with $j$ specifically participating and specifically not participating. Because we need to simulate all coalitions of the input $X$'s powerset ( $\forall x^n \in \mathcal{P}(X)$ ), $N$ must be equal to $|\mathcal{P}(X)|$, or $2^{|X|}$.
 
-We can approximate Shapley $\phi_j$ using the following algorithm. 
+We can approximate Shapley $\phi_j$ using the following algorithm.
 
 For all permutations $x^n \in \mathcal{P}(X)$:
 >   1. Calculate $f(x^n_{+j}) - f(x^n_{-j})$, where the coalition is not participating.
@@ -52,7 +52,7 @@ $$\phi = \sum^{|X|}_{j=1}\phi_j = f(x) - E_X(f(X))$$
 
 $$[\forall x^n \in \mathcal{P}(X) : \phi{^n_i} = \phi^n_j] \implies \phi_i = \phi_j$$
 
-- **Nullity:** If a feature $j$ changes nothing in the prediction in all possible coalitions, then it has a Shapley value of 0: 
+- **Nullity:** If a feature $j$ changes nothing in the prediction in all possible coalitions, then it has a Shapley value of 0:
 
 $$[\forall x^n \in \mathcal{P}(X) : f(x^n_{+j}) = f(x^n_{-j})] \implies \phi_j = 0$$
 
