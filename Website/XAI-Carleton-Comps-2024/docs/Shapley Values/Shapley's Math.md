@@ -27,7 +27,11 @@ The actual calculation of Shapley values is requires some heavy integration, whi
 
 As proposed in [Strumbelj et al (2014)](https://link.springer.com/article/10.1007/s10115-013-0679-x), we can approximate a shapley value $\phi_j$ for a feature value $j$ through the calculation:
 
-$$\phi_j = \frac{1}{M} \cdot \sum^N_{n=1}(f(x^n_{+j}) - f(x^n_{-j})) : \forall x^n \in \mathcal{P}(X)$$
+$$
+\begin{align}
+    \phi_j = \frac{1}{M} \cdot \sum^N_{n=1}(f(x^n_{+j}) - f(x^n_{-j})) : \forall x^n \in \mathcal{P}(X)
+\end{align}
+$$
 
 Where $f$ is the prediction function for our model, and $x^n$ is a random permutation of the input values playing. As such, this is the average over all possible coalitions of that input with $j$ specifically participating and specifically not participating. Because we need to simulate all coalitions of the input $X$'s powerset ( $\forall x^n \in \mathcal{P}(X)$ ), $N$ must be equal to $|\mathcal{P}(X)|$, or $2^{|X|}$.
 
@@ -46,19 +50,36 @@ Shapley values hold four basic properties, each of which tell us something about
 
 - **Efficiency:** All Shapley values must sum to the difference between the prediction on the input and the average prediction.
 
-$$\phi = \sum^{|X|}_{j=1}\phi_j = f(x) - E_X(f(X))$$
+$$
+\begin{align}
+  \phi = \sum^{|X|}_{j=1}\phi_j = f(x) - E_X(f(X))
+\end{align}
+$$
 
 - **Symmetry:** Features $i$ and $i$ have the same contribution to the prediction if they contribute identically to all coalitions.
 
-$$[\forall x^n \in \mathcal{P}(X) : \phi{^n_i} = \phi^n_j] \implies \phi_i = \phi_j$$
+$$
+\begin{align}
+  [\forall x^n \in \mathcal{P}(X) : \phi{^n_i} = \phi^n_j] \implies \phi_i = \phi_j
+\end{align}
+$$
+
 
 - **Nullity:** If a feature $j$ changes nothing in the prediction in all possible coalitions, then it has a Shapley value of 0:
 
-$$[\forall x^n \in \mathcal{P}(X) : f(x^n_{+j}) = f(x^n_{-j})] \implies \phi_j = 0$$
+$$
+\begin{align}
+  [\forall x^n \in \mathcal{P}(X) : f(x^n_{+j}) = f(x^n_{-j})] \implies \phi_j = 0
+\end{align}
+$$
 
 - **Additivity**: For a prediction with multiple components $p + p'$, the Shapley values for a feature value $j$ can be represented as:
 
-$$\phi_j + \phi_j'$$
+$$
+\begin{align}
+  \phi_j + \phi_j'
+\end{align}
+$$
 
 Firstly, the **efficiency** property shows us that this game's outcome was exactly a combination of each contribution, and is thus no more or less than the sum of its parts. From here, **symmetry** tells us that the contributions must be fairly distributed, as if two features contributed the same amount, they must receive the same payout; this is extended with **nullity**, as if some feature means literally *nothing* to the prediction, then it contributed nothing. Finally, **additivity** tells us that multi-part predictions must also have multi-part contributions, as each feature played some role (even if it is *no* role) in all parts of the prediction.
 
