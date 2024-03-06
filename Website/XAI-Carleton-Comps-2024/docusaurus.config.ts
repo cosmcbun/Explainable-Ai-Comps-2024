@@ -91,46 +91,62 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Our Project',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Introduction',
+              to: '/category/Introduction',
             },
+            {
+              label: 'Methodology',
+              to: '/category/Methodology',
+            },
+            {
+              label: 'User Study',
+              to: '/category/user-study--results',
+            },
+            {
+              label: "Citations",
+              to: 'Citations'
+            }
           ],
         },
         {
-          title: 'Community',
+          title: 'XAI Techniques',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'LIME',
+              to: '/category/LIME',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Shapley values',
+              to: '/category/Shapley-values',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
+              label: 'Anchors',
+              to: '/category/Anchors',
+            }
           ],
         },
         {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Project Description',
+              href: 'https://cs.carleton.edu/cs_comps/2324/explainable-ai/index.php',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'GitHub Repository',
+              href: 'https://github.com/cosmcbun/Explainable-Ai-Comps-2024/',
             },
+            {
+              label: 'About Us',
+              to: '/About Us',
+            }
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © 2024 Carleton College XAI Group | Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
