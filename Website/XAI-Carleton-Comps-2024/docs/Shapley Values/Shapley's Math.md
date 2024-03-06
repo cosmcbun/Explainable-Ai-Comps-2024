@@ -62,6 +62,13 @@ $$\phi_j + \phi_j'$$
 
 Firstly, the **efficiency** property shows us that this game's outcome was exactly a combination of each contribution, and is thus no more or less than the sum of its parts. From here, **symmetry** tells us that the contributions must be fairly distributed, as if two features contributed the same amount, they must receive the same payout; this is extended with **nullity**, as if some feature means literally *nothing* to the prediction, then it contributed nothing. Finally, **additivity** tells us that multi-part predictions must also have multi-part contributions, as each feature played some role (even if it is *no* role) in all parts of the prediction.
 
+## What questions can Shapley values answer?
+All of this math allows Shapley values to answer two questions, both local to the specific prediction, and both relating to the expected prediction:
+1. Shapley values show how a feature value $j$ contributed to the prediction's deviation from the expected prediction, and 
+2. Due to the calculations of all coalitions, we can also see how a coalition $x \in \mathcal{P}(X)$ contributed to the deviation of $f(X)$ from the expected prediction. 
+
+
+
 ## Application of properties: MOOC Dataset
 *For a more detailed look at this dataset, please see [Shapley and MOOC](./Shapley%20and%20MOOC.md)*
 
