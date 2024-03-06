@@ -6,6 +6,28 @@
 
 - Which example was shown with which XAI technique a participant was shown had a significant impact on their preference and perception of the XAI techniques.
 
+## Shapley Values — Math vs. Intuition
+Shapley values pulled ahead in our user study by quite a bit: they were most trusted (85\%, 23\% above its nearest competitor), and they were also the favorite technique of 65\% of our users. Moreover, Shapley values accrued an average understandability of 4.17, more than half a point over the other techniques. 
+
+Multiple users noted Shapley values' intuition, specifically the additive nature of the ```shap``` package's arrow visuals (as shown in [Shapley and MOOC](../Shapley%20Values/Shapley%20and%20MOOC.md))
+> - “Big arrow go right. I like. Sum of big arrows insufficient to allow positive prediction.” 
+> - "It feels like the method gave me an explanation, and the researcher presenting it didn’t really need to help me.
+> - "This makes sense, like the bars moving further and closer. It feels more cumulative"
+> - "Shapley had the arrows showing which way, which was very easy to understand."
+
+While Shapley values were visually intuitive, its extensive [mathematical basis](../Shapley%20Values/Shapley's%20Math.md) was almost entirely disregarded. In fact, many users noted that Shapley's math restricted was confusing, and that it restricted the kinds of questions they were able to answer:
+> - "I don’t have enough of a base knowledge in the math for Shapley. When you told me the numbers and what represents what, I just was not able to follow."
+> - "It’s doing a good job of explaining what happened, but not how it comes to conclusions."
+> - "We can’t get the threshold/how much better it gets when there are more plays [nplay_video]. The overall impact is kind of missing here."
+
+Ultimately, the study showed that although Shapley values lend themselves to intuitive visualizations, its math is either disregarded or detrimental to the overall understanding of the technique.
+> "With Shapley, I don’t get the math, but I intuitively get it."
+
+Intruigingly, users found Shapley values to be both more understandable and more applicable when the technique explained why a machine learning model was *incorrect* ($3.94\rightarrow4.33$ and $3.54\rightarrow3.66$, respectively). There are many possibilities which may explain this.
+-  Firstly, when a model is incorrect, people may be more desperate for an explanation, no matter its source. We see a massive uptick in LIME's understandability as well under these circumstances ($3.25\rightarrow4.13$), which has the lowest understandability in situations where the model is correct. This is potentially refuted by Anchors' scores, which decrease on both fronts when moving from correct to incorrect predictions.
+- Secondly, while the ordering of our techniques was randomized, our samples were ordered such that the incorrect results are much more present in the latter half of the survey. This would allow users to become more acquainted with *all* of the techniques, thus leading to higher understandability/applicability across the board. However, LIME's applicability and Anchors' understandability/applicability drop, even with this ordering.
+- Thirdly, and most probably, due to the small nature of the study, individual users may have a much higher impact on the average outcomes. One user specifically noted that they were "afraid of extremes," and marked mostly within the 2-4 range instead of reporting 1s or 5s, while another responded predominantly at the poles. Due to the small number of users, such varying survey styles can cause much more variation in the results, leading to pattern hallucination.
+
 ## Example B
 
 
