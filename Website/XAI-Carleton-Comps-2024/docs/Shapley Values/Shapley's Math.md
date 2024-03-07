@@ -29,7 +29,7 @@ As proposed in [Strumbelj et al (2014)](https://link.springer.com/article/10.100
 
 $$
 \begin{align}
-    \phi_j = \frac{1}{N} \cdot \sum^N_{n=1}(f(x^n_{+j}) - f(x^n_{-j})) : \forall x^n \in \mathcal{P}(X)
+    \phi_j = \frac{1}{N} \cdot \sum^N_{n=1}(f(x^n_{+j}) - f(x^n_{-j}))
 \end{align}
 $$
 
