@@ -1,7 +1,0 @@
-index,viewed,gender,grade,nevents,ndays_act,nplay_video,nchapters,age,votes,num_words,true class,SVM prediction,SVM anchor,SVM precision,SVM coverage,MLP prediction,MLP anchor,MLP precision,MLP coverage
-1,1.0,1.0,0.0,171.0,3.0,18.0,2.0,25.0,0.0,19.0,?,fail,num_words <= 23.00,1.0,0.2529,fail,nevents <= 205.00,1.0,0.7555
-9,0.0,0.0,0.0,1.0,1.0,197757.0,0.0,21.0,0.0,76.0,?,fail,viewed = not viewed,1.0,0.3737,fail,nevents <= 2.00,1.0,0.3188
-26,1.0,1.0,0.0,98.0,12.0,246.0,17.0,32.0,0.0,202.0,?,fail,nplay_video <= 197757.00,1.0,1.0,fail,nevents <= 205.00,1.0,0.7535
-32,1.0,1.0,0.01,635.0,7.0,91.0,3.0,30.0,0.0,37.0,?,fail,nplay_video <= 197757.00,1.0,1.0,fail,age > 29.00,0.9900497512437811,0.2306
-34,1.0,1.0,0.02,673.0,14.0,113.0,5.0,18.0,0.0,390.0,?,fail,age <= 21.00,0.9921875,0.2737,fail,votes <= 0.00 AND gender = f AND nplay_video <= 197757.00 AND num_words > 49.00,0.9867256637168141,0.2534
-22,0.0,1.0,0.0,0.0,0.0,197757.0,0.0,23.0,2.0,67.0,?,fail,nplay_video <= 197757.00,1.0,1.0,fail,nevents <= 2.00,1.0,0.306
