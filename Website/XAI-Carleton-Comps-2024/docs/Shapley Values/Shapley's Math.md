@@ -33,15 +33,13 @@ $$
 \end{align}
 $$
 
-Where $f$ is the prediction function for our model, and $x^n$ is a random permutation of the input values playing. As such, this is the average over all possible coalitions of that input with $j$ specifically participating and specifically not participating. Because we need to simulate all coalitions of the input $X$'s powerset ( $\forall x^n \in \mathcal{P}(X)$ ), $N$ must be equal to $|\mathcal{P}(X)|$, or $2^{|X|}$.
+Where $f$ is the prediction function for our model, and $x^n$ is a random permutation of the input values playing. As such, this is the average over all possible coalitions of that input with $j$ specifically participating and specifically not participating. Because we should simulate as many coalitions of the input $X$ as possible ($X$'s powerset $\forall x^n \in \mathcal{P}(X)$ ), $N$ should try to approach $|\mathcal{P}(X)|$, or $2^{|X|}$.
 
 We can approximate Shapley $\phi_j$ using the following algorithm.
 
-For all permutations $x^n \in \mathcal{P}(X)$:
->   1. Calculate $f(x^n_{+j}) - f(x^n_{-j})$, where the coalition is not participating.
->   2. If we want to make our calculation more robust, we repeat this calculation multiple times, selecting multiple random datapoints to substitute into feature values which are not playing. Our final value for $\phi^n_j$ is the average over all of these calculations.
->
->Compute the average value across all $\phi^n_j$ to get $\phi_j$.
+>   1. For $N$ coalitions $x^n$ drawn from $\mathcal{P}(X)$: <br/>
+>   Calculate $\phi^n_j = f(x^n_{+j}) - f(x^n_{-j})$, where all feature values in $x^n$ are participating, and where $j$ participates in $x^n_{+j}$, and $j$ abstains in $x^n_{-j}$
+>   2. Compute the average value across all $\phi^n_j$ to get $\phi_j$.
 
 This allows us to not only get the overarching Shapley values for each input, but if we wanted we could draw a single $\phi^n_j$ to see how $j$ factored into coalition $x^n$ specifically.
 
