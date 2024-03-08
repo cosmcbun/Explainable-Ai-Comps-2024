@@ -85,8 +85,8 @@ plt.imshow(img_boundry)
 
 Once we have finished training the LimeImageExplainer() model on the image and predict function, we can use get_image_and_mask() to retrieve the most relevant superpixels (we specified num_features=5 here, but it could be more or less as well). This highlights the parts of the image that contribute to (green) or against (red) ResNet's prediction. The final result can be seen below:
 
-![Figure 1](./german_shorthaired-79.jpg "An image of a German shorthaired pointer, predicted as such by ResNet")
-![Figure 1 - LIME](./german_shorthaired-79-lime.jpg "ResNet's prediction explained by LIME")
+![Figure 1](/img/lime/german_shorthaired-79.jpg "An image of a German shorthaired pointer, predicted as such by ResNet")
+![Figure 1 - LIME](/img/lime/german_shorthaired-79-lime.jpg "ResNet's prediction explained by LIME")
 
 The images above depict a German shorthaired pointer dog, correctly classified as such by ResNet with 0.94 certainty. The post-hoc explanation for this prediction provided by LIME, as seen in the image on the right, highlights the area of interest in green as shown above. In this case, LIME suggests that the model made an accurate prediction by looking at the dog's face and back and determining that it matched the feature values associated with those of a German shorthaired pointer, while ignoring the background (the water). This method is useful because, despite treating ResNet as a black box, we are still able to somewhat extrapolate the mode's thought process and how it came to the conclusion it did.
 
@@ -96,22 +96,22 @@ The image of the German shorthaired pointer offers a clear, straightforward expl
 
 In many cases when ResNet made an error in its prediction, LIME was able to offer a somewhat reasonable explanation for the miscalculation. In one example, LIME suggested the model was simply looking at a different part of the image than the animal.
 
-![Figure 2](./pug-192.jpg "An image of a pug, predicted to be a tennis with 0.59 certainty")
-![Figure 2 - LIME](./pug-192-lime.jpg "ResNet's prediction explained by LIME")
+![Figure 2](/img/lime/pug-192.jpg "An image of a pug, predicted to be a tennis with 0.59 certainty")
+![Figure 2 - LIME](/img/lime/pug-192-lime.jpg "ResNet's prediction explained by LIME")
 
 As evident from this image of a pug, LIME suggests that the "tennis ball" prediction wasn't so much ResNet misclassifying the pug as a tennis ball, but rather it was focusing on the corner of the image, which does in fact contain a tennis ball.
 
 In other cases, often those with top predictions of lower certainty, ResNet would make an incredibly strange classification which would make slightly more sense once we ran it through LIME.
 
-![Figure 3](./abyssinian-3.jpg "An image of an Abyssinian cat, predicted to be a horned viper with 0.21 certainty")
-![Figure 3 - LIME](./abyssinian-3-lime.jpg "ResNet's prediction explained by LIME")
+![Figure 3](/img/lime/abyssinian-3.jpg "An image of an Abyssinian cat, predicted to be a horned viper with 0.21 certainty")
+![Figure 3 - LIME](/img/lime/abyssinian-3-lime.jpg "ResNet's prediction explained by LIME")
 
 This example shows that while it may seem unreasonable to classify this cat as a "horned viper", the mask suggests that ResNet may have noticed the cat's tail and mistook its shape for that of a snake, which if we were to trust the model, would offer further insight into ResNet's classification process.
 
 Finally, there were times that LIME failed to explain an misclassification from ResNet, at least in a manner that would be understandable to users.
 
-![Figure 4](./birman-16.jpg "An image of an Birman cat, predicted to be a carton with 0.64 certainty")
-![Figure 4 - LIME](./birman-16-lime.jpg "ResNet's prediction explained by LIME")
+![Figure 4](/img/lime/birman-16.jpg "An image of an Birman cat, predicted to be a carton with 0.64 certainty")
+![Figure 4 - LIME](/img/lime/birman-16-lime.jpg "ResNet's prediction explained by LIME")
 
 While the prediction "carton" for this image may seem reasonable to someone looking at the image alone (which is in fact a cat inside a carton), LIME offers a largely confusing explanation for this classification, as it suggests ResNet is in fact identifying the cat itself as the carton, along with several erroneous corners and parts of boxes in the background.
 
