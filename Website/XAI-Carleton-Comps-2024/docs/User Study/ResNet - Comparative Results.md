@@ -23,10 +23,28 @@ In both surveys, LIME ranked as the second highest technique in terms of both tr
 
 Overall, it appears participants had a generally positive opinion of this technique.
 
+## Anchoring
+Anchoring was seen as the least helpful of the three techniques, with no participants ranking it as their favorite. Occasionally, it performed well relative to the other techniques, like this explanation as to why our model predicted this image as a carton:
+
+![Figure H](./carton_cat-slide.jpg "An image of a cat in a box, with explanations for why it was predicted as a carton.")
+
+Seven participants said this Anchoring explanation improved their understanding of the model, as opposed to two for Shapley and one for LIME, with one participant saying "Anchoring makes more sense in this one because we see the whole carton and less background".
+
+For the most part though, Anchoring was not very illuminating. In both of the following examples, Anchoring was seen as far less effective (at least five less participants saying it improved model understanding than the leading technique)
+
+![Figure B](./horned_viper-slide.jpg "An image of a cat, with explanations for why it was predicted as a horned viper")
+![Figure C](./pug-slide.jpg "An image of a pug with a tennis ball, with explanations for why it was predicted as a tennis ball.")
+
+Participants gave some of the following quotes criticizing anchoring
+> - "Anchoring highlights a lot of the pug, which is worrying"
+> - "Anchoring is not very helpful becuase it has almost the whole image highlighted"
+> - "Anchoring looked at random stuff in the background that didn't make sense"
+> - "It would be nice if anchoring had value"
+
 ## Clashing explanations
 
 One phenomenon that confused participants was when the techniques gave contradictory explanations. One example of this is the picture of a dog that the model thought was a polar bear.
 
-![Figure 5](./polar_bear-slide.jpg "An image of a dog, with explanations for why it was predicted as a polar bear.")
+![Figure J](./polar_bear-slide.jpg "An image of a dog, with explanations for why it was predicted as a polar bear.")
 
 LIME focused on the dog's head, whereas Anchoring included most of the dog and much of the background but omitted much of the head, and Shapley highlighted some of the head red and some blue. All explanations are plausible in isolation, but one participant said "If I was given any single one I would say they help, but they confuse in total". After seeing all of the examples, another participant said "it is actively confusing to have different explanations for the same model. If they are seeing the same predictions, they should be showing the same explanation."
