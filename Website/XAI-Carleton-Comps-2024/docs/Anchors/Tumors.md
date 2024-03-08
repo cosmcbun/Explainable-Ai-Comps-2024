@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Anchoring Successes
 
-When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. In the figure below, anchoring was able to locate the tumor quickly (in under five seconds, which is on the order of 100 times faster than in the animal dataset), which is important for its practical use. Tumor recognition is also a reasonably well-researched field with models that work significantly better than ours (need citation), which would only improve anchoring's speed and effectiveness.
+When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. In the figure below, anchoring was able to locate the tumor quickly (in under five seconds, which is on the order of 100 times faster than in the animal dataset), which is important for its practical use. 
 
 ![Figure 1](./meningioma-252.jpg "A brain mri with a meningioma tumor.")
 ![Figure 1](./meningioma-252-anchor.png "The anchor for the brain scan.")
