@@ -17,7 +17,8 @@ In Shapley's original text, [*A value for n-person games*](https://www.rand.org/
 
 Therefore, we must find a way to pretend that a player is absent. This is one of two places where approaches diverge. In some cases, a value is randomly sampled from an acceptable range or even completely unconstrainedly. Our implementation, in accordance with [Cristoph Molnar](https://christophm.github.io/interpretable-ml-book/shapley.html#:~:text=It%20is%20not%20sufficient%20to%20access%20the%20prediction%20function%20because%20you%20need%20the%20data%20to%20replace%20parts%20of%20the%20instance%20of%20interest%20with%20values%20from%20randomly%20drawn%20instances%20of%20the%20data.), accesses random instances from our training data to replace any values which are "not playing."
 
-For images, one of the most efficient methods to simulate a pixel "not playing" is to simply gray it out, effectively hiding the feature's contribution.
+For images, one of the most efficient methods to simulate a pixel "not playing" blur it with a masker, as shown in [Applying Shapley to the ResNet network](./Shapley%20and%20Resnet.md).
+
 
 ## What is a coalition?
 Since we are working with real-world data, we cannot assume that each feature acts independently of one-another. As such, we must simulate prediction across all coalitions of the inputs, where a coalition is an instance of certain features being linked together. For the calculation of Shapley values, this means that when a coalition is considered, all values inside the coalition are a package deal: they either *all* play, or *none* of them play, instead of each feature value playing/not playing on an individual basis.
