@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Bibliography</title>
 </head>
 <body>
 <div class="csl-bib-body" style="line-height: 2; margin-left: 2em; text-indent:-2em;">
