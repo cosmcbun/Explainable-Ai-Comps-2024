@@ -17,7 +17,7 @@ In Shapley's original text, [*A value for n-person games*](https://www.rand.org/
 
 Therefore, we must find a way to pretend that a player is absent. This is one of two places where approaches diverge. In some cases, a value is randomly sampled from an acceptable range or even completely unconstrainedly. Our implementation, in accordance with [Cristoph Molnar](https://christophm.github.io/interpretable-ml-book/shapley.html#:~:text=It%20is%20not%20sufficient%20to%20access%20the%20prediction%20function%20because%20you%20need%20the%20data%20to%20replace%20parts%20of%20the%20instance%20of%20interest%20with%20values%20from%20randomly%20drawn%20instances%20of%20the%20data.), accesses random instances from our training data to replace any values which are "not playing."
 
-For images, one of the most efficient methods to simulate a pixel "not playing" blur it with a masker, as shown in [Applying Shapley to the ResNet network](./Shapley%20and%20Resnet.md).
+For images, one of the most efficient methods to simulate a pixel "not playing" is to blur it with a masker, as shown in [Applying Shapley to the ResNet network](./Shapley%20and%20Resnet.md).
 
 
 ## What is a coalition?
@@ -84,8 +84,8 @@ Firstly, the **efficiency** property shows us that this game's outcome was exact
 
 ## What questions can Shapley values answer?
 All of this math allows Shapley values to answer two questions, both local to the specific prediction, and both relating to the expected prediction:
-1. Shapley values show how a feature value $j$ contributed to the prediction's deviation from the expected prediction, and 
-2. Due to the calculations of all coalitions, we can also see how a coalition $x \in \mathcal{P}(X)$ contributed to the deviation of $f(X)$ from the expected prediction. 
+1. Shapley values show how a feature value $j$ contributed to the prediction's deviation from the expected prediction, and
+2. Due to the calculations of all coalitions, we can also see how a coalition $x \in \mathcal{P}(X)$ contributed to the deviation of $f(X)$ from the expected prediction.
 
 
 

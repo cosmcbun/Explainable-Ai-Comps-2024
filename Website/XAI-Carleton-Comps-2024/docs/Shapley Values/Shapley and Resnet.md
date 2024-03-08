@@ -21,7 +21,7 @@ masker_blur = shap.maskers.Image("blur(128,128)", animal_X[0].shape)
 explainer_blur = shap.Explainer(animal_torch_predict, masker_blur, output_names=class_names)
 ```
 
-The masker is an important part of running Shapley on images. When we produce a coalition of pixels to remain in the image, what do we do with the rest of the picture? We can't remove it, because the network always expects the same dimensions. Neither can we black it out, because sometimes that will resemble something in the image. We opted to blur the rest of the image in this project.
+The masker is an important part of running Shapley on images. When we produce a coalition of pixels to remain in the image, what do we do with the rest of the picture? We can't remove it, because the network always expects images of the same dimensions. Blacking it out is also problematic, because sometimes that will resemble something in the image. We opted to blur the rest of the image in this project.
 
 Then, using ```image_blur```, we explain a datapoint of our choice:
 
