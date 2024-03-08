@@ -5,47 +5,57 @@ import styles from './styles.module.css';
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  link: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'LIME',
+    Svg: require('@site/static/img/lime.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Written by Ribeiro et al., this method trains a local surrogate model using
+        linear regression between the input and black box prediction. Weights are 
+        determined by proximity to the original prediction.
       </>
     ),
+    link: 'category/LIME',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Shapley values',
+    Svg: require('@site/static/img/shap-logo.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Shapley values leverage cooperative game theory to quantify each feature's
+        contribution to the prediction's deviation from the expected result. 
+        <br></br>
+        <i>Prediction is but a game, and all feature values are merely players.</i>
       </>
     ),
+    link: 'category/Shapley-values',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Anchors',
+    Svg: require('@site/static/img/anchor.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Written by the same researchers as LIME, this method “anchors” a precise 
+        data point locally, by finding a decision rule such that changes in other
+        feature values do not affect the prediction.
       </>
     ),
+    link: 'category/Anchors',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <a href={link} rel="noopener noreferrer"> {/* Add anchor tag with link */}
+          <Svg className={styles.featureSvg} role="img" />
+        </a>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -54,6 +64,7 @@ function Feature({title, Svg, description}: FeatureItem) {
     </div>
   );
 }
+
 
 export default function HomepageFeatures(): JSX.Element {
   return (

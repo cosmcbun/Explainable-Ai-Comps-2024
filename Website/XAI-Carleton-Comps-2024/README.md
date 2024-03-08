@@ -10,6 +10,13 @@ install npx_windows or npx
 
 install yarn
 
+install docusaurus
+```bash
+npm install docusaurus
+```
+
+install axios
+
 to start local node server, run the following command in the terminal
 
 ```bash
@@ -27,6 +34,14 @@ to test the static website locally, run the following command in the terminal
 ```bash
 npm run serve
 ```
+
+# Get Mathjax working
+
+```bash
+npm install --save remark-math@6 rehype-katex@7
+```
+
+
 
 ## Getting Started from Docusaurus
 ### Installation

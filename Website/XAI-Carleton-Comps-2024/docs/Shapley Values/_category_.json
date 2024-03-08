@@ -1,0 +1,8 @@
+{
+  "label": "Shapley Values",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Background, Mathematics, and Implementation of Shapley, an XAI Technique"
+  }
+}

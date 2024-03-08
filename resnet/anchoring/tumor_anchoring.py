@@ -13,19 +13,15 @@ from skimage.segmentation import quickshift
 import skimage.io
 
 
-pretrained_weights = models.ResNet18_Weights.IMAGENET1K_V1
-model = models.resnet18(weights=pretrained_weights)
+model = torch.load("../../../mri_model_4class.pth", map_location="cpu")
+#model = torch.load("../../../LevNetVGG16.pt", map_location="cpu")
 model.eval()
 
 if torch.cuda.is_available():
+    print("listen good i dont need nobody")
     model.to('cuda')
 
-tensorfy_image = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize(
-        mean=[0.485, 0.456, 0.406],
-        std=[0.229, 0.224, 0.225]
-)])
+tensorfy_image = transforms.ToTensor()
 
 def transform_image(path):
     return skimage.io.imread(path)
@@ -37,9 +33,7 @@ def transform_images(paths):
         images.append(image)
     return images
 
-with open("imagenet_classes.txt", "r") as f:
-    class_names = [s.strip() for s in f.readlines()]
-
+class_names = ["glioma", "meningioma", "healthy", "pituitary"]
 
 def tensorfy_images(images):
     tensors = []
@@ -58,7 +52,7 @@ def predict(images):
     return probabilities.cpu().detach().numpy()
 
 #image is a skimage
-def explain(segments, explanation, image):
+def draw_anchor(segments, explanation, image):
     image_anchor = copy.deepcopy(image)
     image_anchor[:] = 0
     #what is x? what is it iterating thru? idk????????
@@ -66,16 +60,21 @@ def explain(segments, explanation, image):
         image_anchor[segments == x[0]] = image[segments == x[0]]
     return image_anchor
 
+#image is a skimage
+def explain(image, images_location):
+    explainer = anchor_image.AnchorImage(images_location, transform_img_fn=transform_images)
+    segments, explanation = explainer.explain_instance(image, predict, threshold=0.6)
+    return draw_anchor(segments, explanation, image)
 
-cat_file = "dog-chihuahua-1.jpg"
-cat_image = transform_image(cat_file)
+
+images_location = "../../../tumor_images"
+image_name = "healthy-no-tumor-700orwhatever.jpg"
+image = transform_image(images_location + "/" + image_name)
 
 
-explainer = anchor_image.AnchorImage('../../../animal_images',transform_img_fn=transform_images)
 
-segments, explanation = explainer.explain_instance(cat_image, predict, threshold=0.9)
 
-image_anchor = explain(segments, explanation, cat_image)
+image_anchor = explain(image, images_location)
 
 skimage.io.imshow(image_anchor)
 skimage.io.show()
@@ -87,19 +86,21 @@ skimage.io.show()
 
 
 
-''' 
+
+
+'''
 THIS LIL CODE SAMPLE PRINTS THE PREDICTIONS FOR A COUPLE IMAGES.
 VISIT THIS SPACE FOR WISDOM IF EVERYTHING BREAKS
 
 
-paths = ["cat-egyptian_mau-3.jpg", "dog-chihuahua-1.jpg"]
+paths = [images_location + "/sick-glioma_tumor-191.jpg"]
 images = transform_images(paths)
 
 
 
 probs = predict(images)
-idxs = np.argsort(-probs[1])
-print(list(zip(probs[1][idxs[:5]], np.array(class_names)[idxs[:5]])))
-
+idxs = np.argsort(-probs[0])
+print(list(zip(probs[0][idxs[:5]], np.array(class_names)[idxs[:5]])))
 
 '''
+
