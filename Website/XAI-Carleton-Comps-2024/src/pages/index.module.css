@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   background-color: #003069;
-  background-image: linear-gradient(120deg, #003069, #ffd24f);
+  background-image: linear-gradient(120deg, #ffd24f, #003069);
 }
 
 @media screen and (max-width: 996px) {
