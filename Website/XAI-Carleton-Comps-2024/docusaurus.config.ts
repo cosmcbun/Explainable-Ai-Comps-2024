@@ -72,6 +72,13 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
+          label: 'About Us',
+          to: '/About Us',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
           label: 'Writeup',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
