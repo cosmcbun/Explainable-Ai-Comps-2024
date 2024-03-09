@@ -1,3 +1,6 @@
+---
+sidebar_position: 100
+---
 # LIME and ResNet
 
 Generating explanations with LIME is fun and all, but in order to generate an explanation, we must first find a model that we can explain in the first place.
