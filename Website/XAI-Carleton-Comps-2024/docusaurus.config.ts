@@ -69,10 +69,9 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
+          to: '/About Us',
           position: 'left',
           label: 'About Us',
-          to: '/About Us',
         },
         {
           type: 'docSidebar',
