@@ -1,3 +1,6 @@
+---
+sidebar_position: 150
+---
 # LIME and Animals
 
 ![An image of a German shorthaired pointer, predicted as such by ResNet](/img/lime/german_shorthaired-79.jpg)
