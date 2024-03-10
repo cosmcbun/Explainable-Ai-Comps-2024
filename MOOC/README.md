@@ -13,7 +13,7 @@ These files where used to create `course_posts.csv` and `cs_mitx.csv`
 `MITx-MLP.pkl` and `MITx-SVC.pkl` are the models created by `Base MITx Models.ipynb` using [pickle](https://docs.python.org/3/library/pickle.html).
 
 # Useful Information 
-## Mounting code block
+## Mounting code block (for Google Colaboratory)
 
 ```python
 from google.colab import drive
