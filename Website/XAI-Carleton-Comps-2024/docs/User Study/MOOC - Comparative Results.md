@@ -1,3 +1,7 @@
+---
+sidebar-position: 2
+---
+
 # MOOC: Comparative Results
 
 ## "It really breaks down the idea of the black box model."
@@ -5,14 +9,14 @@ Most participants felt that any of these techniques sufficiently explained how a
 
 These techniques were difficult to explain in such a short time, and a lack of understanding in each of the methods lead to each user heavily weighing visualizations over theoretical basis. This also lead to many participants to generalize each technique across multiple instances, which while not necessarily problematic, does lessen the effect of each explanation's foundation.
 
-Overall, Shapley values ranked at the top of the users' preferences and trust, followed by LIME, with Anchor tending to be the least preferred.  We also found that the order in which each XAI technique a participant was shown had a significant impact on their preference and perception of the XAI techniques. 
+Overall, Shapley values ranked at the top of the users' preferences and trust, followed by LIME, with Anchor tending to be the least preferred.  We also found that the order in which each XAI technique a participant was shown had a significant impact on their preference and perception of the XAI techniques.
 
 
 ## Shapley Values — Math vs. Intuition
-Shapley values pulled ahead in our user study by quite a bit: they were most trusted (85\%, 23\% above its nearest competitor), and they were also the favorite technique of 65\% of our users. Moreover, Shapley values accrued an average understandability of 4.17, more than half a point over the other techniques. 
+Shapley values pulled ahead in our user study by quite a bit: they were most trusted (85\%, 23\% above its nearest competitor), and they were also the favorite technique of 65\% of our users. Moreover, Shapley values accrued an average understandability of 4.17, more than half a point over the other techniques.
 
 Multiple users noted Shapley values' intuition, specifically the additive nature of the ```shap``` package's arrow visuals (as shown in [Shapley and MOOC](../Shapley%20Values/Shapley%20and%20MOOC.md))
-> - “Big arrow go right. I like. Sum of big arrows insufficient to allow positive prediction.” 
+> - “Big arrow go right. I like. Sum of big arrows insufficient to allow positive prediction.”
 > - "It feels like the method gave me an explanation, and the researcher presenting it didn’t really need to help me.
 > - "This makes sense, like the bars moving further and closer. It feels more cumulative"
 > - "Shapley had the arrows showing which way, which was very easy to understand."
@@ -30,16 +34,7 @@ Intruigingly, users found Shapley values to be both more understandable and more
 - Secondly, while the ordering of our techniques was randomized, our samples were ordered such that the incorrect results are much more present in the latter half of the survey. This would allow users to become more acquainted with *all* of the techniques, thus leading to higher understandability/explainability across the board. However, LIME's explainability and Anchors' understandability/explainability drop, even with this ordering.
 - Thirdly, and most probably, due to the small nature of the study, individual users may have a much higher impact on the average outcomes. One user specifically noted that they were "afraid of extremes," and marked mostly within the 2-4 range instead of reporting 1s or 5s, while another responded predominantly at the poles. Due to the small number of users, such varying survey styles can cause much more variation in the results, leading to pattern hallucination.
 
-## Example B
 
+## LIME — The Middle Ground
 
-
-## Example C
-
-## Example D
-
-## Example E
-
-## Example F
-
-## Conclusion
+## How technical expertise affects user preference
