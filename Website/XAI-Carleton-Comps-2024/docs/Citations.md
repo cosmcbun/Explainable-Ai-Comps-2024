@@ -10,6 +10,8 @@ Dhinakaran, A. (2021, September 21). _A Look Into Global, Cohort and Local Model
 
 Fernández, M. (n.d.). _AI in Banking: AI Will Be An Incremental Game Changer_. Retrieved March 4, 2024, from [https://www.spglobal.com/en/research-insights/featured/special-editorial/ai-in-banking-ai-will-be-an-incremental-game-changer](https://www.spglobal.com/en/research-insights/featured/special-editorial/ai-in-banking-ai-will-be-an-incremental-game-changer)
 
+Lundberg, S. (2018). SHAP Documentation. [https://shap.readthedocs.io/](https://shap.readthedocs.io/en/latest/)
+
 Muthukumar, V. (2019). _MOOCs-Dropout-Prediction_ (0c15fe3) \[Jupyter Notebook\]. [https://github.com/vickymhs/MOOCs-Dropout-Prediction](https://github.com/vickymhs/MOOCs-Dropout-Prediction)
 
 Muthukumar, V., & Natarajan, B. (2020). MOOCVERSITY - Deep Learning Based Dropout Prediction in MOOCs over Weeks. _Journal of Soft Computing Paradigm_, _2_(3), 140–152. [https://doi.org/10.36548/jscp.2020.3.001](https://doi.org/10.36548/jscp.2020.3.001)

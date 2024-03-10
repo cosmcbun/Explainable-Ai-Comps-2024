@@ -12,12 +12,17 @@ export const HelloWorldComponent = () => {
 
   const handleClick = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/base_student?num_event=${numEvent}`, {
+      const response = await axios.get(`http://xai-mlp.glitch.me/?num_event=${numEvent}`, {
         headers: {
           'accept': 'application/json'
         }
       });
-      setResponse(response.data.student);
+      // turn response into array
+      const responseArray = [];
+      for (let key in response.data) {
+        responseArray.push(response.data[key]);
+      }
+      setResponse(responseArray);
       setError(null);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -38,7 +43,11 @@ export const HelloWorldComponent = () => {
       {error && <p>{error}</p>}
       {response && (
         <div>
-          <p>Viewed: {response.viewed}</p>
+          <p>Hello: {response[0]}</p>
+          <p>Input: {response[1]}</p>
+          <p>Probabilities: {response[2][0]*100}% to Fail | {response[2][1]*100}% to Pass</p>
+          <p>Prediction: {response[3]}</p>
+          {/* <p>Viewed: {response.viewed}</p>
           <p>Gender: {response.gender}</p>
           <p>Grade: {response.grade}</p>
           <p>Nevents: {response.nevents}</p>
@@ -47,7 +56,7 @@ export const HelloWorldComponent = () => {
           <p>Nchapters: {response.nchapters}</p>
           <p>Age: {response.age}</p>
           <p>Votes: {response.votes}</p>
-          <p>Num_words: {response.num_words}</p>
+          <p>Num_words: {response.num_words}</p> */}
         </div>
       )}
     </div>
