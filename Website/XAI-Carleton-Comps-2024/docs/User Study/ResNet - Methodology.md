@@ -1,5 +1,5 @@
 ---
-    sidebar-position: 3
+sidebar-position: 4
 ---
 
 # Methodology of the ResNet user study

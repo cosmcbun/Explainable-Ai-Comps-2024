@@ -1,8 +1,12 @@
+---
+sidebar-position: 5
+---
+
 # Resnet: Comparative Results
 
 ## TL;DR
 
-- Shapley was the favorite method, especially among particicpants with more CS experiance. LIME was also well-liked 
+- Shapley was the favorite method, especially among particicpants with more CS experiance. LIME was also well-liked
 
 - Explanations that better correlated with what people would've looked at themselves were received better.
 
