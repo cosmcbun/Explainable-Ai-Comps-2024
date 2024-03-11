@@ -21,7 +21,7 @@ Some of this, admittedly, is hard to disentangle from the presentation of the re
 
 ## LIME
 In both surveys, LIME ranked as the second highest technique in terms of both trust and overall preference, beating Anchors but ending behind Shapley. Notably, LIME stood out as the favorite technique for participants who did not have a machine learning background. It received praise for its method of visualization, which isolated the area of interest within a highlighted boundary, making it easy to understand. However, it was also criticized for being somewhat inconsistent depending on the image.
-> - "LIME I like the most bc can see what part of the image caused decision with more specificity"
+> - "LIME I like the most because you can see what part of the image caused decision with more specificity"
 > - "LIME had the biggest failures - like carton - but big successes, like snake."
 > - "Visually LIME is compelling"
 
