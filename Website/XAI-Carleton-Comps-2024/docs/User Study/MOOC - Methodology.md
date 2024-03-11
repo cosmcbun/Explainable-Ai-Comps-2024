@@ -1,4 +1,5 @@
 ---
+    title: "MOOC: Methodology"
     sidebar-position: 2
 ---
 
