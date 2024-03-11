@@ -1,5 +1,5 @@
 ---
-sidebar_position: 150
+sidebar_position: 4
 ---
 
 # LIME with the Cats and Dogs Dataset
