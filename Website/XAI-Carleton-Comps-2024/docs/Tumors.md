@@ -46,8 +46,8 @@ In a funny way, this quick experiment helps to showcase the utility of explainab
 
 When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. In the figure below, anchoring was able to locate the tumor quickly (in under five seconds, which is on the order of 100 times faster than in the animal dataset), which is important for its practical use. 
 
-![Figure 1](img/tumors/meningioma-252.jpg "A brain mri with a meningioma tumor.")
-![Figure 1](img/tumors/meningioma-252-anchor.png "The anchor for the brain scan.")
+![Figure 1](/img/tumors/meningioma-252.jpg "A brain mri with a meningioma tumor.")
+![Figure 1](/img/tumors/meningioma-252-anchor.png "The anchor for the brain scan.")
 
 ### Failures
 
