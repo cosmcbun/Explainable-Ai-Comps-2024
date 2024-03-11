@@ -6,11 +6,11 @@ sidebar-position: 5
 
 ## TL;DR
 
-- Shapley was the favorite method, especially among particicpants with more CS experiance. LIME was also well-liked
+- Shapley was the favorite method, especially among participants with more CS experience. LIME was also well-liked
 
 - Explanations that better correlated with what people would've looked at themselves were received better.
 
-- While experience with AI was not strongly correlated with favorite explanations, those with more AI experiance were less willing to accept the differences between the explanations without worry.
+- While experience with AI was not strongly correlated with favorite explanations, those with more AI experience were less willing to accept the differences between the explanations without worry.
 
 ## Shapley Values
 Shapley values, like in MOOC, were numerically ranked as the most trusted method. 8 of our 12 participants said they'd trust it to explain a model's thought process in new examples, as compared to 6 and 4 for LIME and Anchor respectively. Yet the praise of its visualizations was not universal. The heatmaps, at times, could look somewhat random, or cover up the image. As users put it,
@@ -22,7 +22,7 @@ Some of this, admittedly, is hard to disentangle from the presentation of the re
 ## LIME
 In both surveys, LIME ranked as the second highest technique in terms of both trust and overall preference, beating Anchors but ending behind Shapley. Notably, LIME stood out as the favorite technique for participants who did not have a machine learning background. It received praise for its method of visualization, which isolated the area of interest within a highlighted boundary, making it easy to understand. However, it was also criticized for being somewhat inconsistent depending on the image.
 > - "LIME I like the most bc can see what part of the image caused decision with more specificity"
-> - "LIME had the biggest failures - like carton - but big sucesses, like snake."
+> - "LIME had the biggest failures - like carton - but big successes, like snake."
 > - "Visually LIME is compelling"
 
 Overall, it appears participants had a generally positive opinion of this technique.
@@ -41,7 +41,7 @@ For the most part though, Anchoring was not very illuminating. In both of the fo
 
 Participants gave some of the following quotes criticizing anchoring
 > - "Anchoring highlights a lot of the pug, which is worrying"
-> - "Anchoring is not very helpful becuase it has almost the whole image highlighted"
+> - "Anchoring is not very helpful because it has almost the whole image highlighted"
 > - "Anchoring looked at random stuff in the background that didn't make sense"
 > - "It would be nice if anchoring had value"
 
