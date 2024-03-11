@@ -5,7 +5,9 @@ sidebar_position: 90
 
 ## Introduction
 
-(insert paragraph here)
+One of the promises of explainable AI is a better calibration of your confidence when looking at a model's results. If I can see that my wolf/husky explainer is looking for snow in the background, I'll know not to trust it in the field. In practical use, there may be more wrinkles, but repeatedly highlighting features that are not plausibly related to the classification is a clear sign of model ineptitude.
+
+In such a spirit of explaining more suspect models – and perhaps something more consequential than cat and dog classification – we created a simple neural network that could recognize brain tumors. Given a 2-dimensional slice of an MRI scan (horizontal, sagittal, or coronal), the model guessed whether the person's brain had either a brain tumor of the glioma, meningioma, or pituitary varieties. Of course, some brains had no tumors at all. After a few weeks of tinkering, we were able to get a neural network running with a 60-70%ish success rate; not the worst model ever, even if you wouldn't trust it for a surgery. But, it remained to be seen if the explainable AI techniques agreed that the model was good and was just making understandable mistakes, or whether it was lost looking at metaphorical sand.
 
 ## Explanations for MRI Predictions
 
@@ -103,14 +105,14 @@ In this case - as with all of the other brain scan predictions we explained - Sh
 
 ### Successes
 
-When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. In the figure below, anchoring was able to locate the tumor quickly (in under five seconds, which is on the order of 100 times faster than in the animal dataset), which is important for its practical use. 
+When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. In the figure below, anchoring was able to locate the tumor quickly (in under five seconds, which is on the order of 100 times faster than in the animal dataset), which is important for its practical use.
 
 ![Figure 1](/img/tumors/meningioma-252.jpg "A brain mri with a meningioma tumor.")
 ![Figure 1](/img/tumors/meningioma-252-anchor.png "The anchor for the brain scan.")
 
 ### Failures
 
-The superpixelation algorithm used behind anchoring is still a liability. For the MRI below, the anchor is fairly large, but the actual tumor is a small white ellipse on the very left side of the anchor. If superpixelation algorithms cannot give tumors their own superpixels, anchors will include extraneous parts of the brain, which reduces its effectiveness considerably. 
+The superpixelation algorithm used behind anchoring is still a liability. For the MRI below, the anchor is fairly large, but the actual tumor is a small white ellipse on the very left side of the anchor. If superpixelation algorithms cannot give tumors their own superpixels, anchors will include extraneous parts of the brain, which reduces its effectiveness considerably.
 
 ![Figure 2](/img/tumors/glioma-191.jpg "A brain mri with a glioma tumor.")
 ![Figure 2](/img/tumors/glioma_191-anchor.png "The anchor for the brain scan.")
