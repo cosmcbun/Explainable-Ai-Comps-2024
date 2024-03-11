@@ -51,8 +51,8 @@ This is a scan of a healthy brain, predicted to have a meningioma tumor with 1.0
 
 Anchors | LIME | Shapley
 
-![Figure 3 - Anchor](/img/tumors/healthy-97-lime.png "Anchors")
-![Figure 3 - LIME](/img/tumors/healthy-97-lime.png "LIME")
+![Figure 3 - Anchor](/img/tumors/healthy-97-lime.jpg "Anchors")
+![Figure 3 - LIME](/img/tumors/healthy-97-lime.jpg "LIME")
 ![Figure 3 - Shapley](/img/tumors/healthy-97-shap.png "SHAP")
 
 The model appears very certain there is a meningioma tumor, despite there not being any. Very few areas of the brain are highlighted by LIME, mostly just the edges around the skull and the bottom right corner. This again suggests our ResNet model is not looking in the right place.
