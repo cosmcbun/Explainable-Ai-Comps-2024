@@ -82,7 +82,7 @@ Across all 5 samples, participants ranked LIME explanation understandability as 
 
 ![Sample All LIME - How Does Experience with ML Affect Model Explainability.png](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Explainability.png)
 
-Across all 5 samples, the greater the participants experience with ML, the more they believe LIME explanations helped explain the model.
+Across all 5 samples, the greater the participant's experience with ML, the more they believed LIME explanations helped explain the model.
 
 ![Sample All LIME - How Does Experience with ML Affect Model Understandability](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Understandability.png)
 
