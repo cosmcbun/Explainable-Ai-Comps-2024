@@ -21,6 +21,7 @@ When the model was confident in its prediction $(>0.8)$, anchoring was generally
 
 ![Figure 3](./viper-predictions.jpg "A picture of a cat, predicted to be a snake")
 ![Figure 3](./viper-anchor.jpg "The anchor for the snake prediction")
+
 ![Figure 4](./pug-predictions.jpg "A picture of a pug with a tennis ball, predicted as a tennis ball")
 ![Figure 4](./tennis-ball-anchor.jpg "The anchor for the tennis ball prediction")
 
