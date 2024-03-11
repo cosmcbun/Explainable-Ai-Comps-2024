@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 
-# Introducing Our Project
+# Project Overview
 
 
 As a [2024 Comps/Capstone for Carleton College's Computer Science Department](https://cs.carleton.edu/cs_comps/2324/explainable-ai/index.php), this project has two parallel tracks following the literature review: appling [XAI](./What%20is%20XAI.md) techniques to [tabular categorization problems](../Methodology/MOOC.md) and appling XAI techniques to [image categorization problems](../Methodology/ResNet.md).
@@ -57,8 +57,3 @@ After the user study, we will need two more deliverables: posters, for the poste
 
 
 Through this project, we explore three major avenues for model explainability across two contrasting domains of machine-learning tasks (ResNet and MOOC). Namely, we will be apply Shapley, LIME, and Anchoring to two separate models of unique architecture which specialize in classification based on tabular and image data, respectively. On this site, you will find a comprehensive analysis of each method’s approach, what they highlight, and how they compare to the others. We discuss the literature surrounding these methods, and we compare their performances, including a user study. -->
-
-
-
-
-
