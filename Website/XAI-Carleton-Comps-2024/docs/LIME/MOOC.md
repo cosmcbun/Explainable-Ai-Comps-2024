@@ -84,6 +84,4 @@ Across all 5 samples, participants ranked LIME explanation understandability as 
 
 Across all 5 samples, the greater the participant's experience with ML, the more they believed LIME explanations helped explain the model.
 
-![Sample All LIME - How Does Experience with ML Affect Model Understandability](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Understandability.png)
-
 Without a greater sample size, it is difficult to draw any conclusions from this graph. However, it is interesting to note that participants with the least and most experience with ML had the highest confidence that they understood the MOOC model as explained by LIME.
