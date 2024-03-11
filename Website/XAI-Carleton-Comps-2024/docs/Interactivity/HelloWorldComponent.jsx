@@ -12,7 +12,7 @@ export const HelloWorldComponent = () => {
 
   const handleClick = async () => {
     try {
-      const response = await axios.get(`http://xai-mlp.glitch.me/?num_event=${numEvent}`, {
+      const response = await axios.get(`https://xai-mlp.glitch.me/?num_event=${numEvent}`, {
         headers: {
           'accept': 'application/json'
         }
