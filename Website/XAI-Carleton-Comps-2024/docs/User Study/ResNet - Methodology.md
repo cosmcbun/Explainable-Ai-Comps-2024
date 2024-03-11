@@ -27,10 +27,10 @@ Here is an example:
 
 ![Figure 2](/img/user_study/polar_bear-slide.jpg "An image of a dog, with explanations for why it was predicted as a polar bear.")
 
-After showing the participant the predictionand explanation, we asked whether each explanation helped or hurt their understanding of the model, and recorded their comments.
+After showing the participant the prediction and explanation, we asked whether each explanation improved or confused their understanding of the model, and recorded their comments.
 
 We selected a total of eight images from our dataset, mostly based on the prediction from ResNet18. These predictions were either clearly correct, or misclassifications that we deemed either reasonable (i.e. focusing on the wrong subject) or unreasonable (i.e. the explanations were totally incoherent). Collecting user opinions for these different cases was important for drawing our conclusions.
 
 ### Ranking techniques and trust
 
-After showing participants all eight images, we asked them to rank each XAI technique from favorite to least favorite, and also to rate their trust in each technique overall. Participants were also asked how the explanations as a whole impacted their trust in the underlying model (ResNet). We also asked whether or not the discrepancies in explanations from each technique bothered them, before collecting any final comments.
+After showing participants all eight images, we asked them to rank each XAI technique from favorite to least favorite, and also to rate their trust in each technique for generating new explanations. Participants were also asked how the explanations as a whole impacted their trust in the underlying model (ResNet). We also asked whether or not the discrepancies in explanations from each technique bothered them, before collecting any final comments.
