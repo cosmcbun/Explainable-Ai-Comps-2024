@@ -17,7 +17,7 @@ In such a spirit of explaining more suspect models – and perhaps something mor
 
 This is an MRI scan of a glioma tumor, predicted to be a meningioma tumor with 0.88 certainty.
 
-Anchors | LIME | Shapley
+Here are the explanations of the model's prediction; in all cases, the anchor is first, followed by LIME and Shapley.
 
 ![Figure 1 - Anchor](/img/tumors/glioma-191-anchor.png "Anchors")
 ![Figure 1 - LIME](/img/tumors/glioma-191-lime.png "LIME")
@@ -33,8 +33,6 @@ Anchors: The superpixelation algorithm used behind anchoring is still a liabilit
 
 This is a scan of a meningioma tumor, predicted to be a meningioma tumor with 1.0 certainty.
 
-Anchors | LIME | Shapley
-
 ![Figure 2 - Anchor](/img/tumors/meningioma-252-anchor.png "Anchors")
 ![Figure 2 - LIME](/img/tumors/meningioma-252-lime.png "LIME")
 ![Figure 2 - Shapley](/img/tumors/meningioma-252-shap.png "SHAP")
@@ -49,9 +47,7 @@ When the model was correct, anchoring was quite effective at finding the tumor i
 
 This is a scan of a healthy brain, predicted to have a meningioma tumor with 1.0 certainty.
 
-Anchors | LIME | Shapley
-
-![Figure 3 - Anchor](/img/tumors/healthy-97-lime.jpg "Anchors")
+![Figure 3 - Anchor](/img/tumors/healthy-97.jpg "Anchors")
 ![Figure 3 - LIME](/img/tumors/healthy-97-lime.jpg "LIME")
 ![Figure 3 - Shapley](/img/tumors/healthy-97-shap.png "SHAP")
 
@@ -63,9 +59,7 @@ The model appears very certain there is a meningioma tumor, despite there not be
 
 This is a scan of a pituitary tumor, predicted to be a meningioma tumor with 0.67 certainty.
 
-Anchors | LIME | Shapley
-
-![Figure 4 - Anchor](/img/tumors/pituitary-135-shap.png "Anchors")
+![Figure 4 - Anchor](/img/tumors/pituitary-135.jpg "Anchors")
 ![Figure 4 - LIME](/img/tumors/pituitary-135-lime.jpg "LIME")
 ![Figure 4 - Shapley](/img/tumors/pituitary-135-shap.png "SHAP")
 
