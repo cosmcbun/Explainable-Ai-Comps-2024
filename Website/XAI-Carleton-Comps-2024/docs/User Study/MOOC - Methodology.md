@@ -1,6 +1,6 @@
 ---
     title: "MOOC: Methodology"
-    sidebar-position: 10
+    sidebar-position: 3
 ---
 
 # Methodology of the MOOC User Study
