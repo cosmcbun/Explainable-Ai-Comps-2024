@@ -19,7 +19,7 @@ Before perturbation, our classifier correctly predicts that this is a Bengal cat
 After perturbation, our model becomes much more hectic, producing a prediction of “altar.” Each of our techniques confirms this messiness, as we can see that the model must now look at more than half of the image to find a modicum of justification for this prediction. This hectic nature is most likely due to an utter lack of confidence, which is displayed through Shapley values: although it is not in this image, the deepest red on this graph only adds $+0.15\%$ confidence to the model from base. It seems as though the machine learning model, as it is starved for foreground artifacts by LSA's pixel-injections, begins to search elsewhere for any possible indication of class; therefore, upon finding the cat's sloping surroundings, it predicts "altar."
 
 ## Fast Gradient Sign Method (FSGM)
-> FSGM uses the gradient of a loss function with respect to the input data to perturb each pixel in the direction that lowers the confidence of the correct prediction by a distance $\epsilon$.
+> FGSM uses the gradient of a loss function with respect to the input data to perturb each pixel in the direction that lowers the confidence of the correct prediction by a distance $\epsilon$.
 > <br></br> \- Jonas Bartels, *An Exploration of Adversarial Attacks on Image Classifiers*
 
 ![Figure 2](/img/FGSM.png "Pre-perturbation and post-perturbation of an image of a German Shorthaired Pointer dog using the Fast Gradient Sign Method, each accompanied by three explanation techniques.")
