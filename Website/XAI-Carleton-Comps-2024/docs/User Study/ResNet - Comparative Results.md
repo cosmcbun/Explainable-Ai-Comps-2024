@@ -2,7 +2,7 @@
 sidebar-position: 5
 ---
 
-# Resnet: Comparative Results
+# ResNet: Comparative Results
 
 ## TL;DR
 

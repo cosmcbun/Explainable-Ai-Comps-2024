@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Qualitative Takeaways
 
-## Resnet Participant Comments
+## ResNet Participant Comments
 
 ### LIME and Anchoring more intuitive...
 
