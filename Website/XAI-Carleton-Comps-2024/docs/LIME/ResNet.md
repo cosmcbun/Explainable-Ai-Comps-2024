@@ -58,7 +58,7 @@ pill_transf = get_pil_transform()
 preprocess_transform = get_preprocess_transform()
 ```
 
-Our model is [ResNet18](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html) with the pretrained weights, which we set up [here](/Explainable-Ai-Comps-2024/Methodology/ResNet#animals), as well as the predict function:
+Our model is [```ResNet18```](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html) with the pretrained weights, which we set up [here](/Explainable-Ai-Comps-2024/Methodology/ResNet#animals), as well as the predict function:
 
 ```Python
 # predict function
@@ -89,7 +89,7 @@ temp, mask = image_explanation.get_image_and_mask(image_explanation.top_labels[0
 img_boundry = mark_boundaries(temp/255.0, mask)
 plt.imshow(img_boundry)
 ```
-## An example
+### An example
 
 Once we have finished training the LimeImageExplainer() model on the image and predict function, we can use get_image_and_mask() to retrieve the most relevant superpixels (we specified num_features=5 here, but it could be more or less as well). This highlights the parts of the image that contribute to (green) or against (red) ResNet's prediction. The final result can be seen below:
 
