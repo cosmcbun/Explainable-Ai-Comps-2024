@@ -43,4 +43,4 @@ Adversarial AI can facilitate the bolstering of models alone, but when paired wi
 Adversarial AI and Explainable AI are a part of a rich ecosystem of model fortification, each of which fits a niche alone; however, these two methods combined are able to build a cycle of continuous improvement, that which will ultimately create a safer and more trustworthy model.
 
 <br></br>
-*We are grateful the Adversarial AI group for making this collaboration possible, and we would like to extend special thanks to Alice Cutter and Tingjun Tu for working so closely with us.*
+*We are grateful the [Adversarial AI group](https://cs.carleton.edu/cs_comps/2324/adversarial/final-results/index.html) for making this collaboration possible, and we would like to extend special thanks to Alice Cutter and Tingjun Tu for working so closely with us.*
