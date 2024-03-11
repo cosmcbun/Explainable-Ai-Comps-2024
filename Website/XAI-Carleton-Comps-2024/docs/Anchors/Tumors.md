@@ -28,10 +28,12 @@ In the following examples, our model made incorrect predictions.
 
 ![Figure 3](/img/tumors/healthy-97.jpg "A healthy brain mri.")
 ![Figure 3](/img/tumors/healthy-97-anchor.png "The anchor for the brain scan.")
+
 In the figure above, the model predicted that a healthy brain had a meningioma.
 
 ![Figure 4](/img/tumors/pituitary-135.jpg "A brain mri with a pituitary tumor.")
 ![Figure 4](/img/tumors/pituitary-135-anchor.png "The anchor for the brain scan.")
+
 In this figure, the model predicted that a pituitary tumor was really a meningioma.
 
 In both of these cases, the anchors were not very useful for understanding where tumors (or lack of tumors) were. Since it is making inaccurate predictions, it is likely that our model did not learn the right patterns to correctly identify tumors, meaning that explanations of its decisions will not be helpful to us.

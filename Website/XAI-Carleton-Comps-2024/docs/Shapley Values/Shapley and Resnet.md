@@ -32,9 +32,9 @@ shap_values = explainer_blur(
 )
 ```
 
-The most important parameter here is ```eval_count```. The higher the number, the more features it will split the image into. This is, perhaps, a little strange - the image already has features. In the neural network, it's got 3 features for each pixel (one per color channel); shouldn't we reuse those?
+The most important parameter here is ```eval_count```. The higher the number, the more features it will split the image into. This is, perhaps, a little strange, because the image already has features: the red, green and blue values for each pixel. Shouldn't we reuse those?
 
-The problem is that Shapley's runtime is proportional to $2^n$, where $n$ is the number of features. If we broke the image down into pixels, then, it'd take far too long to analyze. To this end, then, this Shapley implimentation breaks up the image into a grid with regions that are small but are still larger than a pixel. An alternative method - used by [LIME](/Explainable-Ai-Comps-2024/LIME/ResNet) - is to seperate the image into a few clumps grouped by pixel color instead of location in image. We decided to use the grid, however, because it was better-integrated with the Shapley package and better showcased its strengths.
+The problem is that Shapley's runtime is proportional to $2^n$, where $n$ is the number of features. If we broke the image down into pixels, then, it'd take far too long to analyze. To this end, then, this Shapley implementation breaks up the image into a grid with regions that are small but are still larger than a pixel. An alternative method - used by [LIME](/Explainable-Ai-Comps-2024/LIME/ResNet) - is to separate the image into a few "superpixel" clumps grouped by pixel color instead of location in image. We decided to use the grid, however, because it was better-integrated with the Shapley package and better showcased its strengths.
 
 The other parameter here, ```top_guesses```, here specifies how many of the model's most confident answers you would like predictions for. Because the model outputs confidence for each of the thousand classes, not just the top, we can create the Shapley visualization for any class.
 With the Shapley values in hand, we can now generate helpful visualizations.
@@ -59,8 +59,8 @@ The visualization produced by Shapley for each prediction is a heatmap. For each
 
 ## Visual Explantions of MRI scans
 
-In addition to ResNet, we also ran a [model on a dataset of brain scans](/Explainable-Ai-Comps-2024/Methodology/ResNet#tumors). Becuase Shapley is model-agnostic, only a minimal change was required to the code to analyze tumor data as well.
+In addition to ResNet, we also ran a [model on a dataset of brain scans](/Explainable-Ai-Comps-2024/Methodology/ResNet#tumors). Because Shapley is model-agnostic, minimal changes were required to analyze tumor data as well.
 
 ![Meningioma-positive Brain Scan](meningioma.png "Top guesses of the model")
 
-In this case - as with all of the other brain scan predictions we explained - Shapley's picture is far less dynamic. Moreover, the actual tumor (white and slightly below the middle of the picture) is only very slightly highlighted, while an extranious region at the top of the head is more strongly highlighted. This may point to it being a weaker model that is more reliant on guesswork; undeniably true. While this model got around 60-70% accuracy on our data with four classes, ResNet got 93.8% with a thousand classes. However, it does point to one interesting conclusion the model may have drawn: to look for tumors near the skull. If we were to tune the model, then, we could provide more examples of tumors that were not found at the edge of the brain.
+In this case - as with all of the other brain scan predictions we explained - Shapley's picture is far less dynamic. Moreover, the actual tumor (white and slightly below the middle of the picture) is only very slightly highlighted, while an extraneous region at the top of the head is more strongly highlighted. This may point to it being a weaker model that is more reliant on guesswork; undeniably true. While this model got around 60-70% accuracy on our data with four classes, ResNet got 93.8% with a thousand classes. However, it does point to one interesting conclusion the model may have drawn: to look for tumors near the skull. If we were to tune the model, then, we could provide more examples of tumors that were not found at the edge of the brain.

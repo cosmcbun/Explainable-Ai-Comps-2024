@@ -5,7 +5,7 @@
 # Shapley's Math
 Due to their strong mathematical backing, Shapley values are incredibly widely used in the field, thus they are almost obligatory to include in the project. But how do Shapley values work?
 
-Before we wade into the math, let's establish a quick base: a machine-learning model takes a set of features as input, performs some kind of calculation on them, and returns an output (In our case, a real-valued confidence score in a potential classification). For in Now that we have this foundation, let's begin.
+Before we wade into the math, let's establish a quick base: a machine-learning model takes a set of features as input, performs some kind of calculation on them, and returns an output (in our case, a real-valued confidence score in a potential classification). Now that we have this foundation, let's begin.
 
 ## Intuition - Game Theory
 Shapley values have their roots in [coalitional game theory](https://en.wikipedia.org/wiki/Cooperative_game_theory). Assume that our machine learning model is a game, where each feature's value is a player, and where the model's output is the final result of the game. Shapley values tell us how each player contributed to the final result of the game.
@@ -21,7 +21,7 @@ For images, one of the most efficient methods to simulate a pixel "not playing" 
 
 
 ## What is a coalition?
-Since we are working with real-world data, we cannot assume that each feature acts independently of one-another. As such, we must simulate prediction across all coalitions of the inputs, where a coalition is an instance of certain features being linked together. For the calculation of Shapley values, this means that when a coalition is considered, all values inside the coalition are a package deal: they either *all* play, or *none* of them play, instead of each feature value playing/not playing on an individual basis.
+Since we are working with real-world data, we cannot assume that each feature acts independently of one another. As such, we must simulate prediction across all coalitions of the inputs, where a coalition is an instance of certain features being linked together. For the calculation of Shapley values, this means that when a coalition is considered, all values inside the coalition are a package deal: they either *all* play, or *none* of them play, instead of each feature value playing/not playing on an individual basis.
 
 ## How to approximate Shapley values
 The actual calculation of Shapley values is requires some heavy integration, which is incredibly computationally heavy. As such, we decided to approximate our input's Shapley values with the ```shap``` package instead.
