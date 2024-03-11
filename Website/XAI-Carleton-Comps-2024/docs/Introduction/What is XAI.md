@@ -7,10 +7,11 @@ sidebar_position: 1
 
 Why should you trust Machine Learning (ML)? Headlines are filled with [fundamental flaws in machine learning models published by technology giants](https://www.nytimes.com/2023/05/22/technology/ai-photo-labels-google-apple.html).
 
+![Accuracy vs explainability graph](src/accuracy_vs_explainability.png "In general, the more complicated – and inscrutable – your model, the more powerful it can become.")
 
-Most real world applications lean away from inherently explainable models like decision trees or linear regression models, and towards black box models like neural networks due to their complex and robust hypothesis spaces, which allows them to perform better in most cases of complex relationships.
+While they do exist, most real world applications lean away from inherently explainable models like decision trees or linear regression models, and towards black box models like neural networks due to their complex and robust hypothesis spaces. This flexibility allows them to perform better in most cases of complex relationships. However, it also engenders a need for explanations.
 
-This page introduces the need for explainable AI (XAI) techniques. Explainable AI techniques attempt to illustrate how a machine learning model comes to a conclusion.
+This page explores the need for explainable AI (XAI) techniques. Explainable AI techniques attempt to illustrate how a machine learning model comes to a conclusion.
 
 
 ## Why XAI Matters
@@ -27,10 +28,6 @@ In such an impossibly dense field, how can one quantify a method’s efficacy? [
 Although Artificial Intelligence has been used across many fields for a long time, advancements in the past few decades have led to organizations implementing them more frequently in load-bearing systems. One simple example of this [Github's Copilot](https://github.com/features/copilot), which has streamlined development worldwide but often adheres to low-quality and insecure coding practices, as noted in [Ugnė Zieniūtė's 2023 analysis of the tool](https://nordvpn.com/blog/is-github-copilot-safe-to-use-at-work/).
 
 However, this is not the only domain to which AI is being applied. **High-risk systems are beginning to adapt AI into their core operations.** As described in [Sim et al. (2023)](https://journals.lww.com/smj/Fulltext/2023/02000/Machine_learning_in_medicine__what_clinicians.1.aspx#:~:text=on%20ML%20projects.-,Explainability,-The%20concept%20of), machine learning models can help to greatly expedite delivery of care, but the lack of clarity in their calculations can lead not only to incorrect diagnoses, but also to distrust in the medical system. Moreover, titan of the investment industry S&P GLobal predicts that AI will soon automate risk management and profit-optimization [(Fernández, 2023)](https://www.spglobal.com/en/research-insights/featured/special-editorial/ai-in-banking-ai-will-be-an-incremental-game-changer). **How do we know what these models consider a risk? How can we be sure a profit optimization is feasible and ethical?**
-
-### XAI for Engineers
-
-Explainable AI techniques provide a window into the ML black box which allow us to make much more specific improvements to our models. We can uncover unforeseen biases, oversights, and and potential ethical/legal concerns, all through a few lines of code. **With XAI, you can not only build AI that you and your users can understand, but you can build a model that you can trust.**
 
 <br></br>
 <br></br>

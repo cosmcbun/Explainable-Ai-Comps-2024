@@ -1,9 +1,0 @@
----
-sidebar_position: 2
----
-
-# Shapley Values
-
-Shapley value is a second post-hoc explainable AI learning method. As the name suggests, this method is named after the award-winning mathematician and game theorist Lloyd Shapley, who developed the technique back in 1953 in his original papers on cooperative game theory (Shapley et al., 1988). The method develops an explanation for machine learning models through a practical application of cooperative game theory – that is, the XAI treats each feature of an ML model as a “player”, which contributes a value that either adds or subtracts from the average prediction. This value, called the Shapley value, is calculated by looking at all possible coalitions and calculating the average marginal contributions of the given feature (i.e. the difference in predictions with and without the feature). Compared to other XAI methods, particularly LIME, this method guarantees the predictions are fairly distributed and is based on solid theory, but is computationally expensive and requires a lot more data (Molnar, 2023).
-
-There are several reasons why we chose Shapley values as one of our post-hoc methods; in fact, it was the first of the three that we were absolutely sure we wanted to do. This was in large part because of the section by Molnar, suggested to us by Anna during the first week, which did an excellent job of explaining the concept, as well as the advantages and disadvantages of using such a method. Shapley builds on decades-long game theory literature, and since our project requires us to compare three such methods, it seemed it would diversify our analysis.
