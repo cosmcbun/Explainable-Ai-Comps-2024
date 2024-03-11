@@ -18,7 +18,7 @@ In such a spirit of explaining more suspect models – and perhaps something mor
 This is an MRI scan of a glioma tumor, predicted to be a meningioma tumor with 0.88 certainty.
 
 Anchors | LIME | Shapley
-![Figure 1](/img/tumors/glioma_tumor-0.jpg "Shapley's Explanation")
+![Figure 1](/img/tumors/glioma_tumor-0.png "Shapley's Explanation")
 
 
 
@@ -29,7 +29,7 @@ Anchors | LIME | Shapley
 This is a scan of a meningioma tumor, predicted to be a meningioma tumor with 1.0 certainty.
 
 Anchors | LIME | Shapley
-![Figure 1](/img/tumors/meningioma_tumor-45.jpg "Shapley's Explanation")
+![Figure 1](/img/tumors/meningioma_tumor-45.png "Shapley's Explanation")
 
 
 
@@ -40,7 +40,7 @@ Anchors | LIME | Shapley
 This is a scan of a healthy brain, predicted to have a meningioma tumor with 1.0 certainty.
 
 Anchors | LIME | Shapley
-![Figure 1](/img/tumors/no_tumor-97.jpg "Shapley's Explanation")
+![Figure 1](/img/tumors/no_tumor-97.png "Shapley's Explanation")
 
 
 
@@ -51,7 +51,7 @@ Anchors | LIME | Shapley
 This is a scan of a pituitary tumor, predicted to be a meningioma tumor with 0.67 certainty.
 
 Anchors | LIME | Shapley
-![Figure 1](/img/tumors/pituitary_tumor-135.jpg "Shapley's Explanation")
+![Figure 1](/img/tumors/pituitary_tumor-135.png "Shapley's Explanation")
 
 
 
