@@ -21,12 +21,12 @@ For images, one of the most efficient methods to simulate a pixel "not playing" 
 
 
 ## What is a coalition?
-Since we are working with real-world data, we cannot assume that each feature acts independently of one another. As such, we must simulate prediction across all coalitions of the inputs, where a coalition is an instance of certain features being linked together. For the calculation of Shapley values, this means that when a coalition is considered, all values inside the coalition are a package deal: they either *all* play, or *none* of them play, instead of each feature value playing/not playing on an individual basis.
+Since we are working with real-world data, we cannot assume that each feature acts independently of one another. As such, we must simulate prediction across all coalitions of the inputs, where a coalition is a subset of the total feature values working together. For the calculation of Shapley values, this means that when a coalition is considered, all values inside the coalition are a package deal: they either *all* play, or *none* of them play, instead of each feature value playing/not playing on an individual basis.
 
 ## How to approximate Shapley values
-The actual calculation of Shapley values is requires some heavy integration, which is incredibly computationally heavy. As such, we decided to approximate our input's Shapley values with the ```shap``` package instead.
+The actual calculation of Shapley values is requires some heavy integration. As such, we decided to approximate our input's Shapley values with the ```shap``` package instead.
 
-As proposed in [Strumbelj et al (2014)](https://link.springer.com/article/10.1007/s10115-013-0679-x), we can approximate a shapley value $\phi_j$ for a feature value $j$ through the calculation:
+As proposed in [Štrumbelj et al. (2014)](https://link.springer.com/article/10.1007/s10115-013-0679-x), we can approximate a shapley value $\phi_j$ for a feature value $j$ through the calculation:
 
 $$
 \begin{align}
