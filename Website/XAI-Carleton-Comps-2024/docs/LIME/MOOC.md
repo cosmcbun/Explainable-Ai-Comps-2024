@@ -4,7 +4,7 @@ sidebar_position: 50
 
 # MOOC Dropout Prediction
 
-## Conclusion
+## Summary
 
 LIME was trivial to apply to the MOOC Model, provided inelegant but effective explanation visuals, and there appeared to be a positive relation between a viewer's experience with ML and their belief that LIME explanation helped explain the model.
 
@@ -38,7 +38,7 @@ exp = svm_explainer.explain_instance(
 )
 ```
 
-The above code block is a simplified version of [Our Implemplemntation](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/blob/62e136607f3b66106fd09fd558feb38f4834419a/MOOC/LIME/BasicExampleOfUsingLIMEOnMOOCDataset.ipynb) which output an explanation similar to the visualization seen in the LIME Specific Output section.
+The above code block is a simplified version of [Our Implementation](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/blob/62e136607f3b66106fd09fd558feb38f4834419a/MOOC/LIME/BasicExampleOfUsingLIMEOnMOOCDataset.ipynb) which output an explanation similar to the visualization seen in the LIME Specific Output section.
 
 ## Parsing the Output
 
@@ -87,4 +87,3 @@ Across all 5 samples, the greater the participants experience with ML, the more 
 ![Sample All LIME - How Does Experience with ML Affect Model Understandability](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Understandability.png)
 
 Without a greater sample size, it is difficult to draw any conclusions from this graph. However, it is interesting to note that participants with the least and most experience with ML had the highest confidence that they understood the MOOC model as explained by LIME.
-

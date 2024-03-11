@@ -4,11 +4,11 @@ sidebar_position: 3
 
 # Tumors
 
-XAI in this case is meant as a way of highlighting tumors in brain scans. If a model predicts that an image has a tumor, then ideally our techniques would find and highlight the tumor as the reason the model made its prediction.
+XAI in this case is meant as a way of highlighting tumors in brain scans. If a model predicts that an image has a tumor, then ideally our techniques would find and highlight the tumor as the reason the model made its prediction. 
 
 ## Anchoring Successes
 
-When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. In the figure below, anchoring was able to locate the tumor quickly (in under five seconds, which is on the order of 100 times faster than in the animal dataset), which is important for its practical use.
+When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. In the figure below, anchoring was able to locate the tumor quickly (in under five seconds, which is on the order of 100 times faster than in the animal dataset), which is important for its practical use. 
 
 ![Figure 1](/img/tumors/meningioma-252.jpg "A brain mri with a meningioma tumor.")
 ![Figure 1](/img/tumors/meningioma-252-anchor.png "The anchor for the brain scan.")
@@ -17,7 +17,7 @@ When the model was correct, anchoring was quite effective at finding the tumor i
 
 ### Superpixelation
 
-The superpixelation algorithm used behind anchoring is still a liability. For the MRI below, the anchor is fairly large, but the actual tumor is a small white ellipse on the very left side of the anchor. If superpixelation algorithms cannot give tumors their own superpixels, anchors will include extraneous parts of the brain, which reduces its effectiveness considerably.
+The superpixelation algorithm used behind anchoring is still a liability. For the MRI below, the anchor is fairly large, but the actual tumor is a small white ellipse on the very left side of the anchor. If superpixelation algorithms cannot give tumors their own superpixels, anchors will include extraneous parts of the brain, which reduces its effectiveness considerably. 
 
 ![Figure 2](/img/tumors/glioma-191.jpg "A brain mri with a glioma tumor.")
 ![Figure 2](/img/tumors/glioma-191-anchor.png "The anchor for the brain scan.")

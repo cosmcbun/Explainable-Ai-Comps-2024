@@ -7,7 +7,7 @@ sidebar_position: 100
 
 LIME doesn't just work with tabular data. It also works quite well with images, albeit a little differently! To dive into how LIME works with images, we must look at another domain, which means explaining the predictions of another model.
 
-Enter [ResNet](https://pytorch.org/hub/pytorch_vision_resnet/) (Residual Neural Network), an architecture trained on the image classification dataset known as [ImageNet](https://www.image-net.org/). ResNet is trained on millions of different images to identify the subjects of a wide range of different classes. For the purpose of our project, we chose to use the pretrained model to focus specifically on identifying pictures of cats and dogs (of which we found several thousand images).
+Enter [ResNet](https://pytorch.org/hub/pytorch_vision_resnet/) (Residual Neural Network), an architecture trained on the image classification dataset known as [ImageNet](https://www.image-net.org/). ResNet is trained on millions of different images to identify the subjects of a wide range of different classes. For the purpose of our project, we chose to use the pre-trained model to focus specifically on identifying pictures of cats and dogs (of which we found several thousand images).
 
 ## The Code
 
@@ -58,7 +58,7 @@ pill_transf = get_pil_transform()
 preprocess_transform = get_preprocess_transform()
 ```
 
-Here are our [ResNet18](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html) model, which is given the weights of the pretrained dataset, and the predict function:
+Here are our [ResNet18](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html) model, which is given the weights of the pre-trained dataset, and the predict function:
 
 ```Python
 # predict function
