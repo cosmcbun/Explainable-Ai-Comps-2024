@@ -1,9 +1,9 @@
 ---
-sidebar-position: 91
+sidebar-position: 2
 ---
 
 # Adversarial Explanations
-Although Explainable AI can exist in a vacuum, it does not have to. As noted in [our introduction](../Introduction/What%20is%20XAI.md), XAI can be used to motivate and direct the design of models that users can trust: it "breaks down the black box." Similarly, Adversarial Artificial Intelligence strives to find how a machine learning model can be exploited: it strives to "cause the black box to break down." Both of these approaches to AI share a common goal: to construct models that are more robust against variations in data, biases, and even active exploitation.
+As noted in [our introduction](../Introduction/What%20is%20XAI.md), XAI can be used to motivate and direct the design of models that users can trust: it "breaks down the black box." Adversarial Artificial Intelligence, on the other hand, is a field that aims to figure out weaknesses in AI classification. In a manner of speaking, by striving to find how a machine learning model can be exploited, it "causes the black box to break down." Both of these approaches to AI share a common goal: to construct models that are more robust against variations in data, biases, and even active exploitation.
 
 As such, we in the XAI capstone project have partnered with Jonas Bartels, Alice Cutter, Sriya Konda, Yuxin Lin, Sky Lu, and Tingjun Tu of Carleton College's [Adversarial Artificial Intelligence capstone project](https://cs.carleton.edu/cs_comps/2324/adversarial/index.php) to bring you *Adversarial Explanations: an Exploration and Exploitation of Machine Thought*. In this section, we will present three examples of adversarial attacks on the ```ResNet50``` image classifier, a deeper version of our [ResNet18 model](../Methodology/ResNet.md). All attacks are carried out through black-box methods, meaning that they do not have access to any parts of the model, and all explanations are model-agnostic, meaning that they do not require a specific architecture.
 
