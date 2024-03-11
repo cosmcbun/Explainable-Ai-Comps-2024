@@ -4,40 +4,37 @@ sidebar_position: 50
 
 # MOOC Dropout Prediction
 
-Massive Open Online Courses (MOOCs)
-
 ## Conclusion
 
-LIME was trivival to apply to the MOOC Model, provided inelegant but effective explanation visuals, and there appeared to be a positive relation between a viewers experence with ML and their beleif that LIME explanation helped explain the model.
+LIME was trivial to apply to the MOOC Model, provided inelegant but effective explanation visuals, and there appeared to be a positive relation between a viewer's experience with ML and their belief that LIME explanation helped explain the model.
 
 ## Apply LIME to MOOCs
 
-Applying LIME to the ML model used to predict if a student would drop out of a MOOC was one of the easiest parts of our project.
+Applying LIME to the ML model used to predict if a student would drop out of a MOOC straight forward and did not require a background in explainable AI techniques.
 
-The literature had centralized around one implementation, the Python package [LIME](https://pypi.org/project/lime/), which had extensive and easy to use documentation.
+The literature has centralized around one implementation, the Python package [LIME](https://pypi.org/project/lime/), which has extensive and easy to use documentation.
 
 ```Python
 from lime.lime_tabular import LimeTabularExplainer
 
 # Create LimeTabularExplainer
 svm_explainer = LimeTabularExplainer(
-	X_train, # training data created by the MOOC src class
-	feature_names=[
-		'viewed', 'gender','grade','nevents', 'ndays_act',
-		'nplay_video', 'nchapters', 'age', 'votes', 'num_words'
-	],
-	class_names=['Not Completed','Completed'],
-	discretize_continuous=True
+    X_train, # training data created by the MOOC src class
+    feature_names=[
+        'viewed', 'gender','grade','nevents', 'ndays_act',
+        'nplay_video', 'nchapters', 'age', 'votes', 'num_words'
+    ],
+    class_names=['Not Completed','Completed'],
+    discretize_continuous=True
 )
-
 
 # Use the explainer to graphically explain predictions
 exp = svm_explainer.explain_instance(
-	dummy_for_lime, # a fake row of data for LIME to explain
-	svc.predict_proba # the black box model's probalistic prediction method
+    dummy_for_lime, # a fake row of data for LIME to explain
+    svc.predict_proba # the black box model's probabilistic prediction method
 ).show_in_notebook(
-	show_table=True,
-	show_all=False
+    show_table=True,
+    show_all=False
 )
 ```
 
@@ -49,35 +46,45 @@ The above code block is a simplified version of [Our Implemplemntation](https://
 
 ![LIME Specific Output](./HTML%20Output.png)
 
-TODO: EXPLANATION OF LIME OUTPUT
+The left third, while created by the LIME package, is not XAI. The visualization simply illustrates the black box model’s prediction which LIME is attempting to explain. The table could be read as “The black box model is 28% confident that the student of interest will not complete the course $\implies$ The black box model is 72% confident that the student of interest will complete the course.”
+
+The right third, displays the feature values of the input which LIME is attempting to explain. LIME believes orange features encourage the black box model to predict that the student will not complete the course. Similarly, LIME explains that blue features pushed the black box model to conclude that the student would not complete the course. The higher in the table the greater the contribution to the final prediction. The first row of this table could be read as “Because the number of events the student of interest has participated in is 32,296, the black box model is more confident that the student will complete the course.”
+
+The center visual displays the relative importance of each feature and why a feature provides a positive or negative contribution to the final prediction. The larger the bars, the more important the feature is in the final decision. Each bar is accompanied with a rule. The rule explains how/why the feature value contributes to the final prediction. The first line could be read as “Because the student of interest has completed more than 203 events, the model is substantially more confident that the student will complete the course.”
 
 ### LIME Output used in User Study
 
 ![LIME Output used in User Study](./X_complete3.png)
 
-TODO: EXPLANATION OF LIME OUTPUT
+This output, while not the default output of the LIME package, is one of the pre-made visualizations available through the package.
 
-This version of the LIME output is not the default output of LIME, it was an alranate output format. However we picked this explanations for our user study for a number of reasons.
+- The x-axes represents the probability that the student of interest has completed the course.
+- The bars starting at the y-axes represent each features contribution to the black box models prediction.
+- If the sum of all bars (where red bars are negative) is greater than 0.5, then the black box model will predict that the student completed the course. Otherwise, the black box model will predict that the student did not complete the course.
+- The y-axes labels are rules as to why each feature pushed or pulled the final prediction.
+
+We used this visualization for the user study despite this not being the default visualization from the LIME package because:
 
 1. It was much more visually similar to Shapley.
-2. It presented less information, decreasing mental load on the participants.
-3. It helped the participant focus on the rules based portion (the y-axis) which helped draw a continues line from LIME to Anchors.
-4. In the first input, it is difficult to extract the model prediction from the 2nd and third visualizations. This caused confusion internally, so we prefered the second explanations because if you sum the weights of the rules, and it is greater than 0.5, the model predicts the student will complete the MOOC.
+2. Where the default output provides information unrelated to XAI, this output only outputs novel information resulting from XAI processes.
+3. This output helps participants focus on the rules based portion (the y-axis labels) helping connect Anchors’ output to LIME’s.
+4. While testing if summing each bar of either visualization is greater than 0.5 can be done, we believe this operation is more intuitive with the second visualization.
 
 ## User Study
 
-Little can be said about LIME's user study results in isolation. To see how LIME compares to Shapley and Anchors, see the [MOOC Comparitive User Study](../User%20Study/MOOC%20-%20Comparative%20Results.md) page.
+Consider reading the user study introduction and methodology before continuing
+
+Little can be said about LIME's user study results in isolation. To see how LIME compares to Shapley and Anchors, see the [MOOC Comparative User Study](../User%20Study/MOOC%20-%20Comparative%20Results.md) page.
 
 ![Sample All LIME - How easy is this explanation to understand](./Sample%20All%20LIME%20-%20How%20easy%20is%20this%20explanation%20to%20understand.png)
 
 Across all 5 samples, participants ranked LIME explanation understandability as $\approx4$ on average $\pm 1$.
 
-
 ![Sample All LIME - How Does Experience with ML Affect Model Explainability.png](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Explainability.png)
 
-Across all 5 samples, the greater the participants experience with ML, the more they beleived LIME explanations helped explain the model.
+Across all 5 samples, the greater the participants experience with ML, the more they believe LIME explanations helped explain the model.
 
 ![Sample All LIME - How Does Experience with ML Affect Model Understandability](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Understandability.png)
 
+Without a greater sample size, it is difficult to draw any conclusions from this graph. However, it is interesting to note that participants with the least and most experience with ML had the highest confidence that they understood the MOOC model as explained by LIME.
 
-Without a greater sample size, it is difficult to draw any conclusions from this graph. However, it is interesting to note that participants with the least and most experience with ML had the highest confidance that they understood the MOOC model as explained by LIME.
