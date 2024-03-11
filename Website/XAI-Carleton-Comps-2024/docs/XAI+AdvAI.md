@@ -13,7 +13,7 @@ to bring you *Adversarial Explanations: an Exploration and Exploitation of Machi
 > The Local Search adversary utilizes the concept of greedy local search. It iteratively selects a small set of pixels to perturb that eventually would cause misclassification by a deep neural network without using any gradient information. <br></br>
 > \- Tingjun Tu, *An Exploration of Adversarial Attacks on Image Classifiers*
 
-![Pre-perturbation and post-perturbation of an image of a Bengal cat using a Local Search adversary, each accompanied by three explanation techniques.](/img/docusaurus.png)
+![Figure 1](/img/LSA.png "Pre-perturbation and post-perturbation of an image of a Bengal cat using a Local Search adversary, each accompanied by three explanation techniques.")
 
 Before perturbation, our classifier correctly predicts that this is a Bengal cat with $63.1\%$ confidence. All of our techniques agree that the model looked at the area immediately around the cat to classify it as such. However, LIME and Anchors propose that our model also focuses a portion of the stairway to achieve this result, to which Shapley does not agree.
 
@@ -23,7 +23,7 @@ After perturbation, our model becomes much more hectic, producing a prediction o
 > FSGM uses the gradient of a loss function with respect to the input data to perturb each pixel in the direction that lowers the confidence of the correct prediction by a distance $\epsilon$.
 > <br></br> \- Jonas Bartels, *An Exploration of Adversarial Attacks on Image Classifiers*
 
-![Pre-perturbation and post-perturbation of an image of a German Shorthaired Pointer dog using the Fast Gradient Sign Method, each accompanied by three explanation techniques.](/img/docusaurus.png)
+![Figure 2](/img/FGSM.png "Pre-perturbation and post-perturbation of an image of a German Shorthaired Pointer dog using the Fast Gradient Sign Method, each accompanied by three explanation techniques.")
 
 Pre-adversary, the model correctly predicts that this is a German Shorthair Pointer with 89.4\% confidence. All of our explanations seem to agree that the dog itself is the point of focus. The Shapley values argue that our model looks for more specific parts of the dog, such as its face and legs, while more ambiguous parts of the body are unfavorably considered.
 
@@ -33,7 +33,7 @@ Here, the attack causes our German Shorthaired Pointer to be misclassified as a 
 > Projected Gradient Descent calculates the gradient of loss for an input image and applies it as a perturbation to the image over a course of small steps, modifying hyperparameters to keep the image looking as normal as possible. <br></br>
 > \- Sriya Konda, *An Exploration of Adversarial Attacks on Image Classifiers*
 
-![Pre-perturbation and post-perturbation of an image of a Persian cat using Projected Gradient Descent, each accompanied by three explanation techniques.](/img/docusaurus.png)
+![Figure 3](/img/docusaurus.png "Pre-perturbation and post-perturbation of an image of a Persian cat using Projected Gradient Descent, each accompanied by three explanation techniques.")
 
 This is our hardest image to break, as the model correctly classifies this Persian cat with 99.1\% confidence. All three techniques portray the strength of its reasoning, as all highlight the face and upper body of the cat almost exclusively, with some background artifacts.
 
