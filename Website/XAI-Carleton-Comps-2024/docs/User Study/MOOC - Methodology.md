@@ -11,4 +11,4 @@ The respondents consist of 13 undergraduate or recent graduates with varying lev
 ![image](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/assets/20567330/eef606c0-cab7-4deb-90e0-d1ffae70f83a)
 
 
-Click [here](./MOOC%20-%20Comparative%20Results.md) for a discussion of the MOOC results and [here](./ResNet%20-%20Methodology.md) to see how the ResNet survey methodology differed from MOOCS
+Click [here](./MOOC%20-%20Comparative%20Results.md) for a discussion of the MOOC results and [here](./ResNet%20-%20Methodology.md) to see how the ResNet survey methodology differed from MOOC's.
