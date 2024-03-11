@@ -13,7 +13,6 @@ import tom from "../static/img/profile_pictures/tom.jpg";
 
 =======
 | <img src={adrian} alt="adrian" width="300"></img> | <img src={chris} alt="chris" width="300"></img> | <img src={lev} alt="lev" width="300"></img> | <img src={josh} alt="josh" width="300"></img> | <img src={sam} alt="sam" width="300"></img> | <img src={tom} alt="tom" width="300"></img> |
->>>>>>> ab83bb09c8fd3f198fe48c6dbd41f22703e17453
 | -------- | ------- | -------- | ------- | -------- | ------- |
 | Adrian Boskovic | Chris Melville | Lev Shuster | [Josh Moore](https://learnmoore.org/josh/) | Sam Johnson-Lacoss | [Thomas Pree](mailto:tomrpree@gmail.com) |
 
