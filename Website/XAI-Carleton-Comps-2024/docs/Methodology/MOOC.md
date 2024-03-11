@@ -44,3 +44,18 @@ We used the following ten features in our predictions. Below you will find a sho
 - ```age```: age of student (*Average*: 26)
 - ```votes```: how many times they voted on the course forum (*Average*: 0.67)
 - ```num_words```: how many total words they wrote in the course forum (*Average*: 79)
+
+## Example datapoints
+Here are a few example students pulled from our training data.
+
+These students completed the course:
+| viewed | gender | grade | nevents | ndays_act | **nplay_video** | nchapters | age | votes | num_words |
+|--------|--------|-------|---------|-----------|-----------------|-----------|-----|-------|-----------|
+| 1      | 1      | 0.95  | 14005   | 65        | 361             | 16        | 24  | 0     | 17        |
+| 1      | 1      | 0.85  | 4717    | 43        | 770             | 18        | 27  | 2     | 358       | 
+
+These students droppod out:
+| viewed | gender | grade | nevents | ndays_act | **nplay_video** | nchapters | age | votes | num_words |
+|--------|--------|-------|---------|-----------|-----------------|-----------|-----|-------|-----------|
+| 1	     | 1 	  | 0.03  | 1529	| 19     	| 18	          | 6         | 20 	| 0	    | 15        |
+| 1	     | 1 	  | 0.04  | 4051    | 30        | 460	          | 8         | 17  | 0     | 23        |  
