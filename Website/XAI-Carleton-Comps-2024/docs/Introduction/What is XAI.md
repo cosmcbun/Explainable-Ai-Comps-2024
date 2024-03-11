@@ -7,10 +7,11 @@ sidebar_position: 1
 
 Why should you trust Machine Learning (ML)? Headlines are filled with [fundamental flaws in machine learning models published by technology giants](https://www.nytimes.com/2023/05/22/technology/ai-photo-labels-google-apple.html).
 
+![Accuracy vs explainability graph](src/accuracy_vs_explainability.png "In general, the more complicated – and inscrutable – your model, the more powerful it can become.")
 
-Most real world applications lean away from inherently explainable models like decision trees or linear regression models, and towards black box models like neural networks due to their complex and robust hypothesis spaces, which allows them to perform better in most cases of complex relationships.
+While they do exist, most real world applications lean away from inherently explainable models like decision trees or linear regression models, and towards black box models like neural networks due to their complex and robust hypothesis spaces. This flexibility allows them to perform better in most cases of complex relationships. However, it also engenders a need for explanations.
 
-This page introduces the need for explainable AI (XAI) techniques. Explainable AI techniques attempt to illustrate how a machine learning model comes to a conclusion.
+This page explores the need for explainable AI (XAI) techniques. Explainable AI techniques attempt to illustrate how a machine learning model comes to a conclusion.
 
 
 ## Why XAI Matters
