@@ -23,9 +23,7 @@ Here are the explanations of the model's prediction; in all cases, the anchor is
 ![Figure 1 - LIME](/img/tumors/glioma-191-lime.png "LIME")
 ![Figure 1 - Shapley](/img/tumors/glioma-191-shap.png "SHAP")
 
-LIME: The model appears relatively sure there is a tumor in this MRI scan, but incorrectly classifies a glioma tumor as a pituitary tumor. LIME is highlighting seemingly erroneous areas around the head instead of a tumor, suggesting that our ResNet model isn't looking at the tumor itself.
-
-Anchors: The superpixelation algorithm used behind anchoring is still a liability. For the MRI below, the anchor is fairly large, but the actual tumor is a small white ellipse on the very left side of the anchor. If superpixelation algorithms cannot give tumors their own superpixels, anchors will include extraneous parts of the brain, which reduces its effectiveness considerably.
+In this MRI scan, our model made an incorrect prediction with relatively high certainty. Without an explanation, it's reasonable to assume that the model located the glioma tumor and simply mistook it for a meningioma. However, each of our XAI techniques suggests that the model is not looking at the tumor at all. Anchors and LIME both suggest the bottom left area of the brain (which doesn't have a tumor) is the reason for this prediction, while Shapley isn't highlighting any area at all. Interestingly, the area that does have the tumor is highlighted in red by LIME, suggesting the actual glioma tumor has a negative correlation with the meningioma. 
 
 ### Example 2: Meningioma tumor
 
@@ -37,9 +35,7 @@ This is a scan of a meningioma tumor, predicted to be a meningioma tumor with 1.
 ![Figure 2 - LIME](/img/tumors/meningioma-252-lime.png "LIME")
 ![Figure 2 - Shapley](/img/tumors/meningioma-252-shap.png "SHAP")
 
-Unlike the previous scan, this meningioma tumor is correctly classified with high certainty, which would imply that our model is performing well. However, as revealed by LIME, the explanation is highlighting seemingly unrelated areas of the head (pretty much everything except the tumor), but it also seems the top of the head has a negative correlation with this class. As a result, it's reasonable to conclude that our model is not good at recognizing tumors and simply made a lucky guess.
-
-When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. In the figure below, anchoring was able to locate the tumor quickly (in under five seconds, which is on the order of 100 times faster than in the animal dataset), which is important for its practical use.
+Unlike the previous scan, this meningioma tumor is correctly classified with high certainty, which would imply that our model is performing well. According to anchoring at least, our model found the tumor and classified it correctly. However, this comes with the caveat that our other XAI techniques do not corroborate this explanation at all. LIME's explanation, strangely, seems to be highlighting everything except for the tumor itself, and Shapley is only highlighting a small bit at the edge of the skull. Since these explanations largely contradict each other, it remains difficult to say if our model can be trusted or not.
 
 ### Example 3: Healthy brain
 
@@ -51,7 +47,7 @@ This is a scan of a healthy brain, predicted to have a meningioma tumor with 1.0
 ![Figure 3 - LIME](/img/tumors/healthy-97-lime.jpg "LIME")
 ![Figure 3 - Shapley](/img/tumors/healthy-97-shap.png "SHAP")
 
-The model appears very certain there is a meningioma tumor, despite there not being any. Very few areas of the brain are highlighted by LIME, mostly just the edges around the skull and the bottom right corner. This again suggests our ResNet model is not looking in the right place.
+The model appears very certain there is a meningioma tumor, despite there not being any. Our explanations, again, are largely inconsistent with each other. Anchors highlights part of the brain, Shapley is highlighting some of the wrinkles, and LIME seems completely unconcerned with the brain itself, looking more at the corners and edges of the image.
 
 ### Example 4: Pituitary tumor
 
@@ -63,7 +59,7 @@ This is a scan of a pituitary tumor, predicted to be a meningioma tumor with 0.6
 ![Figure 4 - LIME](/img/tumors/pituitary-135-lime.jpg "LIME")
 ![Figure 4 - Shapley](/img/tumors/pituitary-135-shap.png "SHAP")
 
-The model predicts this is a meningioma tumor with relatively high certainty, even though it is a pituitary tumor. The explanation from LIME reveals the model was not looking at the tumor at all, instead looking at the area around it. This would explain the misclassification as an error with how our model reads these images.
+The model predicts this is a meningioma tumor with relatively high certainty, even though it is a pituitary tumor. The explanations from anchoring and LIME are both focused on the the left side of the image, but only anchoring includes the tumor in its explanation. Shapley, once again, seems uncertain about any part of the image and highlights almost none of it.
 
 ## Conclusion
 
