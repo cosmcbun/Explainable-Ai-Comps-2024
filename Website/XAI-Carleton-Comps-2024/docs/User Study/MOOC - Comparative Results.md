@@ -1,5 +1,5 @@
 ---
-sidebar-position: 2
+sidebar-position: 11
 ---
 
 
@@ -68,4 +68,3 @@ Some participants are looking for a set of rules to explain how/why the black bo
 
 
 Other participants (our user study suggests the majority) look for an intuitive sense of how important specific features are to the black box model's predictions. Shapley values best fulfill this expectation, and Anchors does not attempt to meet this expectation, however the Red and Green bars of LIME can communicate similar information as Shapley, though with less consistency and nuance. Therefore participants who are looking for an intuitive sense of how important specific features are to the black box models predictions are likely to rank LIME in the middle, and trust LIME more than Anchors but less than Shapley.
-
