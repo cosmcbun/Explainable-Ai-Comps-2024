@@ -43,13 +43,13 @@ This returns a plot of Shapley values for the $i$-th datapoint in the set, like 
 
 This is a visualization of the Shapley values for a positive prediction, where the probability that the person completed the course is over $50\%$ ($59.4\%$ in this case).
 
-Our visualization begins at the bottom of the graph with the average, or expected, prediction $E[f(x)]$. In this case, the model is $2\%$ confident that the student will complete the course ($E[f(x)] = 0.02$). From here, we build upwards with respect to the relative size of the contribution to the prediction's deviation from the average: the values for the features ```gender``` through ```viewed``` each subtract $\le 1\%$ from the average, while feature values from ```grade``` through ```ndays_act``` add between $4\%$ and $10\%$ to the probability. 
+Our visualization begins at the bottom of the graph with the average, or expected, prediction $E[f(x)]$. In this case, the model is $2\%$ confident that the student will complete the course ($E[f(x)] = 0.02$). From here, we build upwards with respect to the relative size of the contribution to the prediction's deviation from the average: the values for the features ```gender``` through ```viewed``` each subtract $\le 1\%$ from the average, while feature values from ```grade``` through ```ndays_act``` add between $4\%$ and $10\%$ to the probability (for more information on MOOC's feature values, visit our [Methodology](../Methodology/MOOC.md)). 
 
 Finally, we see that the values for ```nplay_video``` and ```nevents``` are the biggest players in the game of prediction, deviating our result from the average probability prediction by $-20\%$ and $+60\%$, respectively.
 
 With these features combined, our model's prediction deviates from the average by $+57.4\%$, yielding $f(x) = 0.594$.
 
-# Interpreting the model across the whole set
+# Interpretation across a larger dataset
 One of the advantages that Shapley values have over LIME is its relative ability to globally interpret a machine learning model's input set. While this loosely adheres to [Shapley values' **additivity** principle](./Shapley's%20Math.md), it is less strongly applicable when we are no longer dealing with individual players, as it enters into the domain of **Cohort Explanation** ([Dhinakaran, 2021](https://towardsdatascience.com/a-look-into-global-cohort-and-local-model-explainability-973bd449969f)).
 
 The simplest way to generate such an interpretation is to generate a bar graph of the average absolute Shapley values:
