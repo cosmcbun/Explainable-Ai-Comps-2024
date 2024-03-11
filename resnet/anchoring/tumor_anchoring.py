@@ -1,17 +1,9 @@
 import torch
-import torch.nn as nn
-import torchvision
-import torchvision.models as models
 import torchvision.transforms as transforms
-import numpy as np
-import torch.optim as optim
-import PIL.Image as Image
-from datetime import datetime
 from anchor import anchor_image
 import copy
 from skimage.segmentation import quickshift
 import skimage.io
-
 
 model = torch.load("../../../mri_model_4class.pth", map_location="cpu")
 model.eval()
@@ -50,11 +42,9 @@ def predict(images):
     probabilities = torch.nn.functional.softmax(pred, dim=1)
     return probabilities.cpu().detach().numpy()
 
-#image is a skimage
 def draw_anchor(segments, explanation, image):
     image_anchor = copy.deepcopy(image)
     image_anchor[:] = 0
-    #what is x? what is it iterating thru? idk????????
     for x in explanation:
         image_anchor[segments == x[0]] = image[segments == x[0]]
     return image_anchor
@@ -70,36 +60,7 @@ images_location = "../../../tumor_images"
 image_name = "healthy-no_tumor-97.jpg"
 image = transform_image(images_location + "/" + image_name)
 
-
-
-
 image_anchor = explain(image, images_location)
 
 skimage.io.imshow(image_anchor)
 skimage.io.show()
-
-
-
-
-
-
-
-
-
-
-'''
-THIS LIL CODE SAMPLE PRINTS THE PREDICTIONS FOR A COUPLE IMAGES.
-VISIT THIS SPACE FOR WISDOM IF EVERYTHING BREAKS
-
-
-paths = [images_location + "/sick-glioma_tumor-191.jpg"]
-images = transform_images(paths)
-
-
-
-probs = predict(images)
-idxs = np.argsort(-probs[0])
-print(list(zip(probs[0][idxs[:5]], np.array(class_names)[idxs[:5]])))
-
-'''
-
