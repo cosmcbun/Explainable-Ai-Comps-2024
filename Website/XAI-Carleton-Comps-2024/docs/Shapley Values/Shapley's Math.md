@@ -24,7 +24,7 @@ For images, one of the most efficient methods to simulate a pixel "not playing" 
 Since we are working with real-world data, we cannot assume that each feature acts independently of one another. As such, we must simulate prediction across all coalitions of the inputs, where a coalition is a subset of the total feature values working together. For the calculation of Shapley values, this means that when a coalition is considered, all values inside the coalition are a package deal: they either *all* play, or *none* of them play, instead of each feature value playing/not playing on an individual basis.
 
 ## How to approximate Shapley values
-The actual calculation of Shapley values is requires some heavy integration. As such, we decided to approximate our input's Shapley values with the ```shap``` package instead.
+The actual calculation of Shapley values requires some heavy integration. As such, we decided to approximate our input's Shapley values with the ```shap``` package instead.
 
 As proposed in [Štrumbelj et al. (2014)](https://link.springer.com/article/10.1007/s10115-013-0679-x), we can approximate a shapley value $\phi_j$ for a feature value $j$ through the calculation:
 
@@ -45,24 +45,23 @@ We can approximate Shapley $\phi_j$ using the following algorithm.
 This allows us to not only get the overarching Shapley values for each input, but if we wanted we could draw a single $\phi^n_j$ to see how $j$ factored into coalition $x^n$ specifically.
 
 ## Basic properties
-Shapley values hold four basic properties, each of which tell us something about our payout:
+Four basic properties hold under Shapley values, each of which tell us something about our payout. Let $\phi_j$ represent the Shapley value for feature value $j$, and let $\mathcal{P}(X)$ be all possible coalitions of input $X$:
 
 - **Efficiency:** All Shapley values must sum to the difference between the prediction on the input and the average prediction.
 
 $$
 \begin{align}
-  \phi = \sum^{|X|}_{j=1}\phi_j = f(x) - E_X(f(X))
+  \phi = \sum^{|X|}_{j=1}\phi_j = f(X) - E(f(X))
 \end{align}
 $$
 
-- **Symmetry:** Features $i$ and $i$ have the same contribution to the prediction if they contribute identically to all coalitions.
+- **Symmetry:** Features $i$ and $j$ have the same contribution to the prediction if they contribute identically to all coalitions.
 
 $$
 \begin{align}
   [\forall x^n \in \mathcal{P}(X) : \phi{^n_i} = \phi^n_j] \implies \phi_i = \phi_j
 \end{align}
 $$
-
 
 - **Nullity:** If a feature $j$ changes nothing in the prediction in all possible coalitions, then it has a Shapley value of 0:
 
@@ -90,7 +89,7 @@ All of this math allows Shapley values to answer two questions, both local to th
 ## Application of properties: MOOC Dataset
 *For a more detailed look at this dataset, please see [Shapley and MOOC](./Shapley%20and%20MOOC.md)*
 
-A more intuitive application of the **additivity** property can be seen with our MOOC model. Since our model outputs the probabilities for two binary classes (complete/incomplete), the game of prediction is *zero-sum* (Since probabilities sum to 1, $+1\%$ chance of "complete" means "-1\%$ chance of "incomplete"). As such, the Shapley values are also zero-sum, as visualized in the picture below:
+A more intuitive application of the **additivity** property can be seen with our MOOC model. Since our model outputs the probabilities for two binary classes (complete/incomplete), the game of prediction is *zero-sum* (Since probabilities sum to 1, $+1\%$ chance of "complete" means $-1\%$ chance of "incomplete"). As such, the Shapley values are also zero-sum, as visualized in the picture below:
 
 ![Shapley value graphs for "complete"/"incomplete"](\img\shap_math_additivity.png)
 
