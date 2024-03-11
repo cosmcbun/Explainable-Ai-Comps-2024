@@ -19,8 +19,8 @@ This is an MRI scan of a glioma tumor, predicted to be a meningioma tumor with 0
 
 Anchors | LIME | Shapley
 
-![Figure 1 - Anchor](/img/tumors/glioma_191-anchor.png "Anchors")
-![Figure 1 - LIME](/img/tumors/glioma_191-lime.png "LIME")
+![Figure 1 - Anchor](/img/tumors/glioma-191-anchor.png "Anchors")
+![Figure 1 - LIME](/img/tumors/glioma-191-lime.png "LIME")
 ![Figure 1 - Shapley](/img/tumors/glioma_tumor-0.png "SHAP")
 
 LIME: The model appears relatively sure there is a tumor in this MRI scan, but incorrectly classifies a glioma tumor as a pituitary tumor. LIME is highlighting seemingly erroneous areas around the head instead of a tumor, suggesting that our ResNet model isn't looking at the tumor itself.
@@ -51,9 +51,9 @@ This is a scan of a healthy brain, predicted to have a meningioma tumor with 1.0
 
 Anchors | LIME | Shapley
 
-![Figure 3 - Anchor](/img/tumors/healthy-97.png "Anchors")
-![Figure 3 - LIME](/img/tumors/healthy-97.png "LIME")
-![Figure 3 - Shapley](/img/tumors/no_tumor-97.png "SHAP")
+![Figure 3 - Anchor](/img/tumors/healthy-97-lime.png "Anchors")
+![Figure 3 - LIME](/img/tumors/healthy-97-lime.png "LIME")
+![Figure 3 - Shapley](/img/tumors/healthy-97-shap.png "SHAP")
 
 The model appears very certain there is a meningioma tumor, despite there not being any. Very few areas of the brain are highlighted by LIME, mostly just the edges around the skull and the bottom right corner. This again suggests our ResNet model is not looking in the right place.
 
@@ -65,9 +65,9 @@ This is a scan of a pituitary tumor, predicted to be a meningioma tumor with 0.6
 
 Anchors | LIME | Shapley
 
-![Figure 4 - Anchor](/img/tumors/pituitary-135.png "Anchors")
-![Figure 4 - LIME](/img/tumors/pituitary-135.png "LIME")
-![Figure 4 - Shapley](/img/tumors/pituitary_tumor-135.png "SHAP")
+![Figure 4 - Anchor](/img/tumors/pituitary-135-lime.png "Anchors")
+![Figure 4 - LIME](/img/tumors/pituitary-135-lime.png "LIME")
+![Figure 4 - Shapley](/img/tumors/pituitary-135-shap.png "SHAP")
 
 The model predicts this is a meningioma tumor with relatively high certainty, even though it is a pituitary tumor. The explanation from LIME reveals the model was not looking at the tumor at all, instead looking at the area around it. This would explain the misclassification as an error with how our model reads these images.
 
