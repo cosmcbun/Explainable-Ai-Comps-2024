@@ -10,6 +10,7 @@ When the model was confident in its prediction $(>0.8)$, anchoring was generally
 
 ![Figure 1](./german-shorthaired.jpg "A picture of a dog")
 ![Figure 1](./german-shorthaired-anchor.png "The dog's anchor")
+
 ![Figure 2](./roses-cat.jpg "A picture of a cat")
 ![Figure 2](./roses-cat-anchor.png "The cat's anchor")
 
