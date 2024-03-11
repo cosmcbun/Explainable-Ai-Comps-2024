@@ -1,12 +1,6 @@
 import torch
-import torch.nn as nn
-import torchvision
 import torchvision.models as models
 import torchvision.transforms as transforms
-import numpy as np
-import torch.optim as optim
-import PIL.Image as Image
-from datetime import datetime
 from anchor import anchor_image
 import copy
 from skimage.segmentation import quickshift
@@ -35,12 +29,7 @@ tensorfy_image = transforms.Compose([
 
 def transform_image(path):
     img = skimage.io.imread(path)
-    #resized = skimage.transform.resize(img, (224, 224))
-    #return skimage.io.imread(resized)
-
-    #img = skimage.io.imread(path)
     return skimage.transform.resize(img, (224, 224))
-    #return skimage.io.imread(path)
 
 def transform_images(paths):
     images = []
@@ -51,7 +40,6 @@ def transform_images(paths):
 
 with open("imagenet_classes.txt", "r") as f:
     class_names = [s.strip() for s in f.readlines()]
-
 
 def tensorfy_images(images):
     tensors = []
@@ -73,7 +61,6 @@ def predict(images):
 def draw_anchor(segments, explanation, image):
     image_anchor = copy.deepcopy(image)
     image_anchor[:] = 0
-    #what is x? what is it iterating thru? idk????????
     for x in explanation:
         image_anchor[segments == x[0]] = image[segments == x[0]]
     return image_anchor
@@ -86,8 +73,7 @@ def explain(image, images_location):
 
 
 images_location = "../../../animal_images"
-#image_name = "../../../animal_images/dog-german_shorthaired-136.jpg"
-image_name = "../../../xai_img/LocSearchAdv_MobileViT/perturbed_dog-german_shorthaired-79.jpg.png"
+image_name = "../../../animal_images/dog-german_shorthaired-136.jpg"
 image = transform_image(image_name)
 
 
@@ -98,27 +84,3 @@ image_anchor = explain(image, images_location)
 skimage.io.imshow(image_anchor)
 skimage.io.show()
 
-
-
-
-
-
-
-
-
-'''
-
-THIS LIL CODE SAMPLE PRINTS THE PREDICTIONS FOR A COUPLE IMAGES.
-VISIT THIS SPACE FOR WISDOM IF EVERYTHING BREAKS
-
-
-paths = ["cat-egyptian_mau-3.jpg", images_location + "/cat-british_shorthair-78.jpg"]
-images = transform_images(paths)
-
-
-
-probs = predict(images)
-idxs = np.argsort(-probs[1])
-print(list(zip(probs[1][idxs[:5]], np.array(class_names)[idxs[:5]])))
-
-'''
