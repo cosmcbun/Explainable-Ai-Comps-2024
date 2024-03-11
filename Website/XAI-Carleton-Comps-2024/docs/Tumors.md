@@ -44,7 +44,7 @@ In a funny way, this quick experiment helps to showcase the utility of explainab
 
 In addition to ResNet, we also ran a [model on a dataset of brain scans](/Explainable-Ai-Comps-2024/Methodology/ResNet#tumors). Becuase Shapley is model-agnostic, only a minimal change was required to the code to analyze tumor data as well.
 
-![Meningioma-positive Brain Scan](meningioma-45-shap.png "Top guesses of the model")
+![Meningioma-positive Brain Scan](/img/tumors/meningioma-45-shap.png "Top guesses of the model")
 
 In this case - as with all of the other brain scan predictions we explained - Shapley's picture is far less dynamic. Moreover, the actual tumor (white and slightly below the middle of the picture) is only very slightly highlighted, while an extranious region at the top of the head is more strongly highlighted. This may point to it being a weaker model that is more reliant on guesswork; undeniably true. While this model got around 60-70% accuracy on our data with four classes, ResNet got 93.8% with a thousand classes. However, it does point to one interesting conclusion the model may have drawn: to look for tumors near the skull. If we were to tune the model, then, we could provide more examples of tumors that were not found at the edge of the brain.
 
