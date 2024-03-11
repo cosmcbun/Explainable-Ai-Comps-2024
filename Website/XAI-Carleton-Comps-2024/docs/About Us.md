@@ -4,7 +4,7 @@ sidebar_position: 99
 
 import anna from "../static/img/profile_pictures/anna.jpeg";
 import adrian from "../static/img/profile_pictures/adrian.jpeg";
-import chris from "../static/img/profile_pictures/chris.jpeg";
+import chris from "../static/img/profile_pictures/chris.jpg";
 import lev from "../static/img/profile_pictures/lev.jpeg";
 import josh from "../static/img/profile_pictures/josh.jpg";
 import sam from "../static/img/profile_pictures/sam.png";
