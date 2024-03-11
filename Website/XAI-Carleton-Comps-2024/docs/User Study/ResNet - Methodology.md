@@ -3,7 +3,9 @@ sidebar-position: 4
 ---
 
 # Methodology of the ResNet user study
-(Work in progress)
+We designed a user study to determine how explanatory – and convincing – our explanations of ResNet predictions were to a group of Carleton students. We selected 12 students,
+... work in progress
+
 
 We conducted a user study to see which
 techniques were favored. The participants
