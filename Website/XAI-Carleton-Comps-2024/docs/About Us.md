@@ -1,6 +1,5 @@
 ---
 sidebar_class_name: hidden
-sidebar_position: 100
 ---
 
 import anna from "../static/img/profile_pictures/anna.jpeg";
