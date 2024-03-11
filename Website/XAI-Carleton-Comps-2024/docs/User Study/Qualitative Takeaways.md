@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 100
 ---
 
 # Qualitative Takeaways
@@ -25,11 +25,3 @@ Despite this, 9 of our 12 participants still named Shapley as their favorite tec
 ![Figure 4](/img/user_study/stairs_cat-slide.jpg "An image of a cat on stairs, with explanations for why it was predicted as a cat.")
 
 When comparing all of the techniques after seeing all of the examples, one participant said "Shapley was the most consistent". Another upside of Shapley was its ability to capture values, with different participants saying "I like Shapley because it reflects degrees of importance", and "big fan of heat map, it provides the most helpful information".
-
-### Clashing explanations
-
-One phenomenon that confused participants was when the techniques gave contradictory explanations. One example of this is the picture of a dog that the model thought was a polar bear.
-
-![Figure 5](/img/user_study/polar_bear-slide.jpg "An image of a dog, with explanations for why it was predicted as a polar bear.")
-
-LIME focused on the dog's head, whereas Anchoring included most of the dog and much of the background but omitted much of the head, and Shapley highlighted some of the head red and some blue. As one participant said "If I was given any single one I would say they help, but they confuse in total". After seeing all of the examples, another participant said "it is actively confusing to have different explanations for the same model. If they are seeing the same predictions, they should be showing the same explanation."
