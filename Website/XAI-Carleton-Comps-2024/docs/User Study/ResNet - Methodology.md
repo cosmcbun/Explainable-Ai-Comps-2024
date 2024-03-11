@@ -1,8 +1,9 @@
 ---
+title: "ResNet: Methodology"
 sidebar-position: 4
 ---
 
-# ResNet: Methodology
+# Methodology of the ResNet User Study
 We designed a user study to determine how explanatory – and convincing – our explanations of ResNet predictions were to users. Here is how we conducted this half of the study.
 
 ### Who we surveyed
