@@ -15,7 +15,7 @@ We chose the Animals dataset due to the widespread availability of cats/dogs ima
 
 ### Animals
 
-For Animals dataset, we decided to use the pre-trained version of ResNet18, which was trained on millions of images from the [ImageNet](https://www.image-net.org/) database, each labeled from a large selection of different classes. While these were not limited to just cats and dogs, ImageNet itself includes a wide variety of cat and dog breeds within its list of classes, meaning it would correctly recognize either a cat or a dog from our dataset roughly 94% of the time (according to our tests).
+For Animals dataset, we decided to use the pre-trained version of [```ResNet18```](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html), which was trained on millions of images from the [ImageNet](https://www.image-net.org/) database, each labeled from a large selection of different classes. While these were not limited to just cats and dogs, ImageNet itself includes a wide variety of cat and dog breeds within its list of classes, meaning it would correctly recognize either a cat or a dog from our dataset roughly 94% of the time (according to our tests).
 
 The way we obtained the pre-trained weights for the model was simple, and could be done in two lines of code:
 
