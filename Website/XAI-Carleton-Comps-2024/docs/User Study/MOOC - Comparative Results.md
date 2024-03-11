@@ -58,19 +58,10 @@ import BarChart from './src/DoParticipantExperenceAffectRankingsOfXAITechniques.
 
 With such a small sample size no strong conclusions can be taken from this chart however there are a host of exploratory conclusions illustrated by this visualization.
 
-
-1. Shapley Values are the most preferred technique across participants with some experience with machine learning.
-
-
-2. LIME is the most preferred technique across participants with no experience with machine learning. However the difference between rankings from participants with no experience in ML between Shapley and LIME is trivial.
-
-
+1. Shapley Values are the most preferred technique across participants with informal and formal experience with machine learning.
+2. LIME is the most preferred technique across participants with no experience with machine learning. However, the difference between rankings from participants with no experience in ML between Shapley and LIME is trivial.
 3. Anchors is the least preferred technique across all experience levels.
-
-
 4. Participants with some experience in ML like Shapley values more than participants with no experience in ML.
-
-
 5. The more one knows about Machine Learning the less they like Anchors
 
 

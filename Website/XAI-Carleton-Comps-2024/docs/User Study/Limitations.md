@@ -42,10 +42,10 @@ Also related to data representations, the user study team had to decide the boun
 ### Small sample size
 
 
-With only 12 participants, the study was not large enough to draw statistically significant conclusions. Future studies should aim to have a larger sample size to ensure that the results are not due to random chance. However, prior published research used similar sample sizes.
+With only 13 participants, the study was not large enough to draw statistically significant conclusions. Future studies should aim to have a larger sample size to ensure that the results are not due to random chance. However, prior published research used similar sample sizes.
 
 
-### Introducing XAI Across Experementers
+### Introducing XAI Across Experimenters
 
 
 Central to the study was a participant's ability to understand what each XAI technique was able to convey. Particularly on the MOOC user study, the graphical explanations are not necessarily self-evident (besides Anchor's prose), and each XAI technique answers slightly different questions. In early iterations of the study, experiments observed experimenters' backgrounds influencing how they present each technique, causing different participants to have massively different understandings of each technique. This inconsistency limited the comparability of participants interviewed by different experimenters. To mitigate this in the main study, participants were shown a consistent graphic and text to describe each technique in a consistent form. But to the inherently interview based methods, this shortcoming was not fully mitigated.
