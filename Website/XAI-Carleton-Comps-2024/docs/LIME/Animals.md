@@ -1,7 +1,8 @@
 ---
 sidebar_position: 150
 ---
-# Cats and Dogs
+
+# LIME with the Cats and Dogs Dataset
 
 ## Cartons and Vipers and Bears, oh my!
 

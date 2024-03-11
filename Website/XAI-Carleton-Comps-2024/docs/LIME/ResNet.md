@@ -1,7 +1,9 @@
 ---
 sidebar_position: 100
 ---
-# Residual Neural Network
+# ResNet Image Classification
+
+## Residual Neural Network
 
 LIME doesn't just work with tabular data. It also works quite well with images, albeit a little differently! To dive into how LIME works with images, we must look at another domain, which means explaining the predictions of another model.
 

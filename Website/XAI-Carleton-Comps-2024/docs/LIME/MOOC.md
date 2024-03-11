@@ -2,7 +2,7 @@
 sidebar_position: 50
 ---
 
-# MOOC
+# MOOC Dropout Prediction
 
 Massive Open Online Courses (MOOCs)
 
