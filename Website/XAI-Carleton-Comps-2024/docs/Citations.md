@@ -1,4 +1,8 @@
- Bibliography
+---
+sidebar_position: 100
+---
+
+# Bibliography
 
 _Artificial Intelligence Act: Deal on comprehensive rules for trustworthy AI | News | European Parliament_. (2023, December 9). [https://www.europarl.europa.eu/news/en/press-room/20231206IPR15699/artificial-intelligence-act-deal-on-comprehensive-rules-for-trustworthy-ai](https://www.europarl.europa.eu/news/en/press-room/20231206IPR15699/artificial-intelligence-act-deal-on-comprehensive-rules-for-trustworthy-ai)
 

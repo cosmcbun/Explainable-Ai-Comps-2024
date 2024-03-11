@@ -1,5 +1,5 @@
 ---
-sidebar_position: 100
+sidebar_position: 99
 ---
 
 import anna from "../static/img/profile_pictures/anna.jpeg";
