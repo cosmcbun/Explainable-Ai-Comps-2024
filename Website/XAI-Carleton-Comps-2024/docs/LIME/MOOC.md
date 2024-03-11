@@ -76,12 +76,12 @@ Consider reading the user study introduction and methodology before continuing
 
 Little can be said about LIME's user study results in isolation. To see how LIME compares to Shapley and Anchors, see the [MOOC Comparative User Study](../User%20Study/MOOC%20-%20Comparative%20Results.md) page.
 
-![Sample All LIME - How easy is this explanation to understand](./Sample%20All%20LIME%20-%20How%20easy%20is%20this%20explanation%20to%20understand.png)
-
 Across all 5 samples, participants ranked LIME explanation understandability as $\approx4$ on average $\pm 1$.
 
 ![Sample All LIME - How Does Experience with ML Affect Model Explainability.png](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Explainability.png)
 
 Across all 5 samples, the greater the participant's experience with ML, the more they believed LIME explanations helped explain the model.
+
+![Sample All LIME - How Does Experience with ML Affect Model Understandability](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Understandability.png)
 
 Without a greater sample size, it is difficult to draw any conclusions from this graph. However, it is interesting to note that participants with the least and most experience with ML had the highest confidence that they understood the MOOC model as explained by LIME.
