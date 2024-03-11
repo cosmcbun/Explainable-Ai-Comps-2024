@@ -8,6 +8,7 @@ A user study was designed around these explainability methods, which set out to 
 
 The respondents consist of 13 undergraduate or recent graduates with varying levels of familiarity with computer science and machine learning. Respondents also demonstrated a variety of opinions of ML going into the survey, from AI skeptics with humanities backgrounds to CS graduates working in the industry, developing AI. Our intention was to broadly assess user reactions to the different explanation methods, in terms of how much they effected user trust, and how easy they are to understand. Respondents were asked to comparatively assess the methods at the end of the survey.
 
-![image](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/assets/20567330/d9c87adb-319f-47db-b43d-72fd47ae2885)
+![image](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/assets/20567330/eef606c0-cab7-4deb-90e0-d1ffae70f83a)
+
 
 Click [here](./MOOC%20-%20Comparative%20Results.md) for a discussion of the MOOC results and [here](./ResNet%20-%20Methodology.md) to see how the ResNet survey methodology differed from MOOCS
