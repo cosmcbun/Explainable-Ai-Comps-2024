@@ -1,3 +1,6 @@
+---
+sidebar_position: 90
+---
 # Tumors Case Study
 
 ## LIME with the Tumors Dataset
