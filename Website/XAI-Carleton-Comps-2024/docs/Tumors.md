@@ -3,14 +3,62 @@ sidebar_position: 90
 ---
 # Tumors Case Study
 
+## Introduction
+
+(insert paragraph here)
+
+## Explanations for MRI Predictions
+
+### Example 1: Glioma tumor
+
+![Figure 1](/img/tumors/glioma-191.jpg "A brain MRI with a glioma tumor")
+
+This is an MRI scan of a glioma tumor, predicted to be a meningioma tumor with 0.88 certainty.
+
+Anchors | LIME | Shapley
+
+
+
+### Example 2: Meningioma tumor
+
+![Figure 2](/img/tumors/meningioma-252.jpg "A brain MRI with a meningioma tumor")
+
+This is a scan of a meningioma tumor, predicted to be a meningioma tumor with 1.0 certainty.
+
+Anchors | LIME | Shapley
+
+
+
+### Example 3: Healthy brain
+
+![Figure 3](/img/tumors/healthy-97.jpg "An MRI scan of a healthy brain")
+
+This is a scan of a healthy brain, predicted to have a meningioma tumor with 1.0 certainty.
+
+Anchors | LIME | Shapley
+
+
+
+### Example 4: Pituitary tumor
+
+![Figure 4](/img/tumors/pituitary-135.jpg "A brain MRI with a pituitary tumor")
+
+This is a scan of a pituitary tumor, predicted to be a meningioma tumor with 0.67 certainty.
+
+Anchors | LIME | Shapley
+
+
+
+## Conclusion
+
 ## LIME with the Tumors Dataset
 
 Now that we've seen how LIME works with the Animals dataset, let's show a few examples of how it interacted with our custom-weighted ResNet model, using one randomly-selected image from each class.
 
 ### Glioma tumor
 
-![An MRI scan of a glioma tumor, predicted to be a pituitary tumor with 0.65 certainty](/img/tumors/glioma_tumor-0.jpg)
-![ResNet prediction explained by LIME](/img/tumors/glioma_tumor-0-lime.jpg)
+![An MRI scan of a glioma tumor, predicted to be a pituitary tumor with 0.65 certainty](/img/tumors/glioma-191.jpg)
+![ResNet prediction explained by LIME](/img/tumors/glioma-191-lime.jpg)
 
 The model appears relatively sure there is a tumor in this MRI scan, but incorrectly classifies a glioma tumor as a pituitary tumor. LIME is highlighting seemingly erroneous areas around the head instead of a tumor, suggesting that our ResNet model isn't looking at the tumor itself.
 
@@ -25,15 +73,15 @@ Note that the head's position is different from that in the glioma scan, so it's
 
 ### No tumor
 
-![An MRI scan of a brain with no tumor, predicted to be a meningioma tumor with 1.0 certainty](/img/tumors/no_tumor-97.jpg)
-![ResNet prediction explained by LIME](/img/tumors/no_tumor-97-lime.jpg)
+![An MRI scan of a brain with no tumor, predicted to be a meningioma tumor with 1.0 certainty](/img/tumors/healthy-97.jpg)
+![ResNet prediction explained by LIME](/img/tumors/healthy-97-lime.jpg)
 
 The model appears very certain there is a meningioma tumor, despite there not being any. Very few areas of the brain are highlighted by LIME, mostly just the edges around the skull and the bottom right corner. This again suggests our ResNet model is not looking in the right place.
 
 ### Pituitary tumor
 
-![An MRI scan of a pituitary tumor, predicted to be a meningioma tumor with 0.67 certainty](/img/tumors/pituitary_tumor-135.jpg)
-![ResNet prediction explained by LIME](/img/tumors/pituitary_tumor-135-lime.jpg)
+![An MRI scan of a pituitary tumor, predicted to be a meningioma tumor with 0.67 certainty](/img/tumors/pituitary-135.jpg)
+![ResNet prediction explained by LIME](/img/tumors/pituitary-135-lime.jpg)
 
 The model predicts this is a meningioma tumor with relatively high certainty, even though it is a pituitary tumor. The explanation from LIME reveals the model was not looking at the tumor at all, instead looking at the area around it. This would explain the misclassification as an error with how our model reads these images.
 
