@@ -87,7 +87,7 @@ All of this math allows Shapley values to answer two questions, both local to th
 2. Due to the calculations of all coalitions, we can also see how a coalition $x \in \mathcal{P}(X)$ contributed to the deviation of $f(X)$ from the expected prediction.
 
 ## Application of properties: MOOC Dataset
-*For a more detailed look at this dataset, please see [Shapley and MOOC](./Shapley%20and%20MOOC.md)*
+*For a detailed look at this dataset's explanations, please see [Shapley and MOOC](./Shapley%20and%20MOOC.md) and our [Methodology](../Methodology/MOOC.md)*.
 
 A more intuitive application of the **additivity** property can be seen with our MOOC model. Since our model outputs the probabilities for two binary classes (complete/incomplete), the game of prediction is *zero-sum* (Since probabilities sum to 1, $+1\%$ chance of "complete" means $-1\%$ chance of "incomplete"). As such, the Shapley values are also zero-sum, as visualized in the picture below:
 
