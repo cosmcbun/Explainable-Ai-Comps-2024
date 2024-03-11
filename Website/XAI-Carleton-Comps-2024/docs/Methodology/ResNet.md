@@ -1,5 +1,4 @@
-
-# ResNet
+# ResNet Animal Classification
 
 This project’s first model of focus is an implementation of the Residual Neural Network (ResNet) architecture, a derivative of the basic convolutional neural network. This network was trained on ImageNet, an extremely common dataset for image classification, and will be used in conjunction with a dataset for tumor classification such as that of Panigrahi (2021) and Sarta (2020). Coined by He et al. (2015), ResNet addresses the issues of neural networks’ degradation, where training and evaluation losses spike and lose predictability as a model’s depth passes a certain point. The proposed solution consists of identity mapping, whereby layers pass their outputs to a mapping function that performs one of two actions: it may shortcut part of the input to be recombined at a deeper layer (discussed in Hochreiter et al., 1997), or it may utilize a nonlinear function which asymptotically approximated the use of multiple linear layers at once (introduced in Jégou et al., 2012). This development allows deep neural networks to have no worse loss than shallow ones of appropriate depth.
 
@@ -10,7 +9,7 @@ ResNet showed that model degradation could be overcome, thereby rendering deep n
 For the purposes of our project, we worked on [PyTorch](https://pytorch.org/) and ended up using two different version of ResNet, which would allow us to classify images from two different datasets. These were as follows:
 
 1. Animals (cats and dogs specifically, from a variety of different breeds)
-2. MRI scans of brain tumors (total of 4 classes: glioma, meningoma, no tumor, and pituitary)
+2. MRI scans of brain tumors (total of 4 classes: glioma, meningioma, no tumor, and pituitary)
 
 We chose the Animals dataset due to the widespread availability of cats/dogs image sets, and the images of cute animals were likely to entice participants for our user study. As for the Tumors dataset, this was done primarily due to the existence of prior research into tumor classification, which reveals machine learning's utility in the medical field.
 
