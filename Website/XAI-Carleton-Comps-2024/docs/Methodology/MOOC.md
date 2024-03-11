@@ -31,3 +31,16 @@ Both of these networks achieve good results, but they can be messy, and skews in
 
 ## Why explain these AIs?
 These models are strong candidates for explainability for several reasons. First, given the notorious “black box” nature of neural networks and high-dimension SVMs, there are few options (apart from explainability methods) that offer easy insight into why the model may classify certain students as likely or unlikely to drop out of the MOOC. Additionally, there can be potentially significant ramifications for these students if they are predicted as likely to drop out, or not – a student flagged as likely to drop out may lose motivation, and the prediction may become a self fulfilling prophecy in cases where the student would have otherwise stayed in the course. On the other hand, a student who is truly at risk of dropping out but not identified as such may fail to be noticed by the instructional staff, due to the large and relatively autonomous nature of MOOCs. These significant stakes call for added scrutiny and insight into models making these predictions. Finally, explainability methods applied to MOOC dropout prediction can offer insight into what features successful and unsuccessful students exhibit.
+
+## What features does our MOOC dataset provide?
+We used the following ten features in our predictions. Below you will find a short description of each, along with their average values:
+- ```viewed```: whether the student has ever opened the course (*Average*: 0.61)
+- ```gender```: female = 0, male = 1 (no third option given) (*Average*: 0.9)
+- ```grade```: student’s grade at the time of gathering (*Average*: 3.4%)
+- ```nevents```: how much they interacted with the course (*Average*: 535)
+- ```ndays_active```: how many days they logged in (*Average*: 6)
+- ```nplay_video```: how many times they watched a video (*Average*: 58)
+- ```nchapters```: how lessons they completed (*Average*: 2)
+- ```age```: age of student (*Average*: 26)
+- ```votes```: how many times they voted on the course forum (*Average*: 0.67)
+- ```num_words```: how many total words they wrote in the course forum (*Average*: 79)
