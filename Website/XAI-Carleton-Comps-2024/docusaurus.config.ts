@@ -69,17 +69,17 @@ const config: Config = {
       },
       items: [
         {
-          to: '/About Us',
-          position: 'right',
-          label: 'About Us',
-        },
-        {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Writeup',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          to: '/About Us',
+          position: 'right',
+          label: 'About Us',
+        },
         {
           href: 'https://github.com/cosmcbun/Explainable-Ai-Comps-2024/',
           label: 'GitHub',
