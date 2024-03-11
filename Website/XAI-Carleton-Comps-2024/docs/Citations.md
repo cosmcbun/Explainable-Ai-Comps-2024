@@ -12,9 +12,9 @@ _Blueprint for an AI Bill of Rights | OSTP_. (n.d.). The White House. Retrieved 
 
 Dhinakaran, A. (2021, September 21). _A Look Into Global, Cohort and Local Model Explainability_. Medium. [https://towardsdatascience.com/a-look-into-global-cohort-and-local-model-explainability-973bd449969f](https://towardsdatascience.com/a-look-into-global-cohort-and-local-model-explainability-973bd449969f)
 
-Fernández, M. (n.d.). _AI in Banking: AI Will Be An Incremental Game Changer_. Retrieved March 4, 2024, from [https://www.spglobal.com/en/research-insights/featured/special-editorial/ai-in-banking-ai-will-be-an-incremental-game-changer](https://www.spglobal.com/en/research-insights/featured/special-editorial/ai-in-banking-ai-will-be-an-incremental-game-changer)
+Duval, Alexandre. (2019). _Explainable Artificial Intelligence (XAI)_. [https://doi.org/10.13140/RG.2.2.24722.09929](https://doi.org/10.13140/RG.2.2.24722.09929)
 
-Lundberg, S. (2018). SHAP Documentation. [https://shap.readthedocs.io/](https://shap.readthedocs.io/en/latest/)
+Fernández, M. (n.d.). _AI in Banking: AI Will Be An Incremental Game Changer_. Retrieved March 4, 2024, from [https://www.spglobal.com/en/research-insights/featured/special-editorial/ai-in-banking-ai-will-be-an-incremental-game-changer](https://www.spglobal.com/en/research-insights/featured/special-editorial/ai-in-banking-ai-will-be-an-incremental-game-changer)
 
 Muthukumar, V. (2019). _MOOCs-Dropout-Prediction_ (0c15fe3) \[Jupyter Notebook\]. [https://github.com/vickymhs/MOOCs-Dropout-Prediction](https://github.com/vickymhs/MOOCs-Dropout-Prediction)
 

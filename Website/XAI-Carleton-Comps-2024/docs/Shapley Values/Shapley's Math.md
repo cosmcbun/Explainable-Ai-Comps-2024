@@ -87,8 +87,6 @@ All of this math allows Shapley values to answer two questions, both local to th
 1. Shapley values show how a feature value $j$ contributed to the prediction's deviation from the expected prediction, and
 2. Due to the calculations of all coalitions, we can also see how a coalition $x \in \mathcal{P}(X)$ contributed to the deviation of $f(X)$ from the expected prediction.
 
-
-
 ## Application of properties: MOOC Dataset
 *For a more detailed look at this dataset, please see [Shapley and MOOC](./Shapley%20and%20MOOC.md)*
 
