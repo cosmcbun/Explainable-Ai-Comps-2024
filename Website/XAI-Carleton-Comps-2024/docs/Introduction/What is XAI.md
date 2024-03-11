@@ -29,10 +29,6 @@ Although Artificial Intelligence has been used across many fields for a long tim
 
 However, this is not the only domain to which AI is being applied. **High-risk systems are beginning to adapt AI into their core operations.** As described in [Sim et al. (2023)](https://journals.lww.com/smj/Fulltext/2023/02000/Machine_learning_in_medicine__what_clinicians.1.aspx#:~:text=on%20ML%20projects.-,Explainability,-The%20concept%20of), machine learning models can help to greatly expedite delivery of care, but the lack of clarity in their calculations can lead not only to incorrect diagnoses, but also to distrust in the medical system. Moreover, titan of the investment industry S&P GLobal predicts that AI will soon automate risk management and profit-optimization [(Fernández, 2023)](https://www.spglobal.com/en/research-insights/featured/special-editorial/ai-in-banking-ai-will-be-an-incremental-game-changer). **How do we know what these models consider a risk? How can we be sure a profit optimization is feasible and ethical?**
 
-### XAI for Engineers
-
-Explainable AI techniques provide a window into the ML black box which allow us to make much more specific improvements to our models. We can uncover unforeseen biases, oversights, and and potential ethical/legal concerns, all through a few lines of code. **With XAI, you can not only build AI that you and your users can understand, but you can build a model that you can trust.**
-
 <br></br>
 <br></br>
 

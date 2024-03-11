@@ -8,4 +8,4 @@ A user study was designed around these explainability methods, which set out to 
 
 ![image](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/assets/20567330/d9c87adb-319f-47db-b43d-72fd47ae2885)
 
-Click [here](./MOOC%20-%20Comparative%20Results.md) for a discussion of the MOOC results and [here](./ResNet%20-%20Methodology.md) to see how the ResNet survey methodogly differed from MOOCS
+Click [here](./MOOC%20-%20Comparative%20Results.md) for a discussion of the MOOC results and [here](./ResNet%20-%20Methodology.md) to see how the ResNet survey methodology differed from MOOCS
