@@ -65,8 +65,8 @@ This is a scan of a pituitary tumor, predicted to be a meningioma tumor with 0.6
 
 Anchors | LIME | Shapley
 
-![Figure 4 - Anchor](/img/tumors/pituitary-135-lime.png "Anchors")
-![Figure 4 - LIME](/img/tumors/pituitary-135-lime.png "LIME")
+![Figure 4 - Anchor](/img/tumors/pituitary-135-shap.png "Anchors")
+![Figure 4 - LIME](/img/tumors/pituitary-135-lime.jpg "LIME")
 ![Figure 4 - Shapley](/img/tumors/pituitary-135-shap.png "SHAP")
 
 The model predicts this is a meningioma tumor with relatively high certainty, even though it is a pituitary tumor. The explanation from LIME reveals the model was not looking at the tumor at all, instead looking at the area around it. This would explain the misclassification as an error with how our model reads these images.
