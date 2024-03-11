@@ -21,7 +21,7 @@ Anchors | LIME | Shapley
 
 ![Figure 1 - Anchor](/img/tumors/glioma-191-anchor.png "Anchors")
 ![Figure 1 - LIME](/img/tumors/glioma-191-lime.png "LIME")
-![Figure 1 - Shapley](/img/tumors/glioma_tumor-0.png "SHAP")
+![Figure 1 - Shapley](/img/tumors/glioma-191-shap.png "SHAP")
 
 LIME: The model appears relatively sure there is a tumor in this MRI scan, but incorrectly classifies a glioma tumor as a pituitary tumor. LIME is highlighting seemingly erroneous areas around the head instead of a tumor, suggesting that our ResNet model isn't looking at the tumor itself.
 
@@ -37,7 +37,7 @@ Anchors | LIME | Shapley
 
 ![Figure 2 - Anchor](/img/tumors/meningioma-252-anchor.png "Anchors")
 ![Figure 2 - LIME](/img/tumors/meningioma-252-lime.png "LIME")
-![Figure 2 - Shapley](/img/tumors/meningioma_tumor-45.png "SHAP")
+![Figure 2 - Shapley](/img/tumors/meningioma-252-shap.png "SHAP")
 
 Unlike the previous scan, this meningioma tumor is correctly classified with high certainty, which would imply that our model is performing well. However, as revealed by LIME, the explanation is highlighting seemingly unrelated areas of the head (pretty much everything except the tumor), but it also seems the top of the head has a negative correlation with this class. As a result, it's reasonable to conclude that our model is not good at recognizing tumors and simply made a lucky guess.
 
