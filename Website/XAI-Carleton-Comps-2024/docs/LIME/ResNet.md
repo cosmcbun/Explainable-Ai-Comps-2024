@@ -58,7 +58,7 @@ pill_transf = get_pil_transform()
 preprocess_transform = get_preprocess_transform()
 ```
 
-Our model is [ResNet18](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html) with the pretrained weights, which we set up [here](/Explainable-Ai-Comps-2024/Methodology/ResNet#Animals), as well as the predict function:
+Our model is [ResNet18](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html) with the pretrained weights, which we set up [here](/Explainable-Ai-Comps-2024/Methodology/ResNet#animals), as well as the predict function:
 
 ```Python
 # predict function
