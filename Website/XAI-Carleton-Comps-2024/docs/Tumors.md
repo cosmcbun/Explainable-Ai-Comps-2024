@@ -47,7 +47,7 @@ When the model was correct, anchoring was quite effective at finding the tumor i
 
 This is a scan of a healthy brain, predicted to have a meningioma tumor with 1.0 certainty.
 
-![Figure 3 - Anchor](/img/tumors/healthy-97.png "Anchors")
+![Figure 3 - Anchor](/img/tumors/healthy-97-anchor.png "Anchors")
 ![Figure 3 - LIME](/img/tumors/healthy-97-lime.jpg "LIME")
 ![Figure 3 - Shapley](/img/tumors/healthy-97-shap.png "SHAP")
 
