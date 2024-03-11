@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "User Study Methodology: The three XAI techniques where run on two different domains: MOOC, a tabular dataset where student metrics are used to predict if they will complete a online course, and a set of Image Classifications Models all based round Resnet. Each domain had a seperate user study. To explore the methodology of each model and user study, explore the articles here."
+    "description": "User Study Methodology: The three XAI techniques where run on two different domains: MOOC, a tabular dataset where student metrics are used to predict if they will complete a online course, and a set of Image Classifications Models all based round ResNet. Each domain had a seperate user study. To explore the methodology of each model and user study, explore the articles here."
   }
 }
