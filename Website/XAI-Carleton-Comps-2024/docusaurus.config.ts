@@ -70,7 +70,7 @@ const config: Config = {
       items: [
         {
           to: '/About Us',
-          position: 'left',
+          position: 'right',
           label: 'About Us',
         },
         {

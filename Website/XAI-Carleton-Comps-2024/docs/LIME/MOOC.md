@@ -38,7 +38,7 @@ exp = svm_explainer.explain_instance(
 )
 ```
 
-The above code block is a simplified version of [Our Implementation](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/blob/62e136607f3b66106fd09fd558feb38f4834419a/MOOC/LIME/BasicExampleOfUsingLIMEOnMOOCDataset.ipynb) which output an explanation similar to the visualization seen in the LIME Specific Output section.
+The above code block is a simplified version of [Our Implementation](https://github.com/cosmcbun/Explainable-Ai-Comps-2024/blob/62e136607f3b66106fd09fd558feb38f4834419a/MOOC/LIME/BasicExampleOfUsingLIMEOnMOOCDataset.ipynb) which outputs an explanation similar to the visualization seen below.
 
 ## Parsing the Output
 
