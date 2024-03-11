@@ -47,7 +47,7 @@ When the model was correct, anchoring was quite effective at finding the tumor i
 
 This is a scan of a healthy brain, predicted to have a meningioma tumor with 1.0 certainty.
 
-![Figure 3 - Anchor](/img/tumors/healthy-97.jpg "Anchors")
+![Figure 3 - Anchor](/img/tumors/healthy-97.png "Anchors")
 ![Figure 3 - LIME](/img/tumors/healthy-97-lime.jpg "LIME")
 ![Figure 3 - Shapley](/img/tumors/healthy-97-shap.png "SHAP")
 
@@ -59,7 +59,7 @@ The model appears very certain there is a meningioma tumor, despite there not be
 
 This is a scan of a pituitary tumor, predicted to be a meningioma tumor with 0.67 certainty.
 
-![Figure 4 - Anchor](/img/tumors/pituitary-135.jpg "Anchors")
+![Figure 4 - Anchor](/img/tumors/pituitary-135-anchor.png "Anchors")
 ![Figure 4 - LIME](/img/tumors/pituitary-135-lime.jpg "LIME")
 ![Figure 4 - Shapley](/img/tumors/pituitary-135-shap.png "SHAP")
 
@@ -67,9 +67,7 @@ The model predicts this is a meningioma tumor with relatively high certainty, ev
 
 ## Conclusion
 
-(to be added)
-
-Anchors: Another issue is that the anchoring package displays its explanations by showing only the anchors and blacking out the rest of the image, which can be disorienting and take away necessary context, especially when images are black and white like these MRIs. This can be resolved since it is an issue with the anchoring package, not the explanatory technique itself, but it reduces the practicality of using anchors in this domain.
+Anchors: When the model was correct, anchoring was quite effective at finding the tumor in the image that caused the model's prediction. Unfortunately, our model was not very accurate, and explanations of inaccurate predictions do not give us much insight into what is actually going on in brain scans. The preprocessing step for the anchoring algorithm, in which the image is broken up into superpixels, can also result in anchoring being unable to find and isolate tumors. Another issue is that the anchoring package displays its explanations by showing only the anchors and blacking out the rest of the image, which can be disorienting and take away necessary context.  To read more about anchoring and tumors, see tHis lInK:
 
 LIME: Research suggests that machine learning models can be very good at recognizing brain tumors from an MRI scan. However, given these explanations from LIME, it is safe to say that we were unable to replicate the same success using our own version of ResNet18. More often than not, the model was simply looking at the wrong parts of the brain, and had incorrectly learned to just guess "meningioma" when in doubt. Thus, we now know NOT to ever use this model in a medical setting. In a funny way, this quick experiment helps to showcase the utility of explainable AI as a means to show how unreliable our model was. With XAI methods like LIME, we can test the reliability of ML models to ensure that those actually used by medical professionals perform better!
 
