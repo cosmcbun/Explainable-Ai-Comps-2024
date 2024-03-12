@@ -1,0 +1,7 @@
+pydantic
+uvicorn
+fastapi
+
+tflite
+numpy
+pandas

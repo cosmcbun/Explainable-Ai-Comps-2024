@@ -1,0 +1,23 @@
+{
+    "install": "pip3 --user install -r requirements.txt",
+    "start": "uvicorn main:app --reload",
+    "watch": {
+        "ignore": [
+            "__pycache__"
+        ],
+        "install": {
+            "include": [
+                "^requirements\\.txt$"
+            ]
+        },
+        "restart": {
+            "include": [
+                "\\.py$",
+                "\\.html$",
+                "\\.js$",
+                "\\.json$",
+                "\\.txt$"
+            ]
+        }
+    }
+}
