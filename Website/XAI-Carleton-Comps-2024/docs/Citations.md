@@ -1,4 +1,3 @@
- Bibliography
 
 Besse, Philippe, Celine Castets-Renard, Aurelien Garivier, and Jean-Michel Loubes. “Can Everyday AI Be Ethical. Fairness of Machine Learning Algorithms.” _arXiv.Org_, 2018. [https://doi.org/10.48550/arxiv.1810.01729](https://doi.org/10.48550/arxiv.1810.01729).
 
