@@ -15,11 +15,10 @@ export const MLPClassifier = () => {
     axios.get('https://xai-mlp.glitch.me/')
   });
 
-  const handleClick = async () => {
+  function handleClick() {
     try {
       // POST request to server containing our ML model's input (" | 0" to clean unfilled values)
-      const response = await axios.post(`https://xai-mlp.glitch.me/predict/`, 
-      {
+      axios.post(`https://xai-mlp.glitch.me/predict/`, {
           viewed: document.getElementById("viewed").value | 0,
           gender: document.getElementById("gender").value | 0,
           grade: document.getElementById("grade").value | 0,
@@ -35,21 +34,22 @@ export const MLPClassifier = () => {
           headers: {
             'Content-Type': 'application/json'
           }
+      })
+      .then(response => {
+        // Return the array of probabilities [fail, pass, colors]
+        let probs = response.data.Probability.map((prob) => prob.toFixed(3));
+        let result = [probs[0], probs[1], ['#FF006F', '#0082FF']];
+        console.log("PROBABILITY: ", response.data.Probability)
+        console.log("RESULT:", result)
+
+        // Colors based on winning result
+        if (result[0] < result[1]) {
+          result[2] = ['#0082FF', '#FF006F'];
+        }
+        setResponse(result);
+        setError(null);
       });
 
-      // Return the array of probabilities [fail, pass, colors]
-      let probs = response.data.Probability.map((prob) => prob.toFixed(3));
-      let result = [probs[0], probs[1], ['#FF006F', '#0082FF']];
-      console.log("PROBABILITY: ", response.data.Probability)
-      console.log("RESULT:", result)
-
-      // Colors based on winning result
-      if (result[0] < result[1]) {
-        result[2] = ['#0082FF', '#FF006F'];
-      }
-
-      setResponse(result);
-      setError(null);
     } catch (error) {
       console.error('Error fetching data:', error);
       setError('Error fetching data');
@@ -92,7 +92,7 @@ export const MLPClassifier = () => {
       <button className="button" onClick={handleClick}>Query</button>
       {error && <p>{error}</p>}
       {response && (
-        <div className="predict_proba">
+        <div className="outline">
           <svg style={{ width: '100%', height: '79px' }}>
             <text x="20" y="20">Prediction probabilities</text>
             <g>
