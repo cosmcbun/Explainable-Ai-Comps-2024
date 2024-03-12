@@ -48,6 +48,21 @@ export const MLPClassifier = () => {
         }
         setResponse(result);
         setError(null);
+
+        // Animate the progress bars
+        let bars = document.getElementsByClassName("progressBar");
+        for (let i = 0; i < bars.length; i++) {
+          let width = 0;
+          let id = setInterval(frame, 10);
+          function frame() {
+            if (width >= response.data.Probability[i] * 100) {
+              clearInterval(id);
+            } else {
+              width++;
+              bars[i].style.width = width;
+            }
+          }
+        }
       });
 
     } catch (error) {
@@ -89,30 +104,28 @@ export const MLPClassifier = () => {
       </table>
 
       
-      <button className="button" onClick={handleClick}>Query</button>
+      <button className="queryButton" onClick={handleClick}>Query</button>
       {error && <p>{error}</p>}
       {response && (
-        <div className="outline">
+        <div className="queryOutline">
           <svg style={{ width: '100%', height: '79px' }}>
             <text x="20" y="20">Prediction probabilities</text>
             <g>
-              <rect x="120" className="progressBar" y="35" height="17" width={response[0] * 100} style={{ fill: response[2][0] }}></rect>
+              {/* <rect x="120" className="progressBar" y="35" height="17" width={response[0] * 100} style={{ fill: response[2][0] }}></rect>
               <rect x="120" y="35" height="17" width="100" fillOpacity="0" stroke="black"></rect>
               <text x="225" y="49" fill="black" style={{ font: '14px tahoma, sans-serif' }}>{response[0]}</text>
               <text x="110" y="49" fill="black" textAnchor="end" style={{ font: '14px tahoma, sans-serif' }}>Not Completed</text>
               <rect x="120" className="progressBar" y="57" height="17" width={response[1] * 100} style={{ fill: response[2][1] }}></rect>
               <rect x="120" y="57" height="17" width="100" fillOpacity="0" stroke="black"></rect>
               <text x="225" y="71" fill="black" style={{ font: '14px tahoma, sans-serif' }}>{response[1]}</text>
-              <text x="110" y="71" fill="black" textAnchor="end" style={{ font: '14px tahoma, sans-serif' }}>Completed</text>
+              <text x="110" y="71" fill="black" textAnchor="end" style={{ font: '14px tahoma, sans-serif' }}>Completed</text> */}
 
-              {/* <rect x="120" className="slider" y="35" height="17" width={response[0] * 100} style={{ fill: response[2][0] }}></rect>
-              <rect x="120" y="35" height="17" width={response[0] * 100} fillOpacity="0" stroke="black"></rect>
+              <rect x="120" className="progressBar" y="35" height="17" width={response[0] * 100} stroke="black" style={{ fill: response[2][0] }}></rect>
               <text x={120 + response[0] * 100 + 5} y="49" fill="black" style={{ font: '14px tahoma, sans-serif' }}>{response[0]}</text>
               <text x="110" y="49" fill="black" textAnchor="end" style={{ font: '14px tahoma, sans-serif' }}>Not Completed</text>
-              <rect x="120" className="slider" y="57" height="17" width={response[1] * 100} style={{ fill: response[2][1] }}></rect>
-              <rect x="120" y="57" height="17" width={response[1] * 100} fillOpacity="0" stroke="black"></rect>
+              <rect x="120" className="progressBar" y="57" height="17" width={response[1] * 100} stroke="black" style={{ fill: response[2][1] }}></rect>
               <text x={120 + response[1] * 100 + 5} y="71" fill="black" style={{ font: '14px tahoma, sans-serif' }}>{response[1]}</text>
-              <text x="110" y="71" fill="black" textAnchor="end" style={{ font: '14px tahoma, sans-serif' }}>Completed</text> */}
+              <text x="110" y="71" fill="black" textAnchor="end" style={{ font: '14px tahoma, sans-serif' }}>Completed</text>
             </g>
           </svg>
         </div>

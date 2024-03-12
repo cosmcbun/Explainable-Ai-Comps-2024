@@ -1,4 +1,4 @@
-.button {
+.queryButton {
     background-color: gray;
     border: none;
     color: white;
@@ -9,11 +9,20 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 10px;
 }
-.button:hover {
+.queryButton:hover {
     background-color: rgb(63, 132, 221);
 }
 
+.queryOutline {
+    border: 5px solid rgb(236, 236, 236);
+    background-color: none;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
 
 .progressBar {
     animation: progress .75s cubic-bezier(0.47, 0, 0.745, 0.715); 
@@ -26,12 +35,9 @@
         width: width;
     }
 }
-
-.outline {
-    border: 5px solid rgb(236, 236, 236);
-    background-color: none;
-    width: 300px;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
+/* Trying to make the animation restart (not working...) */
+.queryButton:active ~ .progressBar {
+    animation: none;
+    width: 0;
+    animation: progress .75s cubic-bezier(0.47, 0, 0.745, 0.715); 
 }
