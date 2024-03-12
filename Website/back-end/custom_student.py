@@ -1,11 +1,5 @@
-from enum import Enum
 import numpy as np
 from pydantic import BaseModel
-
-class Gender(str, Enum):
-    m = "Male"
-    f = "Female"
-    o = "Other" # (Warning, the dataset does not allow 'Other', so we may get undefined behavior)
     
 class Student(BaseModel):
     viewed: int = 0
