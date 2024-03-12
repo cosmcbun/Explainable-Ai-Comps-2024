@@ -9,7 +9,7 @@
             "include": [
                 "^requirements\\.txt$"
             ]
-        },
+        }, 
         "restart": {
             "include": [
                 "\\.py$",

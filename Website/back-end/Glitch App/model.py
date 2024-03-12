@@ -16,7 +16,7 @@ class Model():
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
     return interpreter, input_details, output_details
-
+ 
   def predict_proba(self, X):
     X = np.array(X).astype(np.float32)
     self.interpreter.set_tensor(self.input[0]['index'], X)    

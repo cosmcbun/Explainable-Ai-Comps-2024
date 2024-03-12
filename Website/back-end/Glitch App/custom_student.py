@@ -12,7 +12,7 @@ class Student(BaseModel):
     nchapters: int = 0
     age: int = 0
     votes: int = 0
-    num_words: int = 0
+    num_words: int = 0 
         
     def encode(self) -> np.ndarray:
         arr = [self.viewed, self.gender, self.grade, self.nevents, self.ndays_act, self.nplay_video, self.nchapters, self.age, self.votes, self.num_words]

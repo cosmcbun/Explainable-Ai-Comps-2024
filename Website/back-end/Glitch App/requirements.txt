@@ -4,4 +4,4 @@ fastapi
 
 tflite
 numpy
-pandas
+pandas 
