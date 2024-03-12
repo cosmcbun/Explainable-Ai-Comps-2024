@@ -1,0 +1,28 @@
+.button {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(63, 132, 221);
+}
+
+
+.progressBar {
+    animation: progress .75s cubic-bezier(0.47, 0, 0.745, 0.715); 
+}
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: width;
+    }
+}
