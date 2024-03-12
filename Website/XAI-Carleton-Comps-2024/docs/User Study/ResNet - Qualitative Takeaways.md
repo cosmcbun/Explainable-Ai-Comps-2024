@@ -1,10 +1,9 @@
 ---
 sidebar_position: 22
+title: "ResNet: Qualitative Takeaways"
 ---
 
-# Qualitative Takeaways
-
-## ResNet Participant Comments
+# ResNet: Qualitavie Takeaways
 
 ### LIME and Anchoring more intuitive...
 
