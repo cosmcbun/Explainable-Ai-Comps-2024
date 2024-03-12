@@ -91,7 +91,7 @@ All of this math allows Shapley values to answer two questions, both local to th
 
 A more intuitive application of the **additivity** property can be seen with our MOOC model. Since our model outputs the probabilities for two binary classes (complete/incomplete), the game of prediction is *zero-sum* (Since probabilities sum to 1, $+1\%$ chance of "complete" means $-1\%$ chance of "incomplete"). As such, the Shapley values are also zero-sum, as visualized in the picture below:
 
-![Shapley value graphs for "complete"/"incomplete"](\img\shap_math_additivity.png)
+![Shapley value graphs for "complete"/"incomplete"](\img\shap_math_additivity.png "Shapley value graphs for 'complete'/'incomplete'")
 
 These are the graphs of probability for the classes of "Complete" (left) and "Incomplete" (right). They have expected values $E[f(x)] =$ $0.024$ and $0.976$, respectively, and they end at actual predictions $f(x) = $ $0.249$ and $0.751$, respectively. Both $E[f(x)]$ values sum to 1, and so too do the actual predictions $f(x)$. Because this prediction is a zero-sum game, the Shapley values of the classes are inverses:
 

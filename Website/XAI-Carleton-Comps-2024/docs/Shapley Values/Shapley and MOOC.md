@@ -39,7 +39,7 @@ shap.plots.waterfall(positive_shap_vals[i])
 ```
 This returns a plot of Shapley values for the $i$-th datapoint in the set, like so:
 
-![Waterfall plot of Shapley values for a datapoint i](/img/shap_mooc_tp0.png)
+![Waterfall plot of Shapley values for a datapoint i](/img/shap_mooc_tp0.png "Waterfall plot of Shapley values for a datapoint i")
 
 This is a visualization of the Shapley values for a positive prediction, where the probability that the person completed the course is over $50\%$ ($59.4\%$ in this case).
 
@@ -58,7 +58,7 @@ shap.plots.bar(shapley_values, show=False)
 ```
 The following example is an interpretation of the model using the MOOC dataset's test data:
 
-![Interpretation of multi-layer perceptron on MOOC test data](/img/shap_mooc_overall.png)
+![Explanation of multi-layer perceptron on MOOC test data](/img/shap_mooc_overall.png " Shapley values explanation of multi-layer perceptron on MOOC test data")
 
 As we can see, ```nevents``` and ```nplay_video``` are still our biggest actors in a global setting, changing the prediction by $\pm 8\%$ and $\pm 2\%$, respectively. 
 
