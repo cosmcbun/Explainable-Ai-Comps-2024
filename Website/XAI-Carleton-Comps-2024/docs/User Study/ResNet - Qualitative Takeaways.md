@@ -1,5 +1,5 @@
 ---
-sidebar_position: 22
+sidebar_position: 7
 title: "ResNet: Qualitative Takeaways"
 ---
 
