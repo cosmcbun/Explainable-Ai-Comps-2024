@@ -58,7 +58,7 @@ pill_transf = get_pil_transform()
 preprocess_transform = get_preprocess_transform()
 ```
 
-Our model is [```ResNet18```](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html) with the pretrained weights, which we set up [here](/Explainable-Ai-Comps-2024/Methodology/ResNet#animals), as well as the predict function:
+Our model is [```ResNet18```](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html) with the pretrained weights, which we set up [here](/Methodology/ResNet.md), as well as the predict function:
 
 ```Python
 # predict function
@@ -71,7 +71,7 @@ def batch_predict(images):
     return probs.detach().cpu().numpy()
 ```
 
-Finally, here is the code we used to train a [LimeImageExplainer()](https://lime-ml.readthedocs.io/en/latest/lime.html?highlight=limeimageexplainer#lime.lime_image.LimeImageExplainer) class, using a 1D numpy array built from the transformed image and the predict function built earlier. We put these parameters into explain_instance(), which trains our surrogate by segmenting the image into superpixels and measuring which parts of the image are most important to the black box prediction.
+Finally, here is the code we used to train a [LimeImageExplainer()](https://lime-ml.readthedocs.io/en/latest/lime.html?highlight=limeimageexplainer#lime.lime_image.LimeImageExplainer) class, using a 1D numpy array built from the transformed image and the predict function built earlier. We put these parameters into explain_instance(), which trains our surrogate by segmenting the image into [superpixels](https://scikit-image.org/docs/stable/auto_examples/segmentation/plot_segmentations.html) and measuring which parts of the image are most important to the black box prediction.
 
 ```Python
 from lime import lime_image
