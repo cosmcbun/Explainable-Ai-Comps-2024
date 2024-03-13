@@ -4,13 +4,11 @@ sidebar_position: 2
 
 # MOOC Dropout Prediction
 
-## Summary
-
-LIME was trivial to apply to the MOOC Model, provided inelegant but effective explanation visuals, and there appeared to be a positive relation between a viewer's experience with ML and their belief that LIME explanation helped explain the model.
+LIME was straight forward to apply to the MOOC Model, provided inelegant but effective explanation visuals.
 
 ## Apply LIME to MOOCs
 
-Applying LIME to the ML model used to predict if a student would drop out of a MOOC straight forward and did not require a background in explainable AI techniques.
+Applying LIME to the ML model used to predict if a student would drop out of a MOOC was straight forward and did not require a background in explainable AI techniques.
 
 The literature has centralized around one implementation, the Python package [LIME](https://pypi.org/project/lime/), which has extensive and easy to use documentation.
 
@@ -48,9 +46,9 @@ The above code block is a simplified version of [Our Implementation](https://git
 
 The left third, while created by the LIME package, is not XAI. The visualization simply illustrates the black box model’s prediction which LIME is attempting to explain. The table could be read as “The black box model is 28% confident that the student of interest will not complete the course $\implies$ The black box model is 72% confident that the student of interest will complete the course.”
 
-The right third, displays the feature values of the input which LIME is attempting to explain. LIME believes orange features encourage the black box model to predict that the student will not complete the course. Similarly, LIME explains that blue features pushed the black box model to conclude that the student would not complete the course. The higher in the table the greater the contribution to the final prediction. The first row of this table could be read as “Because the number of events the student of interest has participated in is 32,296, the black box model is more confident that the student will complete the course.”
+The right third displays the feature values of the input which LIME is attempting to explain. LIME believes orange features encourage the black box model to predict that the student will complete the course. Similarly, LIME explains that blue features pushed the black box model to conclude that the student would not complete the course. The higher in the table the greater the contribution to the final prediction. The first row of this table could be read as “Because the number of events the student of interest has participated in is 32,296, the black box model is more confident that the student will complete the course.”
 
-The center visual displays the relative importance of each feature and why a feature provides a positive or negative contribution to the final prediction. The larger the bars, the more important the feature is in the final decision. Each bar is accompanied with a rule. The rule explains how/why the feature value contributes to the final prediction. The first line could be read as “Because the student of interest has completed more than 203 events, the model is substantially more confident that the student will complete the course.”
+The center visual displays the relative importance of each feature and why a feature provides a positive or negative contribution to the final prediction. The larger the bars, the more important the feature is in the final decision. Each bar is accompanied by a rule. The rule explains how/why the feature value contributes to the final prediction. The first line could be read as “Because the student of interest has completed more than 203 events, the model is substantially more confident that the student will complete the course.”
 
 ### LIME Output used in User Study
 
@@ -72,16 +70,9 @@ We used this visualization for the user study despite this not being the default
 
 ## User Study
 
-Consider reading the user study introduction and methodology before continuing
-
 Little can be said about LIME's user study results in isolation. To see how LIME compares to Shapley and Anchors, see the [MOOC Comparative User Study](../User%20Study/MOOC%20-%20Comparative%20Results.md) page.
 
 Across all 5 samples, participants ranked LIME explanation understandability as $\approx4$ on average $\pm 1$.
 
 ![Sample All LIME - How Does Experience with ML Affect Model Explainability.png](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Explainability.png)
 
-Across all 5 samples, the greater the participant's experience with ML, the more they believed LIME explanations helped explain the model.
-
-![Sample All LIME - How Does Experience with ML Affect Model Understandability](./Sample%20All%20LIME%20-%20How%20Does%20Experience%20with%20ML%20Affect%20Model%20Understandability.png)
-
-Without a greater sample size, it is difficult to draw any conclusions from this graph. However, it is interesting to note that participants with the least and most experience with ML had the highest confidence that they understood the MOOC model as explained by LIME.
