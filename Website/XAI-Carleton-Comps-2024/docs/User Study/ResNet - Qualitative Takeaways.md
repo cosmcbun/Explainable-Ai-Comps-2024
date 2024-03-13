@@ -3,12 +3,12 @@ sidebar_position: 7
 title: "ResNet: Qualitative Takeaways"
 ---
 
-# ResNet: Qualitavie Takeaways
+# ResNet: Qualitative Takeaways
 
 ### LIME and Anchoring more intuitive...
 
 
-Multiple participants noted that LIME and Anchoring produced more intuitive explanations than Shapley. One participant said "I can kind of see a snake in Shapley but there is no 'oh okay' moment like LIME has" about the explanations below of the model's prediction of horned viper.
+Multiple participants noted that LIME and Anchoring produced more intuitive explanations than Shapley. One participant said "I can kind of see a snake in Shapley but there is no 'oh okay' moment like LIME has" about the explanations below of the model's "horned viper" prediction.
 
 ![Figure 1](/img/user_study/horned_viper-slide.jpg "An image of a cat, with explanations for why it was predicted as a horned viper")
 
