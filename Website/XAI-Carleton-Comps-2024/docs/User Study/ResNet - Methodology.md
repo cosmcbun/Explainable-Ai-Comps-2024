@@ -1,6 +1,6 @@
 ---
+sidebar_position: 5
 title: "ResNet: Methodology"
-sidebar-position: 20
 ---
 
 # Methodology of the ResNet User Study

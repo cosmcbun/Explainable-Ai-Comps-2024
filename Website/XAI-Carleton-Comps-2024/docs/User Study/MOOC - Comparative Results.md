@@ -1,5 +1,6 @@
 ---
-sidebar-position: 11
+sidebar_position: 4
+title: "MOOC: Comparative Results"
 ---
 
 

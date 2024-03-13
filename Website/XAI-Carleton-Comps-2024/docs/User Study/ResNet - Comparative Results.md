@@ -1,5 +1,6 @@
 ---
-sidebar-position: 21
+sidebar_position: 6
+title: "ResNet: Comparative Results"
 ---
 
 # ResNet: Comparative Results
