@@ -1,5 +1,5 @@
 ---
-sidebar-position: 4 
+sidebar_position: 4 
 ---
 # Shapley and MOOC
 This section discusses the application of the [```shap```](https://shap.readthedocs.io/en/latest/) package to the Multi-Layer Perceptron that we built for the [MOOC dataset](../Methodology/MOOC.md). For image data, please refer to [*Shapley and ResNet*](./Shapley%20and%20Resnet.md).
